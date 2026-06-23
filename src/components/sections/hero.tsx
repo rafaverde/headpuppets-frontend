@@ -8,7 +8,7 @@ export default function Hero() {
         <div className="absolute inset-0 bg-linear-to-b from-slate-950/85 to-slate-950/0"></div>
       </div>
 
-      <div className="relative flex flex-col items-center text-center">
+      <div className="relative flex flex-col items-center text-center text-foreground">
         <h2 className="max-w-2xl font-heading text-4xl uppercase leading-relaxed">
           Classic Rock e Heavy Metal em alto volume no RN.
         </h2>

@@ -1,3 +1,4 @@
+/** biome-ignore-all lint/a11y/useSemanticElements: <Original Files> */
 'use client'
 
 import useEmblaCarousel, {
