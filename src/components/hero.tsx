@@ -1,0 +1,19 @@
+export default function Hero() {
+  return (
+    <section className="relative flex min-h-dvh flex-col items-center justify-center overflow-hidden">
+      <div className="absolute inset-0 z-0 bg-[url('/temp-band-photo.webp')] bg-center bg-cover bg-fixed bg-no-repeat">
+        <div className="fixed inset-0 bg-linear-to-b from-slate-950 to-slate-950/0"></div>
+      </div>
+
+      <div className="relative flex flex-col items-center text-center">
+        <h2 className="max-w-2xl font-heading text-4xl uppercase leading-relaxed">
+          Classic Rock e Heavy Metal em alto volume no RN.
+        </h2>
+        <p className="text-lg">
+          Dos anos 60 até a atualidade. Aumente o som do seu evento com os
+          clássicos do rock mundial.
+        </p>
+      </div>
+    </section>
+  )
+}
