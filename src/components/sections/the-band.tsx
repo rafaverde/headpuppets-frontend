@@ -7,7 +7,7 @@ export default function TheBandSection() {
     <section id="the-band" className="scroll-m-14 bg-slate-950">
       <div className="container mx-auto grid grid-cols-1 gap-14 px-4 py-14 text-foreground md:grid-cols-2">
         <div className="space-y-3">
-          <h2 className="font-heading text-4xl text-slate-400 uppercase">
+          <h2 className="font-heading text-4xl text-slate-400 uppercase leading-relaxed">
             A Banda
           </h2>
           <h3 className="font-semibold text-lg">
@@ -36,7 +36,7 @@ export default function TheBandSection() {
           />
         </div>
 
-        <div className="col-span-2 grid grid-cols-1 items-center justify-between gap-8 md:grid-cols-3 lg:grid-cols-6">
+        <div className="col-span-1 grid grid-cols-1 items-center justify-between gap-8 md:col-span-2 md:grid-cols-3 lg:grid-cols-6">
           {Array.from({ length: 6 }).map((_, index) => (
             // biome-ignore lint/suspicious/noArrayIndexKey: <Temporary>
             <MemberCard key={index} />
