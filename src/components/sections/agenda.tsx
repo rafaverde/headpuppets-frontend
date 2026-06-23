@@ -1,4 +1,11 @@
 import AgendaCard from '../agenda-card'
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from '../ui/carousel'
 
 export default function AgendaSection() {
   return (
@@ -10,9 +17,21 @@ export default function AgendaSection() {
           </h2>
         </div>
 
-        <div>
-          <AgendaCard />
-        </div>
+        <Carousel opts={{ align: 'start' }}>
+          <CarouselContent className="-ml-8">
+            {Array.from({ length: 6 }).map((_, index) => (
+              <CarouselItem
+                // biome-ignore lint/suspicious/noArrayIndexKey: <Temporary>
+                key={index}
+                className="basis-1/2 pl-8 md:basis-1/3 lg:basis-1/4"
+              >
+                <AgendaCard />
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <CarouselPrevious className="-left-4 hidden cursor-pointer bg-violet-300/40! md:inline-flex" />
+          <CarouselNext className="-right-4 hidden cursor-pointer bg-violet-300/40! md:inline-flex" />
+        </Carousel>
       </div>
     </section>
   )

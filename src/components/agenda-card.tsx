@@ -4,7 +4,7 @@ import { Card, CardContent, CardHeader } from './ui/card'
 
 export default function AgendaCard() {
   return (
-    <Card className="p-5 ring-violet-950 md:basis-1/3 lg:basis-1/4">
+    <Card className="border border-violet-950 p-5 ring-0">
       <CardHeader className="flex items-center gap-3 p-0">
         <RiCalendar2Line className="size-9 text-violet-400" />
         <h3 className="font-heading text-2xl text-accent uppercase">11/07</h3>
