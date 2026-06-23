@@ -1,4 +1,4 @@
-import { Card } from '../ui/card'
+import AgendaCard from '../agenda-card'
 
 export default function AgendaSection() {
   return (
@@ -10,8 +10,8 @@ export default function AgendaSection() {
           </h2>
         </div>
 
-        <div className="">
-          <Card className=""></Card>
+        <div>
+          <AgendaCard />
         </div>
       </div>
     </section>
