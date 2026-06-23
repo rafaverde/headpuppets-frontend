@@ -1,3 +1,5 @@
+import { Card } from '../ui/card'
+
 export default function AgendaSection() {
   return (
     <section id="agenda" className="scroll-m-14 bg-[url('/grunge-bg.webp')]">
@@ -8,7 +10,9 @@ export default function AgendaSection() {
           </h2>
         </div>
 
-        <div className="">Cards</div>
+        <div className="">
+          <Card className=""></Card>
+        </div>
       </div>
     </section>
   )

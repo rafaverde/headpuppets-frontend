@@ -12,11 +12,11 @@ export default function WePlaySection() {
           <h2 className="font-heading text-4xl text-slate-400 uppercase">
             O Que A Gente Toca
           </h2>
-          <h3 className="font-semibold text-lg">
+          <h3 className="font-semibold text-foreground text-lg">
             Nosso setlist vai direto ao ponto: os maiores riffs e clássicos que
             todo fã de rock respeita.
           </h3>
-          <p>
+          <p className="text-foreground">
             De Led Zeppelin, Creedence e Beatles, até o peso de Black Sabbath,
             Iron Maiden e Metallica, passando por Scorpions, AC/DC, Journey, Bon
             Jovi, Guns'n Roses, Heart, Greta Van Fleet e Pearl Jam, e muito mais

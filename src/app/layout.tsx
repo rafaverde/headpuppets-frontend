@@ -7,12 +7,14 @@ import Header from '@/components/header'
 const googlSansFlex = Google_Sans_Flex({
   variable: '--font-sans',
   subsets: ['latin'],
+  fallback: ['Helvetica, sans'],
 })
 
 const boldonse = Boldonse({
   variable: '--font-display',
   weight: ['400'],
   subsets: ['latin'],
+  fallback: ['Helvetica, sans'],
 })
 
 export const metadata: Metadata = {
@@ -29,9 +31,9 @@ export default function RootLayout({
   return (
     <html
       lang="pt-BR"
-      className={`${googlSansFlex.variable} ${boldonse.variable} scheme-dark h-full scroll-smooth antialiased`}
+      className={`${googlSansFlex.variable} ${boldonse.variable} dark h-full scroll-smooth antialiased`}
     >
-      <body className="flex min-h-full flex-col px-1">
+      <body className="flex min-h-full flex-col">
         <main>
           <Header />
           {children}

@@ -5,7 +5,7 @@ import MemberCard from '../member-card'
 export default function TheBandSection() {
   return (
     <section id="the-band" className="scroll-m-14 bg-slate-950">
-      <div className="container mx-auto grid grid-cols-1 gap-14 px-4 py-14 md:grid-cols-2">
+      <div className="container mx-auto grid grid-cols-1 gap-14 px-4 py-14 text-foreground md:grid-cols-2">
         <div className="space-y-3">
           <h2 className="font-heading text-4xl text-slate-400 uppercase">
             A Banda

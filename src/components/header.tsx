@@ -15,7 +15,7 @@ export default function Header() {
   return (
     <header className="fixed z-10 w-full px-4 py-5">
       <div className="container mx-auto flex items-center justify-between rounded-full bg-slate-900/85 px-4 py-3 shadow-md backdrop-blur-[3px]">
-        <nav className="hidden items-center gap-6 pl-4 lg:flex">
+        <nav className="hidden items-center gap-6 pl-4 text-foreground lg:flex">
           <Link href="#the-band">A Banda</Link>
           <Link href="#setlist">Repertório</Link>
           <Link href="#agenda">Agenda</Link>
@@ -31,7 +31,7 @@ export default function Header() {
           />
         </Link>
 
-        <nav className="hidden items-center gap-6 lg:flex">
+        <nav className="hidden items-center gap-6 text-foreground lg:flex">
           <Link href="#videos">Vídeos</Link>
           <Button size="xl" className="rounded-full">
             <RiWhatsappLine size={24} /> Eu quero é rock
