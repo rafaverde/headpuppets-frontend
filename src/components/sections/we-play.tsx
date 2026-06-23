@@ -6,7 +6,7 @@ import { Button } from '../ui/button'
 
 export default function WePlaySection() {
   return (
-    <section id="the-band" className="scroll-m-14 bg-violet-950">
+    <section id="setlist" className="scroll-m-14 bg-violet-950">
       <div className="container mx-auto grid grid-cols-1 items-center gap-14 px-4 py-14 md:grid-cols-2">
         <div className="space-y-3">
           <h2 className="font-heading text-4xl text-slate-400 uppercase">
