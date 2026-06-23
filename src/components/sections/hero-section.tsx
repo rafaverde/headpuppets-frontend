@@ -1,8 +1,11 @@
 export default function Hero() {
   return (
-    <section className="relative flex min-h-dvh flex-col items-center justify-center overflow-hidden">
+    <section
+      id="top"
+      className="relative flex min-h-dvh flex-col items-center justify-center overflow-hidden"
+    >
       <div className="absolute inset-0 z-0 bg-[url('/temp-band-photo.webp')] bg-center bg-cover bg-fixed bg-no-repeat">
-        <div className="fixed inset-0 bg-linear-to-b from-slate-950 to-slate-950/0"></div>
+        <div className="absolute inset-0 bg-linear-to-b from-slate-950/85 to-slate-950/0"></div>
       </div>
 
       <div className="relative flex flex-col items-center text-center">

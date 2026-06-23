@@ -21,13 +21,15 @@ export default function Header() {
           <Link href="#agenda">Agenda</Link>
         </nav>
 
-        <Image
-          src="/head-puppets-logo-simples.svg"
-          width={136}
-          height={48}
-          alt="Logotipo Banda Head Puppets"
-          className="pl-6 lg:pl-0"
-        />
+        <Link href="#top">
+          <Image
+            src="/head-puppets-logo-simples.svg"
+            width={136}
+            height={48}
+            alt="Logotipo Banda Head Puppets"
+            className="pl-6 lg:pl-0"
+          />
+        </Link>
 
         <nav className="hidden items-center gap-6 lg:flex">
           <Link href="#videos">Vídeos</Link>

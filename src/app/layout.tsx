@@ -29,7 +29,7 @@ export default function RootLayout({
   return (
     <html
       lang="pt-BR"
-      className={`${googlSansFlex.variable} ${boldonse.variable} scheme-dark h-full antialiased`}
+      className={`${googlSansFlex.variable} ${boldonse.variable} scheme-dark h-full scroll-smooth antialiased`}
     >
       <body className="flex min-h-full flex-col px-1">
         <main>
