@@ -1,5 +1,7 @@
 import { YouTubeEmbed } from '@next/third-parties/google'
 
+import { VideoService } from '@/api/services/video.service'
+
 function getYouTubeId(url: string) {
   const match = url.match(
     /(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v=|watch\?.+&v=))([^&?]+)/
@@ -7,19 +9,8 @@ function getYouTubeId(url: string) {
   return match ? match[1] : null
 }
 
-export default function VideosSection() {
-  const videosFromStrapi = [
-    {
-      id: 1,
-      title: 'Cover Led Zeppelin',
-      youtubeUrl: 'https://youtu.be/hu8HAy5vZh0?si=k4nyS5xkSWYJkom8',
-    },
-    {
-      id: 2,
-      title: 'Cover AC/DC',
-      youtubeUrl: 'https://youtu.be/hu8HAy5vZh0?si=k4nyS5xkSWYJkom8',
-    },
-  ]
+export default async function VideosSection() {
+  const videos = await VideoService.getAllVideos()
 
   return (
     <section id="videos" className="scroll-m-14 bg-slate-950">
@@ -31,7 +22,7 @@ export default function VideosSection() {
         </div>
 
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
-          {videosFromStrapi.map(video => {
+          {videos.map(video => {
             const videoId = getYouTubeId(video.youtubeUrl)
 
             if (!videoId) return null
