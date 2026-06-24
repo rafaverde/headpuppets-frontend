@@ -7,11 +7,22 @@ export const ShowService = {
    */
   async getAgenda(): Promise<Show[]> {
     const response = await ShowRepository.getShows()
+    const rawShows = response.data
 
-    // O Strapi devolve { data: [...], meta: {...} }
-    // O Service extrai e devolve apenas o array de shows para o componente React
-    const shows = response.data
+    const formattedShows = rawShows.map(show => {
+      // biome-ignore lint/correctness/noUnusedVariables: <Non used>
+      const [year, month, day] = show.date.split('-')
+      const formattedDate = `${day}/${month}`
 
-    return shows
+      const formattedHour = show.time.substring(0, 5).replace(':', 'h')
+
+      return {
+        ...show,
+        date: formattedDate,
+        time: formattedHour,
+      }
+    })
+
+    return formattedShows
   },
 }
