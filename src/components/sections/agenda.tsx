@@ -1,3 +1,4 @@
+import type { Show } from '@/api/types/show.types'
 import AgendaCard from '../agenda-card'
 import {
   Carousel,
@@ -7,7 +8,11 @@ import {
   CarouselPrevious,
 } from '../ui/carousel'
 
-export default function AgendaSection() {
+interface AgendaSectionProps {
+  agenda: Show[]
+}
+
+export default function AgendaSection({ agenda }: AgendaSectionProps) {
   return (
     <section id="agenda" className="scroll-m-14 bg-[url('/grunge-bg.webp')]">
       <div className="container mx-auto flex flex-col gap-8 px-4 py-14">
@@ -19,13 +24,12 @@ export default function AgendaSection() {
 
         <Carousel opts={{ align: 'start' }}>
           <CarouselContent className="-ml-8 max-w-[80%] md:max-w-full">
-            {Array.from({ length: 6 }).map((_, index) => (
+            {agenda.map(show => (
               <CarouselItem
-                // biome-ignore lint/suspicious/noArrayIndexKey: <Temporary>
-                key={index}
+                key={show.id}
                 className="basis pl-8 md:basis-1/3 lg:basis-1/4"
               >
-                <AgendaCard />
+                <AgendaCard show={show} />
               </CarouselItem>
             ))}
           </CarouselContent>
