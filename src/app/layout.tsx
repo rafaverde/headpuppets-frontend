@@ -3,6 +3,7 @@ import { Boldonse, Google_Sans_Flex } from 'next/font/google'
 import './globals.css'
 
 import Header from '@/components/header'
+import Footer from '@/components/sections/footer'
 
 const googlSansFlex = Google_Sans_Flex({
   variable: '--font-sans',
@@ -37,6 +38,7 @@ export default function RootLayout({
         <main>
           <Header />
           {children}
+          <Footer />
         </main>
       </body>
     </html>

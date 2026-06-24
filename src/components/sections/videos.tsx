@@ -41,7 +41,6 @@ export default function VideosSection() {
                 key={video.id}
                 className="overflow-hidden rounded-xl border border-slate-900"
               >
-                {/* O componente YouTubeEmbed já faz o Facade automaticamente! */}
                 <YouTubeEmbed videoid={videoId} params="rel=0" />
 
                 <div className="bg-card p-4">
