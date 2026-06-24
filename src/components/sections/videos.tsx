@@ -22,7 +22,7 @@ export default function VideosSection() {
   ]
 
   return (
-    <section id="the-band" className="scroll-m-14 bg-slate-950">
+    <section id="videos" className="scroll-m-14 bg-slate-950">
       <div className="container mx-auto flex flex-col gap-8 px-4 py-14 text-foreground">
         <div className="space-y-3">
           <h2 className="font-heading text-4xl text-slate-400 uppercase leading-relaxed">
