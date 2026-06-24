@@ -1,4 +1,5 @@
 import { ShowRepository } from '../repositories/show.repository'
+import type { Show } from '../types/show.types'
 
 export const ShowService = {
   /**
