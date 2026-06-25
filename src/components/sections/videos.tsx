@@ -1,4 +1,5 @@
 import { YouTubeEmbed } from '@next/third-parties/google'
+import { RiEmotionSadLine } from '@remixicon/react'
 
 import { VideoService } from '@/api/services/video.service'
 
@@ -21,28 +22,35 @@ export default async function VideosSection() {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
-          {videos.map(video => {
-            const videoId = getYouTubeId(video.youtubeUrl)
+        {videos.length > 0 ? (
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
+            {videos.map(video => {
+              const videoId = getYouTubeId(video.youtubeUrl)
 
-            if (!videoId) return null
+              if (!videoId) return null
 
-            return (
-              <div
-                key={video.id}
-                className="overflow-hidden rounded-xl border border-slate-900"
-              >
-                <YouTubeEmbed videoid={videoId} params="rel=0" />
+              return (
+                <div
+                  key={video.id}
+                  className="overflow-hidden rounded-xl border border-slate-900"
+                >
+                  <YouTubeEmbed videoid={videoId} params="rel=0" />
 
-                <div className="bg-card p-4">
-                  <h3 className="font-bold text-card-foreground">
-                    {video.title}
-                  </h3>
+                  <div className="bg-card p-4">
+                    <h3 className="font-bold text-card-foreground">
+                      {video.title}
+                    </h3>
+                  </div>
                 </div>
-              </div>
-            )
-          })}
-        </div>
+              )
+            })}
+          </div>
+        ) : (
+          <div className="mx-auto flex w-full max-w-2xl flex-col items-center justify-center text-center text-slate-500">
+            <RiEmotionSadLine className="size-11" />
+            <span>Nenhum vídeo encontrado. I want my MTV...</span>
+          </div>
+        )}
       </div>
     </section>
   )
