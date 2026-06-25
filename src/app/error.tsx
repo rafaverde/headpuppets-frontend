@@ -8,11 +8,11 @@ import { Button } from '@/components/ui/button'
 
 export default function ErrorPage() {
   return (
-    <section>
+    <section className="flex min-h-screen flex-col items-center justify-center bg-slate-950 p-6 text-center">
       <Image
         src="/global-error.svg"
-        width={300}
-        height={300}
+        width={250}
+        height={250}
         alt="Head Puppets Logo com um letreiro de erro."
       />
 
@@ -25,7 +25,7 @@ export default function ErrorPage() {
       </p>
 
       <Link href="/">
-        <Button size="xl" className="rounded-full">
+        <Button size="xl" className="mt-8 rounded-full">
           <RiArrowLeftLine />
           Voltar ao início
         </Button>

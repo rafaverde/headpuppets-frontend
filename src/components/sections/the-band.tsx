@@ -2,7 +2,46 @@ import Image from 'next/image'
 
 import MemberCard from '../member-card'
 
+export type BandMember = {
+  name: string
+  photo: string
+  title: string
+}
+
 export default function TheBandSection() {
+  const theBand: BandMember[] = [
+    {
+      name: 'Anna Sinthia',
+      photo: 'anna-sinthia.webp',
+      title: 'Lead Vocal',
+    },
+    {
+      name: 'Daniel Ferreira',
+      photo: 'daniel-ferreira.webp',
+      title: 'Bateria',
+    },
+    {
+      name: 'Enrique Robledo',
+      photo: 'enrique-robledo.webp',
+      title: 'Lead Vocal & Harmonica',
+    },
+    {
+      name: 'Felipe Afonso',
+      photo: 'felipe-afonso.webp',
+      title: 'Guitarra',
+    },
+    {
+      name: 'Lucas Souto',
+      photo: 'lucas-souto.webp',
+      title: 'Guitarra',
+    },
+    {
+      name: 'Rafael Valverde',
+      photo: 'rafael-valverde.webp',
+      title: 'Contra-Baixo & Vocal',
+    },
+  ]
+
   return (
     <section id="the-band" className="scroll-m-14 bg-slate-950">
       <div className="container mx-auto grid grid-cols-1 gap-14 px-4 py-14 text-foreground md:grid-cols-2">
@@ -37,9 +76,8 @@ export default function TheBandSection() {
         </div>
 
         <div className="col-span-1 grid grid-cols-1 items-center justify-between gap-8 md:col-span-2 md:grid-cols-3 lg:grid-cols-6">
-          {Array.from({ length: 6 }).map((_, index) => (
-            // biome-ignore lint/suspicious/noArrayIndexKey: <Temporary>
-            <MemberCard key={index} />
+          {theBand.map(member => (
+            <MemberCard key={member.name} member={member} />
           ))}
         </div>
       </div>
