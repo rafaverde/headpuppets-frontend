@@ -36,7 +36,7 @@ export default async function Header() {
 
         <nav className="hidden items-center gap-6 text-foreground lg:flex">
           <Link href="#videos">Vídeos</Link>
-          <Link href={`https://wa.me/${whatsapp}`} target="_blank">
+          <Link href={`https://wa.me/+55${whatsapp}`} target="_blank">
             <Button size="xl" className="rounded-full">
               <RiWhatsappLine size={24} /> Eu quero é rock
             </Button>
@@ -78,7 +78,7 @@ export default async function Header() {
                   <Link href="#videos">Vídeos</Link>
                 </SheetClose>
                 <SheetClose asChild>
-                  <Link href={`https://wa.me/${whatsapp}`} target="_blank">
+                  <Link href={`https://wa.me/+55${whatsapp}`} target="_blank">
                     <Button size="xl" className="rounded-full text-xl">
                       <RiWhatsappLine size={24} /> Eu quero é rock
                     </Button>

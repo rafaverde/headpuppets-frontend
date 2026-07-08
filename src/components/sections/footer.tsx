@@ -27,7 +27,7 @@ export default async function Footer() {
           <Link href={youtubeUrl} target="_blank">
             <RiYoutubeLine className="size-11 cursor-pointer text-accent hover:text-primary" />
           </Link>
-          <Link href={`https://wa.me/${whatsapp}`} target="_blank">
+          <Link href={`https://wa.me/+55${whatsapp}`} target="_blank">
             <RiWhatsappLine className="size-11 cursor-pointer text-accent hover:text-primary" />
           </Link>
         </div>
