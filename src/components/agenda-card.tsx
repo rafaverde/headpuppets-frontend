@@ -1,4 +1,4 @@
-import { RiCalendar2Line } from '@remixicon/react'
+import { RiCalendar2Line, RiMapPin2Line, RiTimeLine } from '@remixicon/react'
 
 import type { Show } from '@/api/types/show.types'
 import { Card, CardContent, CardHeader } from './ui/card'
@@ -17,13 +17,15 @@ export default function AgendaCard({ show }: AgendaCardProps) {
         </h3>
       </CardHeader>
       <CardContent className="flex flex-col gap-2 p-0">
-        <span className="text-xl">
-          Local:{' '}
+        <span className="flex items-center gap-1 text-xl">
+          <RiMapPin2Line className="text-violet-500" /> Local:{' '}
           <a href={show.locationUrl} className="underline" target="_blank">
             {show.venue}
           </a>
         </span>
-        <span className="text-xl">Horário: {show.time}</span>
+        <span className="flex items-center gap-1 text-xl">
+          <RiTimeLine className="text-violet-500" /> Horário: {show.time}
+        </span>
         <span className="font-semibold text-slate-500 text-xs">
           {show.isOpenEvent ? 'Evento Aberto' : 'Evento Particular'}
         </span>
