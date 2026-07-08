@@ -1,4 +1,7 @@
 import { YouTubeEmbed } from '@next/third-parties/google'
+import { RiEmotionSadLine } from '@remixicon/react'
+
+import { VideoService } from '@/api/services/video.service'
 
 function getYouTubeId(url: string) {
   const match = url.match(
@@ -7,19 +10,8 @@ function getYouTubeId(url: string) {
   return match ? match[1] : null
 }
 
-export default function VideosSection() {
-  const videosFromStrapi = [
-    {
-      id: 1,
-      title: 'Cover Led Zeppelin',
-      youtubeUrl: 'https://youtu.be/hu8HAy5vZh0?si=k4nyS5xkSWYJkom8',
-    },
-    {
-      id: 2,
-      title: 'Cover AC/DC',
-      youtubeUrl: 'https://youtu.be/hu8HAy5vZh0?si=k4nyS5xkSWYJkom8',
-    },
-  ]
+export default async function VideosSection() {
+  const videos = await VideoService.getAllVideos()
 
   return (
     <section id="videos" className="scroll-m-14 bg-slate-950">
@@ -30,28 +22,35 @@ export default function VideosSection() {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
-          {videosFromStrapi.map(video => {
-            const videoId = getYouTubeId(video.youtubeUrl)
+        {videos.length > 0 ? (
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
+            {videos.map(video => {
+              const videoId = getYouTubeId(video.youtubeUrl)
 
-            if (!videoId) return null
+              if (!videoId) return null
 
-            return (
-              <div
-                key={video.id}
-                className="overflow-hidden rounded-xl border border-slate-900"
-              >
-                <YouTubeEmbed videoid={videoId} params="rel=0" />
+              return (
+                <div
+                  key={video.id}
+                  className="overflow-hidden rounded-xl border border-slate-900"
+                >
+                  <YouTubeEmbed videoid={videoId} params="rel=0" />
 
-                <div className="bg-card p-4">
-                  <h3 className="font-bold text-card-foreground">
-                    {video.title}
-                  </h3>
+                  <div className="bg-card p-4">
+                    <h3 className="font-bold text-card-foreground">
+                      {video.title}
+                    </h3>
+                  </div>
                 </div>
-              </div>
-            )
-          })}
-        </div>
+              )
+            })}
+          </div>
+        ) : (
+          <div className="mx-auto flex w-full max-w-2xl flex-col items-center justify-center text-center text-slate-500">
+            <RiEmotionSadLine className="size-11" />
+            <span>Nenhum vídeo encontrado. I want my MTV...</span>
+          </div>
+        )}
       </div>
     </section>
   )

@@ -2,6 +2,7 @@ import { RiCloseLine, RiMenu4Line, RiWhatsappLine } from '@remixicon/react'
 import Image from 'next/image'
 import Link from 'next/link'
 
+import { GlobalSettingsService } from '@/api/services/global-settings.service'
 import { Button } from './ui/button'
 import {
   Sheet,
@@ -11,7 +12,9 @@ import {
   SheetTrigger,
 } from './ui/sheet'
 
-export default function Header() {
+export default async function Header() {
+  const { whatsapp } = await GlobalSettingsService.getGlobalSettings()
+
   return (
     <header className="fixed z-10 w-full px-4 py-5">
       <div className="container mx-auto flex items-center justify-between rounded-full bg-slate-900/85 px-4 py-3 shadow-md backdrop-blur-[3px]">
@@ -33,9 +36,11 @@ export default function Header() {
 
         <nav className="hidden items-center gap-6 text-foreground lg:flex">
           <Link href="#videos">Vídeos</Link>
-          <Button size="xl" className="rounded-full">
-            <RiWhatsappLine size={24} /> Eu quero é rock
-          </Button>
+          <Link href={`https://wa.me/+55${whatsapp}`} target="_blank">
+            <Button size="xl" className="rounded-full">
+              <RiWhatsappLine size={24} /> Eu quero é rock
+            </Button>
+          </Link>
         </nav>
 
         {/* Mobile Menu */}
@@ -49,17 +54,17 @@ export default function Header() {
 
             <SheetContent
               side="top"
-              className="min-h-dvh w-full bg-slate-900/85"
+              className="min-h-dvh w-full gap-0 bg-slate-900/85"
               showCloseButton={false}
             >
-              <SheetHeader className="items-end">
+              <SheetHeader className="items-end pb-0">
                 <SheetClose asChild>
                   <Button size="icon-lg" className="rounded-full">
                     <RiCloseLine />
                   </Button>
                 </SheetClose>
               </SheetHeader>
-              <nav className="flex h-dvh flex-col items-center justify-center gap-8 text-2xl text-background">
+              <nav className="flex h-dvh flex-col items-center justify-center gap-8 text-2xl text-foreground">
                 <SheetClose asChild>
                   <Link href="#the-band">A Banda</Link>
                 </SheetClose>
@@ -73,9 +78,11 @@ export default function Header() {
                   <Link href="#videos">Vídeos</Link>
                 </SheetClose>
                 <SheetClose asChild>
-                  <Button size="xl" className="rounded-full text-xl">
-                    <RiWhatsappLine size={24} /> Eu quero é rock
-                  </Button>
+                  <Link href={`https://wa.me/+55${whatsapp}`} target="_blank">
+                    <Button size="xl" className="rounded-full text-xl">
+                      <RiWhatsappLine size={24} /> Eu quero é rock
+                    </Button>
+                  </Link>
                 </SheetClose>
               </nav>
             </SheetContent>
