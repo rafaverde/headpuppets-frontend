@@ -16,7 +16,7 @@ export default async function Footer() {
   return (
     <footer id="footer" className="bg-slate-950 brightness-75">
       <div className="container mx-auto flex flex-col gap-8 px-4 py-14 md:flex-row">
-        <h2 className="font-heading text-4xl text-slate-400 uppercase">
+        <h2 className="wrap-anywhere font-heading text-slate-400 text-xl uppercase md:text-3xl lg:text-4xl">
           @banda_headpuppets
         </h2>
 
