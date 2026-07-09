@@ -4,7 +4,7 @@ export default function Hero() {
       id="top"
       className="justify-end-safe relative flex min-h-dvh flex-col items-center overflow-hidden px-4 pb-20"
     >
-      <div className="absolute inset-0 z-0 bg-[url('/bg-banda-grunge-halloween.webp')] bg-center bg-cover bg-fixed bg-no-repeat">
+      <div className="absolute inset-0 z-0 bg-[url('/bg-banda-grunge-halloween-mobile.webp')] bg-center bg-cover bg-fixed bg-no-repeat md:bg-[url('/bg-banda-grunge-halloween.webp')]">
         <div className="absolute inset-0 bg-linear-to-b from-slate-950/20 to-slate-950/0"></div>
       </div>
 
