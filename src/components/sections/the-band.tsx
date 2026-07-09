@@ -54,8 +54,8 @@ export default function TheBandSection() {
           </h3>
           <p>
             <strong>
-              Somos uma banda de Natal/RN que leva o peso do Heavy Metal
-              Clássico para o palco.
+              Somos uma banda de Natal/RN que leva o peso dos grandes clássicos
+              para o palco.
             </strong>{' '}
             Músicos que se entregam de corpo e alma para entregar shows cheios
             de atitude e qualidade.
