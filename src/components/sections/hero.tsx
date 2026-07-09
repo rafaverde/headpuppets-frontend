@@ -9,7 +9,7 @@ export default function Hero() {
       </div>
 
       <div className="relative flex flex-col items-center text-center text-foreground">
-        <h2 className="max-w-2xl font-heading text-2xl uppercase leading-relaxed lg:text-3xl">
+        <h2 className="max-w-2xl font-heading text-xl uppercase leading-relaxed md:text-2xl lg:text-3xl">
           Classic Rock e Heavy Metal em alto volume no RN.
         </h2>
         <p className="text-lg">

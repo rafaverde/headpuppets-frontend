@@ -2,9 +2,12 @@ import { RiCalendar2Line, RiWhatsappLine } from '@remixicon/react'
 import Image from 'next/image'
 import Link from 'next/link'
 
+import { GlobalSettingsService } from '@/api/services/global-settings.service'
 import { Button } from '../ui/button'
 
-export default function WePlaySection() {
+export default async function WePlaySection() {
+  const { whatsapp } = await GlobalSettingsService.getGlobalSettings()
+
   return (
     <section id="setlist" className="scroll-m-14 bg-violet-950">
       <div className="container mx-auto grid grid-cols-1 items-center gap-14 px-4 py-14 md:grid-cols-2">
@@ -23,11 +26,13 @@ export default function WePlaySection() {
             rock'n roll.
           </p>
 
-          <div className="mt-6 flex items-center gap-6">
-            <Button size="xl" className="rounded-full">
-              <RiWhatsappLine className="size-6" />
-              Quero contratar
-            </Button>
+          <div className="mt-6 flex flex-col gap-6 md:flex-row lg:items-center">
+            <Link href={`https://wa.me/+55${whatsapp}`} target="_blank">
+              <Button size="xl" className="rounded-full">
+                <RiWhatsappLine className="size-6" />
+                Quero contratar
+              </Button>
+            </Link>
 
             <Link href="#agenda">
               <Button size="xl" className="rounded-full">
