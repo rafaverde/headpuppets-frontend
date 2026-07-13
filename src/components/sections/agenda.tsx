@@ -43,7 +43,7 @@ export default function AgendaSection({ agenda }: AgendaSectionProps) {
         ) : (
           <div className="mx-auto flex w-full max-w-2xl flex-col items-center justify-center text-center text-slate-500">
             <RiEmotionSadLine className="size-11" />
-            <span>Nenhum show encontrado. Ozzy nos ajude...</span>
+            <span>Nenhum show agendado ainda. Que Ozzy nos ajude...</span>
           </div>
         )}
       </div>
