@@ -5,7 +5,7 @@ import { VideoService } from '@/api/services/video.service'
 
 function getYouTubeId(url: string) {
   const match = url.match(
-    /(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v=|watch\?.+&v=))([^&?]+)/
+    /(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|shorts\/|watch\?v=|watch\?.+&v=))([^&?]+)/
   )
   return match ? match[1] : null
 }
