@@ -9,7 +9,16 @@ export const ShowService = {
     const response = await ShowRepository.getShows()
     const rawShows = response.data
 
-    const formattedShows = rawShows.map(show => {
+    const today = new Date().toISOString().split('T')[0]
+
+    const futureShows = rawShows.filter(show => {
+      const [year, day, month] = show.date.split('-')
+      const normalizedShowData = `${year}-${month}-${day}`
+
+      return normalizedShowData >= today
+    })
+
+    const formattedShows = futureShows.map(show => {
       // biome-ignore lint/correctness/noUnusedVariables: <Non used>
       const [year, month, day] = show.date.split('-')
       const formattedDate = `${day}/${month}`
