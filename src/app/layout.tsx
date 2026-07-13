@@ -34,7 +34,7 @@ export default function RootLayout({
       lang="pt-BR"
       className={`${googlSansFlex.variable} ${boldonse.variable} dark h-full scroll-smooth antialiased`}
     >
-      <body className="flex min-h-full flex-col">
+      <body className="flex min-h-full flex-col bg-slate-950">
         <main>
           <Header />
           {children}
