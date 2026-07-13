@@ -8,6 +8,10 @@ export const VideoRepository = {
    * a agenda ordenada do show mais próximo para o mais distante.
    */
   async getVideos(): Promise<VideoResponse> {
-    return fetchAPI<VideoResponse>('/videos?sort=order:asc')
+    return fetchAPI<VideoResponse>('/videos?sort=order:asc', {
+      next: {
+        revalidate: 3600,
+      },
+    })
   },
 }

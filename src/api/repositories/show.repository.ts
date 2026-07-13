@@ -8,6 +8,10 @@ export const ShowRepository = {
    * a agenda ordenada do show mais próximo para o mais distante.
    */
   async getShows(): Promise<ShowResponse> {
-    return fetchAPI<ShowResponse>('/shows?sort=date:asc')
+    return fetchAPI<ShowResponse>('/shows?sort=date:asc', {
+      next: {
+        revalidate: 3600,
+      },
+    })
   },
 }
