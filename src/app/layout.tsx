@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Boldonse, Google_Sans_Flex } from 'next/font/google'
 import './globals.css'
 
+import CookieConsent from '@/components/cookie-consent'
 import Header from '@/components/header'
 import Footer from '@/components/sections/footer'
 
@@ -39,6 +40,7 @@ export default function RootLayout({
           <Header />
           {children}
           <Footer />
+          <CookieConsent />
         </main>
       </body>
     </html>
