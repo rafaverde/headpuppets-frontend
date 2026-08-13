@@ -17,14 +17,15 @@ export default function AgendaCard({ show }: AgendaCardProps) {
         </h3>
       </CardHeader>
       <CardContent className="flex flex-col gap-2 p-0">
-        <span className="flex items-center gap-1 text-xl">
-          <RiMapPin2Line className="text-violet-500" /> Local:{' '}
+        <span className="flex items-start gap-1 text-xl">
+          <RiMapPin2Line className="shrink-0 text-violet-500" /> Local:{' '}
           <a href={show.locationUrl} className="underline" target="_blank">
             {show.venue}
           </a>
         </span>
         <span className="flex items-center gap-1 text-xl">
-          <RiTimeLine className="text-violet-500" /> Horário: {show.time}
+          <RiTimeLine className="shrink-0 text-violet-500" /> Horário:{' '}
+          {show.time}
         </span>
         <span className="font-semibold text-slate-500 text-xs">
           {show.isOpenEvent ? 'Evento Aberto' : 'Evento Particular'}
