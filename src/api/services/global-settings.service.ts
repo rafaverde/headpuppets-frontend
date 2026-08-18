@@ -5,7 +5,13 @@ export const GlobalSettingsService = {
   async getGlobalSettings(): Promise<GlobalSettings> {
     const response = await GlobalSettingsRepository.getGlobalSettings()
 
-    const globalSettings = response.data
+    const settings = response.globalSettings.globalSettingsFields
+
+    const globalSettings = {
+      whatsapp: settings.whatsapp,
+      instagramUrl: settings.instagramurl,
+      youtubeUrl: settings.youtubeurl,
+    }
 
     return globalSettings
   },
