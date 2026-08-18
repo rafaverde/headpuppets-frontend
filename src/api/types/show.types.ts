@@ -12,13 +12,15 @@ export interface Show {
 }
 
 export interface ShowResponse {
-  data: Show[]
-  meta: {
-    pagination: {
-      page: number
-      pageSize: number
-      pageCount: number
-      total: number
-    }
+  shows: {
+    nodes: Array<{
+      id: string
+      databaseId: number
+      showsFg: {
+        date: string
+        isopenevent: boolean
+        locationurl: string
+      }
+    }>
   }
 }
