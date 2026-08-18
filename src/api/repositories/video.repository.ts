@@ -1,17 +1,9 @@
-import { fetchAPI } from '../http-client'
+import { fetchGraphQL } from '../http-client'
+import { GET_VIDEOS_QUERY } from '../queries/video.query'
 import type { VideoResponse } from '../types/video.types'
 
 export const VideoRepository = {
-  /**
-   * Busca a lista de shows no Strapi.
-   * Usamos o parâmetro ?sort=date:asc para que o banco já devolva
-   * a agenda ordenada do show mais próximo para o mais distante.
-   */
   async getVideos(): Promise<VideoResponse> {
-    return fetchAPI<VideoResponse>('/videos?sort=order:asc', {
-      next: {
-        revalidate: 3600,
-      },
-    })
+    return fetchGraphQL<VideoResponse>(GET_VIDEOS_QUERY)
   },
 }

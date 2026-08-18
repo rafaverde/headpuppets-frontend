@@ -4,19 +4,18 @@ export interface Video {
   title: string
   youtubeUrl: string
   order: number
-  createdAt: string
-  updatedAt: string
-  publishedAt: string
 }
 
 export interface VideoResponse {
-  data: Video[]
-  meta: {
-    pagination: {
-      page: number
-      pageSize: number
-      pageCount: number
-      total: number
-    }
+  videos: {
+    nodes: Array<{
+      id: string
+      databaseId: number
+      title: string
+      videosFg: {
+        youtubeurl: string
+        order: string
+      }
+    }>
   }
 }
