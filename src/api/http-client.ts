@@ -1,5 +1,5 @@
 const GRAPHQL_URL =
-  process.env.WORDPRESS_GRAPHQL_URL || 'https://admin.headpuppets:8890/graphql'
+  process.env.WORDPRESS_GRAPHQL_URL || 'http://admin.headpuppets:8888/graphql'
 
 interface GraphQLResponse<T> {
   data?: T
