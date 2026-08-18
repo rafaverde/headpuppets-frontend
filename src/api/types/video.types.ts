@@ -14,7 +14,7 @@ export interface VideoResponse {
       title: string
       videosFg: {
         youtubeurl: string
-        order: string
+        order: number
       }
     }>
   }

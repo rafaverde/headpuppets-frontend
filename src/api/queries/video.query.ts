@@ -1,6 +1,6 @@
 export const GET_VIDEOS_QUERY = `
   query getVideos {
-    video(first: 100) {
+    videos: video(first: 100) {
       nodes {
         id
         databaseId
