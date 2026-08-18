@@ -12,6 +12,7 @@ export interface ShowResponse {
     nodes: Array<{
       id: string
       databaseId: number
+      title: string
       showsFg: {
         date: string
         isopenevent: boolean
