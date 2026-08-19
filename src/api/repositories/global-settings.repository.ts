@@ -1,12 +1,9 @@
-import { fetchAPI } from '../http-client'
+import { fetchGraphQL } from '../http-client'
+import { GET_GLOBAL_SETTINGS_QUERY } from '../queries/global-settings.query'
 import type { GlobalSettingsResponse } from '../types/global-settings.types'
 
 export const GlobalSettingsRepository = {
   async getGlobalSettings(): Promise<GlobalSettingsResponse> {
-    return fetchAPI<GlobalSettingsResponse>('/global-setting', {
-      next: {
-        revalidate: 3600,
-      },
-    })
+    return fetchGraphQL<GlobalSettingsResponse>(GET_GLOBAL_SETTINGS_QUERY)
   },
 }

@@ -1,35 +1,48 @@
-const API_URL = process.env.NEXT_PUBLIC_STRAPI_URL || 'http://127.0.0.1:1337'
+const GRAPHQL_URL =
+  process.env.WORDPRESS_GRAPHQL_URL || 'http://admin.headpuppets:8888/graphql'
 
-/**
- * Função genérica para buscar dados do Strapi.
- * O <T> permite que o TypeScript injete as interfaces que acabamos de criar.
- */
-export async function fetchAPI<T>(
-  endpoint: string,
+interface GraphQLResponse<T> {
+  data?: T
+  errors?: Array<{
+    message: string
+    path?: Array<string | number>
+  }>
+}
+
+export async function fetchGraphQL<T>(
+  query: string,
+  variables: Record<string, unknown> = {},
   options: RequestInit = {}
 ): Promise<T> {
-  // Configuração padrão para todas as requisições
-  const defaultOptions: RequestInit = {
+  const response = await fetch(GRAPHQL_URL, {
+    method: 'POST',
     headers: {
       'Content-Type': 'application/json',
+      ...options.headers,
     },
-    ...options, // Permite sobrescrever opções (como cache) depois
+    body: JSON.stringify({
+      query,
+      variables,
+    }),
+    next: {
+      revalidate: 3600,
+    },
+    ...options,
+  })
+
+  if (!response.ok) {
+    throw new Error(`Erro HTTP ao consultar o Wordpress: ${response.status}`)
   }
 
-  try {
-    const response = await fetch(`${API_URL}/api${endpoint}`, defaultOptions)
+  const result = (await response.json()) as GraphQLResponse<T>
 
-    if (!response.ok) {
-      console.log(`[API Error]: ${response.status} - ${response.statusText}`)
-      throw new Error(`Falha ao buscar dados no Strapi na rota: ${endpoint}`)
-    }
-
-    // Retorna dados tipados
-    const data = await response.json()
-    return data as T
-  } catch (err) {
-    // Trata erros desconhecidos
-    console.error('[Fetch exception]:', err)
-    throw err
+  if (result.errors?.length) {
+    throw new Error(result.errors.map(error => error.message).join(', '))
   }
+
+  if (!result.data) {
+    throw new Error('O WordPress não retornou dados')
+  }
+
+  return result.data
 }
