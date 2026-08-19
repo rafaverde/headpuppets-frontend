@@ -3,6 +3,7 @@ export interface Show {
   documentId: string
   venue: string
   date: string
+  time: string
   isOpenEvent: boolean
   locationUrl: string
 }
