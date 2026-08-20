@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Boldonse, Google_Sans_Flex } from 'next/font/google'
 import './globals.css'
 
+import { GlobalSettingsService } from '@/api/services/global-settings.service'
 import CookieConsent from '@/components/cookie-consent'
 import Header from '@/components/header'
 import Footer from '@/components/sections/footer'
@@ -25,11 +26,13 @@ export const metadata: Metadata = {
     'Banda de rock clássico e heavy metal em Natal, Rio Grande do Norte',
 }
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode
 }>) {
+  const { whatsapp } = await GlobalSettingsService.getGlobalSettings()
+
   return (
     <html
       lang="pt-BR"
@@ -37,7 +40,7 @@ export default function RootLayout({
     >
       <body className="flex min-h-full flex-col bg-slate-950">
         <main>
-          <Header />
+          <Header whatsapp={whatsapp} />
           {children}
           <Footer />
           <CookieConsent />

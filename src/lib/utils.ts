@@ -13,3 +13,19 @@ export function parseWordPressDateTime(value: string): Date {
 
   return new Date(year, month - 1, day, hour, minute, second)
 }
+
+// Utilitário scroll para anchor link
+export function scrollToSection(id: string) {
+  document.getElementById(id.replace(/^#/, ''))?.scrollIntoView({
+    behavior: 'smooth',
+    block: 'start',
+  })
+}
+
+// Utilitário scroll to top
+export function scrollToTop() {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth',
+  })
+}
