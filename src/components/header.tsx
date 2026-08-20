@@ -1,8 +1,11 @@
+'use client'
+
 import { RiCloseLine, RiMenu4Line, RiWhatsappLine } from '@remixicon/react'
 import Image from 'next/image'
 import Link from 'next/link'
+import { useEffect, useState } from 'react'
 
-import { GlobalSettingsService } from '@/api/services/global-settings.service'
+import { cn } from '@/lib/utils'
 import { SmoothScrollLink } from './smooth-scroll-link'
 import { Button } from './ui/button'
 import {
@@ -13,11 +16,31 @@ import {
   SheetTrigger,
 } from './ui/sheet'
 
-export default async function Header() {
-  const { whatsapp } = await GlobalSettingsService.getGlobalSettings()
+interface HeaderProps {
+  whatsapp: string
+}
+
+export default function Header({ whatsapp }: HeaderProps) {
+  const [isScrolled, setIsScrolled] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setIsScrolled(true)
+      } else {
+        setIsScrolled(false)
+      }
+    }
+
+    window.addEventListener('scroll', handleScroll)
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [])
 
   return (
-    <header className="fixed z-10 w-full px-4 py-5">
+    <header className="fixed z-90 w-full px-4 py-5">
       <div className="container mx-auto flex items-center justify-between rounded-full bg-slate-900/85 px-4 py-3 shadow-md backdrop-blur-[3px]">
         <nav className="hidden items-center gap-6 pl-4 text-foreground lg:flex">
           <SmoothScrollLink href="#the-band">A Banda</SmoothScrollLink>
@@ -25,20 +48,37 @@ export default async function Header() {
           <SmoothScrollLink href="#agenda">Agenda</SmoothScrollLink>
         </nav>
 
-        <SmoothScrollLink href="#top">
+        <SmoothScrollLink
+          href="#top"
+          className="flex items-center justify-center"
+        >
+          <Image
+            src="/head-puppets-logo-icon.svg"
+            width={30}
+            height={48}
+            alt="Logotipo Banda Head Puppets"
+            className={cn(
+              'w-auto pl-6 transition-all duration-500 lg:pl-0',
+              isScrolled ? 'h-12' : 'h-0'
+            )}
+          />
+
           <Image
             src="/head-puppets-logo-simples.svg"
             width={136}
             height={48}
             alt="Logotipo Banda Head Puppets"
-            className="pl-6 lg:pl-0"
+            className={cn(
+              'w-auto pl-6 transition-all duration-500 lg:pl-0',
+              !isScrolled ? 'h-12' : 'h-0'
+            )}
           />
         </SmoothScrollLink>
 
         <nav className="hidden items-center gap-6 text-foreground lg:flex">
           <SmoothScrollLink href="#videos">Vídeos</SmoothScrollLink>
           <Link href={`https://wa.me/+55${whatsapp}`} target="_blank">
-            <Button size="xl" className="rounded-full">
+            <Button size={'xl'} className="rounded-full">
               <RiWhatsappLine size={24} /> Eu quero é rock
             </Button>
           </Link>
