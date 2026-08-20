@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 import { GlobalSettingsService } from '@/api/services/global-settings.service'
+import { SmoothScrollLink } from './smooth-scroll-link'
 import { Button } from './ui/button'
 import {
   Sheet,
@@ -19,12 +20,12 @@ export default async function Header() {
     <header className="fixed z-10 w-full px-4 py-5">
       <div className="container mx-auto flex items-center justify-between rounded-full bg-slate-900/85 px-4 py-3 shadow-md backdrop-blur-[3px]">
         <nav className="hidden items-center gap-6 pl-4 text-foreground lg:flex">
-          <Link href="#the-band">A Banda</Link>
-          <Link href="#setlist">Repertório</Link>
-          <Link href="#agenda">Agenda</Link>
+          <SmoothScrollLink href="#the-band">A Banda</SmoothScrollLink>
+          <SmoothScrollLink href="#setlist">Repertório</SmoothScrollLink>
+          <SmoothScrollLink href="#agenda">Agenda</SmoothScrollLink>
         </nav>
 
-        <Link href="#top">
+        <SmoothScrollLink href="#top">
           <Image
             src="/head-puppets-logo-simples.svg"
             width={136}
@@ -32,10 +33,10 @@ export default async function Header() {
             alt="Logotipo Banda Head Puppets"
             className="pl-6 lg:pl-0"
           />
-        </Link>
+        </SmoothScrollLink>
 
         <nav className="hidden items-center gap-6 text-foreground lg:flex">
-          <Link href="#videos">Vídeos</Link>
+          <SmoothScrollLink href="#videos">Vídeos</SmoothScrollLink>
           <Link href={`https://wa.me/+55${whatsapp}`} target="_blank">
             <Button size="xl" className="rounded-full">
               <RiWhatsappLine size={24} /> Eu quero é rock
