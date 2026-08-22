@@ -2,11 +2,6 @@ import type { Metadata } from 'next'
 import { Boldonse, Google_Sans_Flex } from 'next/font/google'
 import './globals.css'
 
-import { GlobalSettingsService } from '@/api/services/global-settings.service'
-import CookieConsent from '@/components/cookie-consent'
-import Header from '@/components/header'
-import Footer from '@/components/sections/footer'
-
 const googlSansFlex = Google_Sans_Flex({
   variable: '--font-sans',
   subsets: ['latin'],
@@ -44,26 +39,17 @@ export const metadata: Metadata = {
   },
 }
 
-export default async function RootLayout({
+export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode
 }>) {
-  const { whatsapp } = await GlobalSettingsService.getGlobalSettings()
-
   return (
     <html
       lang="pt-BR"
       className={`${googlSansFlex.variable} ${boldonse.variable} dark h-full scroll-smooth antialiased`}
     >
-      <body className="flex min-h-full flex-col bg-slate-950">
-        <main>
-          <Header whatsapp={whatsapp} />
-          {children}
-          <Footer />
-          <CookieConsent />
-        </main>
-      </body>
+      <body className="flex min-h-full flex-col bg-slate-950">{children}</body>
     </html>
   )
 }

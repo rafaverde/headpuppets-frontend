@@ -1,0 +1,242 @@
+{
+  "id": "enter-sandman",
+  "title": "ENTER SANDMAN",
+  "artist": "Metallica",
+  "key": "Em",
+  "singers": ["E"],
+  "setOrder": 33,
+  "lines": [
+    {
+      "t": "cue",
+      "x": "2x riff principal"
+    },
+    {
+      "t": "verse",
+      "x": "Say your prayers, little one, don't forget, my son"
+    },
+    {
+      "t": "verse",
+      "x": "To include everyone"
+    },
+    {
+      "t": "verse",
+      "x": "I tuck you in, warm within, keep you free from sin"
+    },
+    {
+      "t": "verse",
+      "x": "'Til the Sandman, he comes, ah"
+    },
+    {
+      "t": "chorus",
+      "x": "Sleep with one eye open"
+    },
+    {
+      "t": "chorus",
+      "x": "Gripping your pillow tight"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "chorus",
+      "x": "Exit light"
+    },
+    {
+      "t": "chorus",
+      "x": "Enter night"
+    },
+    {
+      "t": "chorus",
+      "x": "Take my hand"
+    },
+    {
+      "t": "chorus",
+      "x": "We're off to Never-Neverland"
+    },
+    {
+      "t": "cue",
+      "x": "2x riff"
+    },
+    {
+      "t": "verse",
+      "x": "Something's wrong, shut the light, heavy thoughts tonight"
+    },
+    {
+      "t": "verse",
+      "x": "And they aren't of Snow White"
+    },
+    {
+      "t": "verse",
+      "x": "Dreams of war, dreams of liars, dreams of dragons' fire"
+    },
+    {
+      "t": "verse",
+      "x": "And of things that will bite, yeah"
+    },
+    {
+      "t": "chorus",
+      "x": "Sleep with one eye open"
+    },
+    {
+      "t": "chorus",
+      "x": "Gripping your pillow tight"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "chorus",
+      "x": "Exit light"
+    },
+    {
+      "t": "chorus",
+      "x": "Enter night"
+    },
+    {
+      "t": "chorus",
+      "x": "Take my hand"
+    },
+    {
+      "t": "chorus",
+      "x": "We're off to Never-Neverland"
+    },
+    {
+      "t": "chorus",
+      "x": "hehe!"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "cue",
+      "x": "solo longo"
+    },
+    {
+      "t": "verse",
+      "x": "Now, I lay me down to sleep"
+    },
+    {
+      "t": "cue",
+      "x": "now, I lay me down to sleep"
+    },
+    {
+      "t": "verse",
+      "x": "Pray the Lord my soul to keep"
+    },
+    {
+      "t": "cue",
+      "x": "pray the Lord my soul to keep"
+    },
+    {
+      "t": "verse",
+      "x": "If I die before I wake"
+    },
+    {
+      "t": "cue",
+      "x": "if I die before I wake"
+    },
+    {
+      "t": "verse",
+      "x": "Pray the Lord my soul to take"
+    },
+    {
+      "t": "cue",
+      "x": "pray the Lord my soul to take"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "chorus",
+      "x": "Hush, little baby, don't say a word"
+    },
+    {
+      "t": "chorus",
+      "x": "And never mind that noise you heard"
+    },
+    {
+      "t": "chorus",
+      "x": "It's just the beasts under your bed"
+    },
+    {
+      "t": "chorus",
+      "x": "In your closet, in your head"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "chorus",
+      "x": "Exit light"
+    },
+    {
+      "t": "chorus",
+      "x": "Enter night"
+    },
+    {
+      "t": "chorus",
+      "x": "Grain of sand"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "chorus",
+      "x": "Exit light"
+    },
+    {
+      "t": "chorus",
+      "x": "Enter night"
+    },
+    {
+      "t": "chorus",
+      "x": "Take my hand"
+    },
+    {
+      "t": "chorus",
+      "x": "We're off to Never-Neverland"
+    },
+    {
+      "t": "chorus",
+      "x": "hahaha"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "chorus",
+      "x": "Oh"
+    },
+    {
+      "t": "chorus",
+      "x": "Yeah, yeah"
+    },
+    {
+      "t": "chorus",
+      "x": "Whoa, oh"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "chorus",
+      "x": "(We're off to Never-Neverland) take my hand"
+    },
+    {
+      "t": "chorus",
+      "x": "(We're off to Never-Neverland) take my hand"
+    },
+    {
+      "t": "chorus",
+      "x": "e assim vai descendo…"
+    }
+  ]
+}

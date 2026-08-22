@@ -1,0 +1,322 @@
+{
+  "id": "money-for-nothing",
+  "title": "MONEY FOR NOTHING",
+  "artist": "Dire Straits",
+  "key": "Gm",
+  "singers": ["E"],
+  "setOrder": 10,
+  "lines": [
+    {
+      "t": "cue",
+      "x": "2 riffs + bateria e 2 riffs após"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "verse",
+      "x": "Now look at them yo-yos, that's the way you do it"
+    },
+    {
+      "t": "verse",
+      "x": "You play the guitar on the MTV"
+    },
+    {
+      "t": "verse",
+      "x": "That ain't workin', that's the way you do it"
+    },
+    {
+      "t": "verse",
+      "x": "Money for nothin' and your chicks for free"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "verse",
+      "x": "Now that ain't workin', that's the way you do it"
+    },
+    {
+      "t": "verse",
+      "x": "Lemme tell ya, them guys ain't dumb"
+    },
+    {
+      "t": "verse",
+      "x": "Maybe get a blister on your little finger"
+    },
+    {
+      "t": "verse",
+      "x": "Maybe get a blister on your thumb"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "verse",
+      "x": "We got to install microwave ovens, custom kitchen deliveries"
+    },
+    {
+      "t": "verse",
+      "x": "We got to move these refrigerators, we got to move these color TVs"
+    },
+    {
+      "t": "cue",
+      "x": "redoblo de bateria"
+    },
+    {
+      "t": "verse",
+      "x": "See the little faggot with the earring and the make up"
+    },
+    {
+      "t": "verse",
+      "x": "Yeah, buddy, that's his own hair"
+    },
+    {
+      "t": "verse",
+      "x": "That little faggot got his own jet airplane"
+    },
+    {
+      "t": "verse",
+      "x": "That little faggot, he's a millionaire"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "verse",
+      "x": "We got to install microwave ovens, custom"
+    },
+    {
+      "t": "verse",
+      "x": "kitchen deliveries"
+    },
+    {
+      "t": "verse",
+      "x": "We got to move these refrigerators, we gotta move these color TVs"
+    },
+    {
+      "t": "cue",
+      "x": "(redoblo e 2 riffs (‘moova moova”)"
+    },
+    {
+      "t": "verse",
+      "x": "We got to install microwave ovens, custom kitchen deliveries"
+    },
+    {
+      "t": "verse",
+      "x": "We got to move these refrigerators, we got to move these color TVs"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "verse",
+      "x": "Looky here, look out"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "verse",
+      "x": "I shoulda learned to play the guitar"
+    },
+    {
+      "t": "verse",
+      "x": "I shoulda learned to play them drums"
+    },
+    {
+      "t": "verse",
+      "x": "Look at that mama, she got it stickin' in the camera man"
+    },
+    {
+      "t": "verse",
+      "x": "We could have some"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "verse",
+      "x": "And he's up there, what's that?"
+    },
+    {
+      "t": "verse",
+      "x": "Hawaiian noises?"
+    },
+    {
+      "t": "verse",
+      "x": "Bangin' on the bongos like a chimpanzee"
+    },
+    {
+      "t": "verse",
+      "x": "That ain't workin', that's the way you do it"
+    },
+    {
+      "t": "verse",
+      "x": "Get your money for nothin', get your chicks for free"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "verse",
+      "x": "We got to install microwave ovens, custom kitchen deliveries"
+    },
+    {
+      "t": "verse",
+      "x": "We got to move these refrigerators, we gotta move these color TVs"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "cue",
+      "x": "(2 riffs (auuuuu))"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "verse",
+      "x": "Listen here"
+    },
+    {
+      "t": "verse",
+      "x": "Now that ain't workin' that's the way you do it"
+    },
+    {
+      "t": "verse",
+      "x": "You play the guitar on the MTV"
+    },
+    {
+      "t": "verse",
+      "x": "That ain't workin', that's the way you do it"
+    },
+    {
+      "t": "verse",
+      "x": "Money for nothin' and your chicks for free"
+    },
+    {
+      "t": "verse",
+      "x": "Money for nothin', chicks for free"
+    },
+    {
+      "t": "verse",
+      "x": "Get your money for nothin' and your chicks for free"
+    },
+    {
+      "t": "verse",
+      "x": "Ooh, money for nothin', chicks for free"
+    },
+    {
+      "t": "verse",
+      "x": "Money for nothin', chicks for free (money, money, money)"
+    },
+    {
+      "t": "verse",
+      "x": "Money for nothin', chicks for free"
+    },
+    {
+      "t": "verse",
+      "x": "Get your money for nothin', get your chicks for free"
+    },
+    {
+      "t": "verse",
+      "x": "Get your money for nothin' and the chicks for free"
+    },
+    {
+      "t": "verse",
+      "x": "Get your money for nothin' and the chicks for free"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "chorus",
+      "x": "Look at that, look at that"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "verse",
+      "x": "Get your money for nothin' (I want my, I want my)"
+    },
+    {
+      "t": "verse",
+      "x": "Chicks for free (I want my MTV)"
+    },
+    {
+      "t": "verse",
+      "x": "Money for nothin', chicks for free (I want my, I want my, I want my MTV)"
+    },
+    {
+      "t": "verse",
+      "x": "Get your money for nothin' (I want my, I want my)"
+    },
+    {
+      "t": "verse",
+      "x": "And the chicks for free (I want my MTV)"
+    },
+    {
+      "t": "verse",
+      "x": "Get your money for nothin' (I want my, I want my)"
+    },
+    {
+      "t": "verse",
+      "x": "And the chicks for free (I want my MTV)"
+    },
+    {
+      "t": "verse",
+      "x": "Easy, easy money for nothin' (I want my, I want my)"
+    },
+    {
+      "t": "verse",
+      "x": "Easy, easy chicks for free (I want my MTV)"
+    },
+    {
+      "t": "verse",
+      "x": "Easy, easy money for nothin' (I want my, I want my)"
+    },
+    {
+      "t": "verse",
+      "x": "Chicks for free (I want my MTV)"
+    },
+    {
+      "t": "verse",
+      "x": "That ain't workin'"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "cue",
+      "x": "3 riffs e zappeio na guitarra"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "verse",
+      "x": "Money for nothing, chicks for free"
+    },
+    {
+      "t": "verse",
+      "x": "Money for nothing, chicks for free"
+    }
+  ]
+}

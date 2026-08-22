@@ -1,0 +1,158 @@
+{
+  "id": "even-flow",
+  "title": "EVEN FLOW",
+  "artist": "Pearl Jam",
+  "key": "G",
+  "singers": ["R"],
+  "setOrder": 21,
+  "lines": [
+    {
+      "t": "verse",
+      "x": "Freezin', rests his head"
+    },
+    {
+      "t": "verse",
+      "x": "On a pillow made of concrete, again"
+    },
+    {
+      "t": "verse",
+      "x": "Oh, feelin', maybe he'll see"
+    },
+    {
+      "t": "verse",
+      "x": "A little better set a days, ooh yeah"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "verse",
+      "x": "Oh, hand out, faces that he sees time again"
+    },
+    {
+      "t": "verse",
+      "x": "Ain't that familiar, oh, yeah"
+    },
+    {
+      "t": "verse",
+      "x": "Oh, dark grin, he can't help"
+    },
+    {
+      "t": "verse",
+      "x": "When he's happy, looks insane"
+    },
+    {
+      "t": "chorus",
+      "x": "Oh, yeah"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "chorus",
+      "x": "Even flow, thoughts arrive like butterflies"
+    },
+    {
+      "t": "chorus",
+      "x": "Oh, he don't know, so he chases them away"
+    },
+    {
+      "t": "chorus",
+      "x": "Someday yet, he'll begin his life again"
+    },
+    {
+      "t": "chorus",
+      "x": "Life again, life again"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "verse",
+      "x": "Kneelin', looking through the paper"
+    },
+    {
+      "t": "verse",
+      "x": "Though he doesn't know to read, oh, yeah"
+    },
+    {
+      "t": "verse",
+      "x": "Oh, prayin', now to something"
+    },
+    {
+      "t": "verse",
+      "x": "That has never showed him anything, oh"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "verse",
+      "x": "Oh, feelin', understands the weather"
+    },
+    {
+      "t": "verse",
+      "x": "Of the winter's on its way, oh"
+    },
+    {
+      "t": "verse",
+      "x": "Oh, ceilings, few and far between"
+    },
+    {
+      "t": "verse",
+      "x": "All the legal halls of shame, yeah"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "chorus",
+      "x": "Even flow, thoughts arrive like butterflies"
+    },
+    {
+      "t": "chorus",
+      "x": "Oh, he don't know, so he chases them away"
+    },
+    {
+      "t": "chorus",
+      "x": "Someday yet, he'll begin his life again"
+    },
+    {
+      "t": "chorus",
+      "x": "Whispering hands, gently lead him away"
+    },
+    {
+      "t": "chorus",
+      "x": "Him away, him away, yeah!"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "chorus",
+      "x": "Even flow, thoughts arrive like butterflies"
+    },
+    {
+      "t": "chorus",
+      "x": "Oh, he don't know, so he chases them away"
+    },
+    {
+      "t": "chorus",
+      "x": "Someday yet, he'll begin his life again, yeah"
+    },
+    {
+      "t": "chorus",
+      "x": "Oh, whispering hands, gently lead him away"
+    },
+    {
+      "t": "chorus",
+      "x": "Him away, him away, yeah!"
+    }
+  ]
+}

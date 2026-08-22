@@ -1,0 +1,749 @@
+<title>Head Puppets Stage</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap">
+<style>
+  :root{
+    --bg:#0A0A0F; --surface:#14141B; --surface2:#1C1C26; --line:#2A2A38;
+    --text:#F2F2F5; --muted:#8B8B9A;
+    --enrique:#63C4FF; --anna:#FF8FC4; --coro:#7CE8A4; --rafael:#C9A2FF; --cue:#FFB84D;
+    --action:#FF3D2E; --action-press:#D62F22;
+    --font-d:'Anton',system-ui,sans-serif; --font-b:'Archivo',system-ui,sans-serif;
+  }
+  *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+  html,body{margin:0;padding:0;height:100%}
+  body{background:var(--bg);color:var(--text);font-family:var(--font-b);overscroll-behavior:none}
+  button{font-family:var(--font-b);cursor:pointer;border:none}
+  input{font-family:var(--font-b)}
+  #app{height:100vh;height:100dvh;display:flex;flex-direction:column;overflow:hidden}
+
+  /* ---------- generic ---------- */
+  .screen{flex:1;display:flex;flex-direction:column;min-height:0}
+  .btn{background:var(--surface2);color:var(--text);border:1px solid var(--line);border-radius:10px;
+       padding:10px 16px;font-size:15px;font-weight:600;letter-spacing:.02em}
+  .btn:active{background:var(--line)}
+  .btn.primary{background:var(--action);border-color:var(--action);color:#fff}
+  .btn.primary:active{background:var(--action-press)}
+  .btn.ghost{background:transparent}
+  .badge-key{font-weight:800;font-size:13px;letter-spacing:.04em;color:var(--bg);
+             background:var(--text);border-radius:7px;padding:3px 8px;white-space:nowrap;font-variant-numeric:tabular-nums}
+  .dot{width:11px;height:11px;border-radius:50%;display:inline-block;flex:none}
+  .dot.E{background:var(--enrique)} .dot.A{background:var(--anna)} .dot.R{background:var(--rafael)}
+
+  /* ---------- top nav ---------- */
+  .nav{display:flex;align-items:center;gap:8px;padding:12px 16px 10px;border-bottom:1px solid var(--line);flex:none}
+  .brand{font-family:var(--font-d);font-size:24px;letter-spacing:.05em;line-height:1;margin-right:auto;
+         color:var(--text);text-transform:uppercase}
+  .brand small{display:block;font-family:var(--font-b);font-size:10px;font-weight:600;letter-spacing:.32em;color:var(--action);margin-top:3px}
+  .tab{background:transparent;color:var(--muted);font-size:14px;font-weight:700;letter-spacing:.06em;
+       padding:9px 14px;border-radius:9px;text-transform:uppercase}
+  .tab.on{color:var(--text);background:var(--surface2)}
+
+  /* ---------- icons / campos ---------- */
+  .ic{vertical-align:-2px}
+  .btn .ic{margin-right:2px}
+  .badge-key.kbtn{border:none;cursor:pointer;display:inline-flex;align-items:center;gap:5px;padding:6px 10px}
+  .badge-key.kbtn:active{background:var(--muted)}
+  .field{margin-bottom:16px}
+  .field label{display:block;font-size:11px;font-weight:800;letter-spacing:.14em;color:var(--muted);margin-bottom:7px}
+  .hint{color:var(--muted);font-size:12.5px;line-height:1.6;margin-bottom:8px}
+  select.setname{appearance:none;-webkit-appearance:none;background-image:linear-gradient(45deg,transparent 50%,var(--muted) 50%),linear-gradient(135deg,var(--muted) 50%,transparent 50%);background-position:calc(100% - 20px) 50%,calc(100% - 14px) 50%;background-size:6px 6px;background-repeat:no-repeat}
+  textarea.lyr-ta{min-height:320px;resize:vertical;line-height:1.6;font-size:15px}
+
+  /* ---------- home ---------- */
+  .searchwrap{padding:14px 16px 6px;flex:none;display:flex;gap:10px;align-items:stretch}
+  .searchwrap .search{flex:1;min-width:0}
+  .addnew{flex:none;font-size:11.5px;font-weight:800;line-height:1.25;letter-spacing:.04em;padding:6px 13px}
+  .search{width:100%;background:var(--surface);border:1px solid var(--line);border-radius:12px;
+          color:var(--text);font-size:18px;padding:13px 16px;outline:none}
+  .search::placeholder{color:var(--muted)}
+  .search:focus{border-color:var(--enrique)}
+  .chips{display:flex;gap:8px;padding:10px 16px;flex-wrap:wrap;flex:none}
+  .chip{background:var(--surface);border:1px solid var(--line);color:var(--muted);border-radius:99px;
+        padding:7px 14px;font-size:13px;font-weight:700;letter-spacing:.03em}
+  .chip.on{color:var(--bg);background:var(--text);border-color:var(--text)}
+  .songlist{flex:1;overflow-y:auto;padding:4px 10px 30px;min-height:0}
+  .songrow{display:flex;align-items:center;gap:12px;width:100%;text-align:left;background:transparent;
+           color:var(--text);padding:13px 10px;border-bottom:1px solid var(--line);border-radius:0}
+  .songrow:active{background:var(--surface)}
+  .songrow .num{font-variant-numeric:tabular-nums;color:var(--muted);font-weight:700;font-size:13px;width:26px;flex:none;text-align:right}
+  .songrow .tt{flex:1;min-width:0}
+  .songrow .t1{font-weight:800;font-size:17px;letter-spacing:.01em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .songrow .t2{color:var(--muted);font-size:12.5px;margin-top:2px}
+  .warn{color:var(--cue);font-size:11px;font-weight:700;letter-spacing:.05em}
+  .count{padding:8px 18px;color:var(--muted);font-size:12px;flex:none}
+
+  /* ---------- song view ---------- */
+  .songbar{display:flex;align-items:center;gap:10px;padding:10px 12px;border-bottom:1px solid var(--line);flex:none}
+  .songbar .back{font-size:22px;padding:6px 12px;background:transparent;color:var(--muted)}
+  .songbar .stitle{flex:1;min-width:0;font-family:var(--font-d);font-size:21px;letter-spacing:.03em;
+                   text-transform:uppercase;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;line-height:1.1}
+  .songbar .sartist{font-family:var(--font-b);display:block;font-size:11px;color:var(--muted);letter-spacing:.08em;font-weight:600;margin-top:2px;text-transform:none}
+  .navarrow{background:transparent;color:var(--muted);font-size:24px;padding:6px 10px}
+  .navarrow:disabled{opacity:.25}
+  .lyrics{flex:1;overflow-y:auto;min-height:0;padding:4vh 20px 70vh;scroll-behavior:auto}
+  .lwrap{max-width:820px;margin:0 auto}
+  .lline{font-weight:700;line-height:1.42;margin:0}
+  .lline.verse{}
+  .lline.chorus{color:var(--coro)}
+  .lline.cue{color:var(--cue);font-style:italic;font-weight:600;opacity:.95;margin:.35em 0}
+  .lline.cue::before{content:"▸ "}
+  .lgap{height:1.15em}
+  .legend{display:flex;gap:14px;flex-wrap:wrap;margin:0 0 3.5vh;padding:10px 12px;border:1px dashed var(--line);border-radius:10px}
+  .legend span{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--muted);font-weight:600}
+  .nolyrics{border:1px solid var(--cue);border-radius:12px;padding:18px;color:var(--cue);font-size:16px;line-height:1.5}
+
+  .controls{flex:none;display:flex;flex-wrap:wrap;align-items:center;gap:10px;padding:10px 14px calc(10px + env(safe-area-inset-bottom));
+            border-top:1px solid var(--line);background:var(--surface);transition:opacity .4s}
+  .controls.dim{opacity:.3}
+  .controls .btn.go{font-size:16px;font-weight:800;padding:13px 20px;letter-spacing:.05em;min-width:120px}
+  .speed{display:flex;align-items:center;gap:8px;flex:1;min-width:110px}
+  .speed input{flex:1;accent-color:var(--action);min-width:70px}
+  .speed label{font-size:11px;color:var(--muted);font-weight:700;letter-spacing:.05em;white-space:nowrap}
+  .fbtn{font-size:17px;font-weight:800;padding:11px 14px}
+
+  /* ---------- modals ---------- */
+  .modal-bg{position:fixed;inset:0;background:rgba(3,3,6,.82);display:flex;align-items:flex-end;justify-content:center;z-index:50}
+  .modal{background:var(--surface);border:1px solid var(--line);border-radius:18px 18px 0 0;width:100%;max-width:900px;
+         max-height:86dvh;overflow-y:auto;padding:20px 20px calc(24px + env(safe-area-inset-bottom))}
+  .modal h2{font-family:var(--font-d);font-size:22px;letter-spacing:.04em;margin:0 0 4px;text-transform:uppercase}
+  .modal .sub{color:var(--muted);font-size:13px;margin:0 0 16px}
+  .mclose{position:sticky;top:0;float:right;background:var(--surface2);border:1px solid var(--line);color:var(--text);
+          border-radius:99px;width:38px;height:38px;font-size:17px}
+  .chordgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:16px}
+  .chordcard{background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:12px}
+  .chordcard .cname{font-weight:800;font-size:17px;margin-bottom:2px}
+  .chordcard .cfun{color:var(--muted);font-size:11.5px;font-weight:700;letter-spacing:.06em;margin-bottom:8px}
+  .chordcard .cnotes{color:var(--muted);font-size:12.5px;margin-top:7px;font-variant-numeric:tabular-nums}
+  .harpcard{background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:16px;margin-bottom:14px}
+  .harpcard h3{margin:0 0 2px;font-size:16px;font-weight:800}
+  .harpcard .pos{color:var(--muted);font-size:12px;font-weight:700;letter-spacing:.05em;text-transform:uppercase}
+  .harpkey{font-family:var(--font-d);font-size:44px;line-height:1;margin:10px 0 4px;color:var(--cue)}
+  .harprow{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+  .hbx{background:var(--surface2);border:1px solid var(--line);border-radius:8px;padding:6px 10px;font-size:13px;font-weight:600}
+  .hbx b{color:var(--cue)}
+  .harpnote{color:var(--muted);font-size:12.5px;line-height:1.55;margin-top:10px}
+
+  /* ---------- setlists ---------- */
+  .setwrap{flex:1;overflow-y:auto;padding:16px;min-height:0}
+  .setcard{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px;margin-bottom:14px}
+  .setcard h3{margin:0;font-family:var(--font-d);font-size:19px;letter-spacing:.03em;text-transform:uppercase}
+  .setcard .meta{color:var(--muted);font-size:12.5px;margin:4px 0 12px}
+  .setbtns{display:flex;gap:8px;flex-wrap:wrap}
+  .setbtns .btn{font-size:13px;padding:9px 13px}
+  .editrow{display:flex;align-items:center;gap:8px;padding:9px 6px;border-bottom:1px solid var(--line)}
+  .editrow .tt{flex:1;min-width:0;font-weight:700;font-size:15px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .editrow .k{color:var(--muted);font-size:12px;font-variant-numeric:tabular-nums}
+  .mini{background:var(--surface2);border:1px solid var(--line);color:var(--text);border-radius:8px;
+        width:36px;height:36px;font-size:15px;font-weight:800;flex:none}
+  .mini.del{color:var(--action)}
+  .addarea{margin-top:14px}
+  .setname{width:100%;background:var(--bg);border:1px solid var(--line);border-radius:10px;
+        color:var(--text);font-size:16px;padding:11px 14px;outline:none;margin-bottom:10px;font-family:var(--font-b)}
+  .setname:focus{border-color:var(--enrique)}
+  .pickresults{max-height:300px;overflow-y:auto;border:1px solid var(--line);border-radius:10px;margin-top:8px}
+  .pickrow{display:flex;align-items:center;gap:10px;width:100%;text-align:left;background:transparent;color:var(--text);
+           padding:11px 12px;border-bottom:1px solid var(--line);font-size:15px;font-weight:600}
+  .pickrow:active{background:var(--surface2)}
+  .pickrow .k{margin-left:auto;color:var(--muted);font-size:12px}
+  .empty{color:var(--muted);text-align:center;padding:40px 20px;font-size:15px;line-height:1.6}
+  ::-webkit-scrollbar{width:5px;height:5px}
+  ::-webkit-scrollbar-thumb{background:var(--line);border-radius:99px}
+  @media (prefers-reduced-motion: reduce){ .lyrics{scroll-behavior:auto} }
+</style>
+<div id="app"></div>
+
+<script>
+const SONGS=[{"id":"rock-and-roll","title":"ROCK AND ROLL","artist":"Led Zeppelin","key":"Am","singers":["A"],"setOrder":1,"lines":[{"t":"verse","x":"It's been a long time since I rock and rolled"},{"t":"verse","x":"It's been a long time since I did the stroll"},{"t":"verse","x":"Ooh, let me get it back, let me get it back"},{"t":"verse","x":"Let me get it back"},{"t":"verse","x":"Baby, where I come from"},{"t":"gap","x":""},{"t":"chorus","x":"It's been a long time, been a long time"},{"t":"chorus","x":"Been a long lonely, lonely, lonely, lonely, lonely time"},{"t":"chorus","x":"Yes, it has"},{"t":"gap","x":""},{"t":"verse","x":"It's been a long time since the book of love"},{"t":"verse","x":"I can't count the tears of a life with no love"},{"t":"verse","x":"Carry me back, carry me back"},{"t":"verse","x":"Carry me back"},{"t":"verse","x":"Baby, where I come from"},{"t":"verse","x":"Whoa, whoa, oh"},{"t":"gap","x":""},{"t":"chorus","x":"It's been a long time, been a long time"},{"t":"chorus","x":"Been a long lonely, lonely, lonely, lonely, lonely time"},{"t":"verse","x":"Oh, seems so long since we walked in the moonlight"},{"t":"verse","x":"Making vows that just can't work right"},{"t":"verse","x":"Oh, yeah, open your arms, opens your arms"},{"t":"verse","x":"Open your arms, baby, let my love come running in"},{"t":"chorus","x":"Yeah!"},{"t":"gap","x":""},{"t":"chorus","x":"It's been a long time, been a long time"},{"t":"chorus","x":"Been a long lonely, lonely, lonely, lonely, lonely time"},{"t":"gap","x":""},{"t":"chorus","x":"Yeah, yeah"},{"t":"chorus","x":"Yeah, yeah"},{"t":"gap","x":""},{"t":"verse","x":"Ooh, yeah, ooh, yeah"},{"t":"verse","x":"Ooh, yeah, ooh, yeah"},{"t":"gap","x":""},{"t":"chorus","x":"It's been a long time, been a long time"},{"t":"chorus","x":"Been a long lonely, lonely, lonely, lonely, lonely time"}]},{"id":"johnny-b-goode","title":"JOHNNY B. GOODE","artist":"Chuck Berry","key":"B","singers":["E"],"setOrder":2,"lines":[{"t":"cue","x":"Intro entra logo após o solo"},{"t":"verse","x":"Deep down in Louisiana, close to New Orleans"},{"t":"verse","x":"Way back up in the woods among the evergreens"},{"t":"verse","x":"There stood a log cabin made of earth and wood"},{"t":"verse","x":"Where lived a country boy named Johnny B. Goode"},{"t":"verse","x":"Who never ever learned to read or write so well"},{"t":"verse","x":"But he could play a guitar just like a-ringin' a bell"},{"t":"chorus","x":"Go, go"},{"t":"chorus","x":"Go, Johnny, go, go"},{"t":"chorus","x":"Go, Johnny, go, go"},{"t":"chorus","x":"Go, Johnny, go, go"},{"t":"chorus","x":"Go, Johnny, go, go"},{"t":"chorus","x":"Johnny B. Goode"},{"t":"verse","x":"He used to carry his guitar in a gunny sack"},{"t":"verse","x":"Go sit beneath the tree by the railroad track"},{"t":"verse","x":"Oh, the engineers would see him sittin' in the shade"},{"t":"verse","x":"Strummin' with the rhythm that the drivers made"},{"t":"verse","x":"People passin' by they would stop and say"},{"t":"verse","x":"Oh my, but that little country boy can play"},{"t":"gap","x":""},{"t":"chorus","x":"Go, go"},{"t":"chorus","x":"Go, Johnny, go, go"},{"t":"chorus","x":"Go, Johnny, go, go"},{"t":"chorus","x":"Go, Johnny, go, go"},{"t":"chorus","x":"Go, Johnny, go, go"},{"t":"chorus","x":"Johnny B. Goode"},{"t":"cue","x":"SOLO"},{"t":"verse","x":"His mother told him: Some day you will be a man"},{"t":"verse","x":"And you will be the leader of a big old band"},{"t":"verse","x":"Many people comin' from miles around"},{"t":"verse","x":"To hear you play your music 'till the Sun go down"},{"t":"verse","x":"Maybe someday your name will be in lights"},{"t":"verse","x":"Sayin': Johnny B. Goode tonight"},{"t":"gap","x":""},{"t":"chorus","x":"Go, go"},{"t":"chorus","x":"Go, Johnny, go"},{"t":"chorus","x":"Go, go, go, Johnny, go"},{"t":"chorus","x":"Go, go, go, Johnny, go"},{"t":"chorus","x":"Go, go, go, Johnny, go"},{"t":"gap","x":""},{"t":"chorus","x":"Go - Johnny B. Goode"}]},{"id":"immigrant-song","title":"IMMIGRANT SONG","artist":"Led Zeppelin","key":"F#m","singers":["A"],"setOrder":3,"lines":[{"t":"cue","x":"Intro Grito"},{"t":"gap","x":""},{"t":"verse","x":"We came from the land"},{"t":"verse","x":"Of the ice and snow"},{"t":"verse","x":"From the midnight sun"},{"t":"verse","x":"Where the hot springs blow"},{"t":"gap","x":""},{"t":"verse","x":"The hammer of the gods"},{"t":"verse","x":"Will drive our ships to new lands"},{"t":"verse","x":"To fight the horde, singing and crying"},{"t":"verse","x":"Valhalla, I am coming"},{"t":"gap","x":""},{"t":"chorus","x":"On we sweep"},{"t":"chorus","x":"With threshing oar"},{"t":"chorus","x":"Our only goal"},{"t":"chorus","x":"Will be the western shore"},{"t":"gap","x":""},{"t":"cue","x":"Grito"},{"t":"gap","x":""},{"t":"verse","x":"We came from the land"},{"t":"verse","x":"Of the ice and snow"},{"t":"verse","x":"From the midnight sun"},{"t":"verse","x":"Where the hot springs flow"},{"t":"gap","x":""},{"t":"verse","x":"How soft your fields so green"},{"t":"verse","x":"Can whisper tales of gore"},{"t":"verse","x":"Of how we calmed the tides of war"},{"t":"verse","x":"We are your overlords"},{"t":"gap","x":""},{"t":"chorus","x":"On we sweep"},{"t":"chorus","x":"With threshing oar"},{"t":"chorus","x":"Our only goal"},{"t":"chorus","x":"Will be the western shore"},{"t":"gap","x":""},{"t":"verse","x":"So now you'd better stop"},{"t":"verse","x":"And rebuild all your ruins"},{"t":"verse","x":"For peace and trust can win the day"},{"t":"verse","x":"Despite of all your losing"},{"t":"gap","x":""},{"t":"cue","x":"FINALE"}]},{"id":"gimme-all-your-loving","title":"GIMME ALL YOUR LOVING","artist":"ZZ Top","key":"Cm","singers":["E"],"setOrder":4,"lines":[{"t":"cue","x":"Solo - sai do solo com o riff"},{"t":"gap","x":""},{"t":"verse","x":"I got to have a shot"},{"t":"verse","x":"Of what you got is, oh, so sweet"},{"t":"verse","x":"You got to make it hot"},{"t":"verse","x":"Like a boomerang I need a repeat"},{"t":"gap","x":""},{"t":"chorus","x":"Gimme all your lovin'"},{"t":"chorus","x":"All your hugs and kisses too"},{"t":"chorus","x":"Gimme all your lovin'"},{"t":"chorus","x":"Don't let up until we're through"},{"t":"gap","x":""},{"t":"verse","x":"You got to whip it up"},{"t":"verse","x":"And hit me like a ton of lead"},{"t":"verse","x":"If I blow my top"},{"t":"verse","x":"Will you let it go to your head?"},{"t":"gap","x":""},{"t":"chorus","x":"Gimme all your lovin'"},{"t":"chorus","x":"All your hugs and kisses too"},{"t":"chorus","x":"Gimme all your lovin'"},{"t":"chorus","x":"Don't let up until we're through"},{"t":"gap","x":""},{"t":"cue","x":"Solo - sai do solo com o riff"},{"t":"gap","x":""},{"t":"verse","x":"You got to move it up"},{"t":"verse","x":"And use it like a screwball would"},{"t":"verse","x":"You got to pack it up"},{"t":"verse","x":"Work it like a new boy should"},{"t":"gap","x":""},{"t":"chorus","x":"Gimme all your lovin'"},{"t":"chorus","x":"All your hugs and kisses too"},{"t":"chorus","x":"Gimme all your lovin'"},{"t":"chorus","x":"Don't let up until we're through"},{"t":"gap","x":""},{"t":"cue","x":"2 voltas de riff e solo final"}]},{"id":"hold-the-line","title":"HOLD THE LINE","artist":"Toto","key":"F#m","singers":["A"],"setOrder":5,"lines":[{"t":"verse","x":"It's not in the way that you hold me"},{"t":"verse","x":"It's not in the way you say you care"},{"t":"verse","x":"It's not in the way you've been treating my friends"},{"t":"verse","x":"It's not in the way that you stayed till the end"},{"t":"chorus","x":"It's not in the way you look or the things that you say that you do"},{"t":"gap","x":""},{"t":"chorus","x":"Hold the line"},{"t":"verse","x":"Love isn't always on time, oh oh oh"},{"t":"chorus","x":"Hold the line"},{"t":"verse","x":"Love isn't always on time, oh oh oh"},{"t":"gap","x":""},{"t":"verse","x":"It's not in the words that you told me, girl"},{"t":"verse","x":"It's not in the way you say you're mine"},{"t":"verse","x":"It's not in the way that you came back to me"},{"t":"verse","x":"It's not in the way that your love set me free"},{"t":"gap","x":""},{"t":"chorus","x":"It's not in the way you look or the things that you say that you do"},{"t":"gap","x":""},{"t":"chorus","x":"Hold the line"},{"t":"verse","x":"Love isn't always on time, oh oh oh"},{"t":"gap","x":""},{"t":"chorus","x":"Hold the line"},{"t":"verse","x":"Love isn't always on time, oh oh oh"},{"t":"cue","x":"SOLO"},{"t":"gap","x":""},{"t":"verse","x":"It's not in the words that you told me"},{"t":"verse","x":"It's not in the way you say you're mine"},{"t":"verse","x":"It's not in the way that you came back to me"},{"t":"verse","x":"It's not in the way that your love set me free"},{"t":"chorus","x":"It's not in the way you look or the things that you say that you do"},{"t":"gap","x":""},{"t":"chorus","x":"Hold the line"},{"t":"verse","x":"Love isn't always on time, oh oh oh"},{"t":"chorus","x":"Hold the line"},{"t":"chorus","x":"Love isn't always on time"},{"t":"chorus","x":"Love isn't always on time"},{"t":"gap","x":""},{"t":"chorus","x":"Hold the line"},{"t":"chorus","x":"Love isn't always on time"},{"t":"chorus","x":"Love isn't always, love isn't always on time"},{"t":"chorus","x":"Hold the line"},{"t":"chorus","x":"Love isn't always on time"},{"t":"chorus","x":"Love isn't always on time"},{"t":"chorus","x":"Love isn't always on time"},{"t":"verse","x":"Love isn't always on time, oh oh o"}]},{"id":"you-give-love-a-bad-name","title":"YOU GIVE LOVE A BAD NAME","artist":"Bon Jovi","key":"Cm","singers":["A","E"],"setOrder":6,"lines":[{"t":"chorus","x":"Shot through the heart, and you're to blame"},{"t":"verse","x":"Darling, you give love a bad name"},{"t":"gap","x":""},{"t":"verse","x":"An angel's smile is what you sell"},{"t":"verse","x":"You promise me heaven, then put me through hell"},{"t":"verse","x":"Chains of love got a hold on me"},{"t":"verse","x":"When passion's a prison, you can't break free"},{"t":"verse","x":"Oh, you're a loaded gun, yeah"},{"t":"verse","x":"Oh, there's nowhere to run"},{"t":"verse","x":"No one can save me"},{"t":"verse","x":"The damage is done"},{"t":"gap","x":""},{"t":"chorus","x":"Shot through the heart, and you're to blame"},{"t":"verse","x":"You give love a bad name (bad name)"},{"t":"verse","x":"I play my part and you play your game"},{"t":"verse","x":"You give love a bad name (bad name)"},{"t":"verse","x":"Hey, you give love a bad name"},{"t":"gap","x":""},{"t":"verse","x":"Paint your smile on your lips"},{"t":"verse","x":"Blood-red nails on your fingertips"},{"t":"verse","x":"A school boy's dream, you act so shy"},{"t":"verse","x":"Your very first kiss was your first kiss goodbye"},{"t":"verse","x":"You give love a bad name (bad name)"},{"t":"gap","x":""},{"t":"verse","x":"You give love (woah, oh-oh-oh)"},{"t":"verse","x":"You give love (woah, oh-oh-oh), (bad name)"},{"t":"verse","x":"You give love (woah, oh-oh-oh)"},{"t":"verse","x":"You give love (woah, oh-oh-oh), (bad name)"},{"t":"verse","x":"You give love (woah, oh-oh-oh)"},{"t":"verse","x":"You give love (woah, oh-oh-oh), (bad name)"},{"t":"verse","x":"You give love (woah, oh-oh-oh)"},{"t":"verse","x":"Oh, you're a loaded gun"},{"t":"verse","x":"Oh, there's nowhere to run"},{"t":"verse","x":"No one can save me"},{"t":"verse","x":"The damage is done"},{"t":"gap","x":""},{"t":"chorus","x":"Shot through the heart, and you're to blame"},{"t":"verse","x":"You give love a bad name (bad name)"},{"t":"verse","x":"I play my part and you play your game"},{"t":"verse","x":"You give love a bad name (bad name)"},{"t":"verse","x":"You give love"},{"t":"gap","x":""},{"t":"verse","x":"Oh, shot through the heart, and you're to blame"},{"t":"verse","x":"You give love a bad name"},{"t":"verse","x":"I play my part and you play your game"},{"t":"verse","x":"You give love a bad name (bad name)"},{"t":"gap","x":""},{"t":"chorus","x":"Shot through the heart, and you're to blame"},{"t":"verse","x":"You give love a bad name (bad name)"},{"t":"verse","x":"I play my part and you play your game"}]},{"id":"it-s-a-long-way-to-the-top","title":"IT'S A LONG WAY TO THE TOP","artist":"AC/DC","key":"A","singers":["E"],"setOrder":7,"lines":[{"t":"cue","x":"quatro finais com a guitarra:"},{"t":"verse","x":"Ridin' down the highway"},{"t":"verse","x":"Goin' to a show"},{"t":"verse","x":"Stop in all the byways"},{"t":"verse","x":"Playin' rock 'n' roll"},{"t":"verse","x":"Gettin' robbed"},{"t":"verse","x":"Gettin' stoned"},{"t":"verse","x":"Gettin' beat up"},{"t":"verse","x":"Broken boned"},{"t":"verse","x":"Gettin' had"},{"t":"verse","x":"Gettin' took"},{"t":"chorus","x":"I tell you folks: - It's harder than it looks"},{"t":"gap","x":""},{"t":"chorus","x":"It's a long way to the top if you wanna rock 'n' roll"},{"t":"chorus","x":"It's a long way to the top if you wanna rock 'n' roll"},{"t":"cue","x":"dois riffs:"},{"t":"chorus","x":"If you - think it's easy doing one night stand"},{"t":"chorus","x":"Try playin' in a rock roll band"},{"t":"chorus","x":"It's a long way to the top if you wanna rock 'n' roll"},{"t":"cue","x":"Solo de Gaita de Fole, e para e começa novamente"},{"t":"cue","x":"dois riffs"},{"t":"verse","x":"Hotel, motel"},{"t":"verse","x":"Make you wanna cry"},{"t":"verse","x":"Lady, do the hard sell"},{"t":"verse","x":"Know the reason why"},{"t":"verse","x":"Gettin' old"},{"t":"verse","x":"Gettin' grey"},{"t":"verse","x":"Gettin' ripped off"},{"t":"verse","x":"Under-paid"},{"t":"verse","x":"Gettin' sold"},{"t":"verse","x":"Second hand"},{"t":"chorus","x":"That's how it goes, playing in a band"},{"t":"gap","x":""},{"t":"chorus","x":"It's a long way to the top if you wanna rock 'n' roll"},{"t":"chorus","x":"It's a long way to the top if you wanna rock 'n' roll"},{"t":"cue","x":"dois riffs:"},{"t":"chorus","x":"If you - wanna be a star of stage and screen"},{"t":"chorus","x":"Look out it's rough and mean"},{"t":"chorus","x":"It's a long way to the top if you wanna rock 'n' roll"},{"t":"chorus","x":"It's a long way to the top if you wanna rock 'n' roll"},{"t":"cue","x":"dois riffs:"},{"t":"chorus","x":"It's a long way to the top if you wanna rock 'n' roll"},{"t":"chorus","x":"It's a long way to the top if you wanna rock 'n' roll"},{"t":"cue","x":"dois riffs:"},{"t":"verse","x":"Well, it's a long way"},{"t":"verse","x":"Oh, it's a long way (you should've told me)"},{"t":"verse","x":"It's a long way - Such a long way"},{"t":"verse","x":"2a'.....4a......"},{"t":"verse","x":"5s 4a 4s 4a....."},{"t":"verse","x":"5s 4a 4s 4a...."},{"t":"verse","x":"4s 4a 4s 3a....."},{"t":"gap","x":""},{"t":"verse","x":"4s 4a'4a.....5s 4a 4s 4a....."},{"t":"verse","x":"5s 4a 4s 4a....."},{"t":"verse","x":"4s 4a 4s 3a....."},{"t":"gap","x":""},{"t":"verse","x":"3a\" 3a 6s.....................(4X)"},{"t":"verse","x":"5a 5s 4a..................... (4X)"}]},{"id":"highway-tune","title":"HIGHWAY TUNE","artist":"Greta Van Fleet","key":"Em","singers":["A"],"setOrder":8,"lines":[{"t":"chorus","x":"Oh, mama"},{"t":"gap","x":""},{"t":"verse","x":"No stopping at the red light girl"},{"t":"verse","x":"Because I want to get your signal"},{"t":"verse","x":"No going at the green light girl"},{"t":"verse","x":"Because I want to be with you now"},{"t":"gap","x":""},{"t":"verse","x":"You are my special"},{"t":"verse","x":"You are my special"},{"t":"verse","x":"You are my midnight, midnight yeah"},{"t":"gap","x":""},{"t":"chorus","x":"So sweet"},{"t":"chorus","x":"So fine"},{"t":"chorus","x":"So nice"},{"t":"chorus","x":"All my"},{"t":"chorus","x":"My mine"},{"t":"chorus","x":"My mine"},{"t":"chorus","x":"Oh"},{"t":"gap","x":""},{"t":"verse","x":"No stopping on the highway girl"},{"t":"verse","x":"Because I want to burn my gas"},{"t":"verse","x":"There's one girl that I know"},{"t":"verse","x":"I'm never gonna pass"},{"t":"gap","x":""},{"t":"verse","x":"She is my special"},{"t":"verse","x":"She is my special"},{"t":"verse","x":"She is my midnight, midnight yeah"},{"t":"gap","x":""},{"t":"chorus","x":"So sweet"},{"t":"chorus","x":"So fine"},{"t":"chorus","x":"So nice"},{"t":"chorus","x":"All my"},{"t":"chorus","x":"My mine"},{"t":"chorus","x":"My mine"},{"t":"chorus","x":"Oh!"},{"t":"verse","x":"APRESENTAÇÃO IMPROVISOS"},{"t":"chorus","x":"Oh, yeah"},{"t":"gap","x":""},{"t":"chorus","x":"So sweet"},{"t":"chorus","x":"So fine"},{"t":"chorus","x":"So nice"},{"t":"chorus","x":"All my"},{"t":"chorus","x":"My mine"},{"t":"chorus","x":"My mine"},{"t":"chorus","x":"Oh, sugar"}]},{"id":"safari-song","title":"SAFARI SONG","artist":"Greta Van Fleet","key":"Am","singers":["A"],"setOrder":9,"lines":[{"t":"verse","x":"Ah yeah"},{"t":"gap","x":""},{"t":"verse","x":"Oh lady, when ya come on down"},{"t":"verse","x":"Won't ya come on down?"},{"t":"verse","x":"I said to my town"},{"t":"gap","x":""},{"t":"verse","x":"Oh mama when ya come on down"},{"t":"verse","x":"Won't ya come on down?"},{"t":"verse","x":"I said to my home"},{"t":"gap","x":""},{"t":"verse","x":"Oo lady won't you move my way?"},{"t":"verse","x":"Can't ya move my way?"},{"t":"verse","x":"I'm getting hazy"},{"t":"gap","x":""},{"t":"verse","x":"Oh mama when you give your lovin'"},{"t":"verse","x":"When you give your love"},{"t":"verse","x":"You drive me crazy"},{"t":"gap","x":""},{"t":"verse","x":"Ah mama what you gonna do"},{"t":"verse","x":"With all that love in your heart?"},{"t":"verse","x":"Ah mama what you gonna say"},{"t":"verse","x":"About that love in your heart?"},{"t":"verse","x":"Oh mama when you walk this way"},{"t":"verse","x":"Why don't you give some lovin'?"},{"t":"verse","x":"Oo mama what you gonna do"},{"t":"verse","x":"With all that lovin' in your heart?"},{"t":"gap","x":""},{"t":"verse","x":"See mama gotta feel your everything"},{"t":"verse","x":"Feel your everything"},{"t":"verse","x":"I really wanna know"},{"t":"verse","x":"See mama when you shine you're shinin' bright"},{"t":"verse","x":"Give you're given right"},{"t":"verse","x":"I really want our love to grow"},{"t":"gap","x":""},{"t":"verse","x":"See mama when your heart is in its place"},{"t":"verse","x":"See that smilin' face"},{"t":"verse","x":"It's all I wanna do"},{"t":"gap","x":""},{"t":"verse","x":"See mama every time that you are near"},{"t":"verse","x":"It's when your gonna fear"},{"t":"verse","x":"You're never gonna come back home"},{"t":"gap","x":""},{"t":"verse","x":"Ah mama what you gonna do"},{"t":"verse","x":"With all that love in your heart?"},{"t":"verse","x":"Ah mama what you gonna say"},{"t":"verse","x":"About that love in your heart?"},{"t":"verse","x":"Oh mama when you walk this way"},{"t":"verse","x":"Why don't you give some lovin'?"},{"t":"verse","x":"Oo mama what you gonna do"},{"t":"verse","x":"With all that lovin' in your heart?"},{"t":"gap","x":""},{"t":"verse","x":"Do you remember what I said"},{"t":"verse","x":"When I got down on my knees?"},{"t":"verse","x":"Gotta get your lovin', baby"},{"t":"verse","x":"Lovin's all I need"},{"t":"verse","x":"Don't make me beg now, baby"},{"t":"verse","x":"Don't make me bleed"},{"t":"verse","x":"I gave you all a man could give"},{"t":"verse","x":"And you still walked out on me"},{"t":"gap","x":""},{"t":"verse","x":"Ah mama what you gonna do"},{"t":"verse","x":"With all that love in your heart?"},{"t":"verse","x":"Ah mama what you gonna say"},{"t":"verse","x":"About that love in your heart?"},{"t":"verse","x":"Oh mama when you walk this way"},{"t":"verse","x":"Why don't you give some lovin'?"},{"t":"verse","x":"Oo mama what you gonna do"},{"t":"verse","x":"With all that lovin' in your heart?"},{"t":"gap","x":""},{"t":"verse","x":"Your heart - Your heart"},{"t":"verse","x":"Your heart - Your heart"},{"t":"verse","x":"Lovin' -  Burnin - Fire"},{"t":"verse","x":"Aw yeah"}]},{"id":"money-for-nothing","title":"MONEY FOR NOTHING","artist":"Dire Straits","key":"Gm","singers":["E"],"setOrder":10,"lines":[{"t":"cue","x":"2 riffs + bateria e 2 riffs após"},{"t":"gap","x":""},{"t":"verse","x":"Now look at them yo-yos, that's the way you do it"},{"t":"verse","x":"You play the guitar on the MTV"},{"t":"verse","x":"That ain't workin', that's the way you do it"},{"t":"verse","x":"Money for nothin' and your chicks for free"},{"t":"gap","x":""},{"t":"verse","x":"Now that ain't workin', that's the way you do it"},{"t":"verse","x":"Lemme tell ya, them guys ain't dumb"},{"t":"verse","x":"Maybe get a blister on your little finger"},{"t":"verse","x":"Maybe get a blister on your thumb"},{"t":"gap","x":""},{"t":"verse","x":"We got to install microwave ovens, custom kitchen deliveries"},{"t":"verse","x":"We got to move these refrigerators, we got to move these color TVs"},{"t":"cue","x":"redoblo de bateria"},{"t":"verse","x":"See the little faggot with the earring and the make up"},{"t":"verse","x":"Yeah, buddy, that's his own hair"},{"t":"verse","x":"That little faggot got his own jet airplane"},{"t":"verse","x":"That little faggot, he's a millionaire"},{"t":"gap","x":""},{"t":"verse","x":"We got to install microwave ovens, custom"},{"t":"verse","x":"kitchen deliveries"},{"t":"verse","x":"We got to move these refrigerators, we gotta move these color TVs"},{"t":"cue","x":"(redoblo e 2 riffs (‘moova moova”)"},{"t":"verse","x":"We got to install microwave ovens, custom kitchen deliveries"},{"t":"verse","x":"We got to move these refrigerators, we got to move these color TVs"},{"t":"gap","x":""},{"t":"verse","x":"Looky here, look out"},{"t":"gap","x":""},{"t":"verse","x":"I shoulda learned to play the guitar"},{"t":"verse","x":"I shoulda learned to play them drums"},{"t":"verse","x":"Look at that mama, she got it stickin' in the camera man"},{"t":"verse","x":"We could have some"},{"t":"gap","x":""},{"t":"verse","x":"And he's up there, what's that?"},{"t":"verse","x":"Hawaiian noises?"},{"t":"verse","x":"Bangin' on the bongos like a chimpanzee"},{"t":"verse","x":"That ain't workin', that's the way you do it"},{"t":"verse","x":"Get your money for nothin', get your chicks for free"},{"t":"gap","x":""},{"t":"verse","x":"We got to install microwave ovens, custom kitchen deliveries"},{"t":"verse","x":"We got to move these refrigerators, we gotta move these color TVs"},{"t":"gap","x":""},{"t":"cue","x":"(2 riffs (auuuuu))"},{"t":"gap","x":""},{"t":"verse","x":"Listen here"},{"t":"verse","x":"Now that ain't workin' that's the way you do it"},{"t":"verse","x":"You play the guitar on the MTV"},{"t":"verse","x":"That ain't workin', that's the way you do it"},{"t":"verse","x":"Money for nothin' and your chicks for free"},{"t":"verse","x":"Money for nothin', chicks for free"},{"t":"verse","x":"Get your money for nothin' and your chicks for free"},{"t":"verse","x":"Ooh, money for nothin', chicks for free"},{"t":"verse","x":"Money for nothin', chicks for free (money, money, money)"},{"t":"verse","x":"Money for nothin', chicks for free"},{"t":"verse","x":"Get your money for nothin', get your chicks for free"},{"t":"verse","x":"Get your money for nothin' and the chicks for free"},{"t":"verse","x":"Get your money for nothin' and the chicks for free"},{"t":"gap","x":""},{"t":"chorus","x":"Look at that, look at that"},{"t":"gap","x":""},{"t":"verse","x":"Get your money for nothin' (I want my, I want my)"},{"t":"verse","x":"Chicks for free (I want my MTV)"},{"t":"verse","x":"Money for nothin', chicks for free (I want my, I want my, I want my MTV)"},{"t":"verse","x":"Get your money for nothin' (I want my, I want my)"},{"t":"verse","x":"And the chicks for free (I want my MTV)"},{"t":"verse","x":"Get your money for nothin' (I want my, I want my)"},{"t":"verse","x":"And the chicks for free (I want my MTV)"},{"t":"verse","x":"Easy, easy money for nothin' (I want my, I want my)"},{"t":"verse","x":"Easy, easy chicks for free (I want my MTV)"},{"t":"verse","x":"Easy, easy money for nothin' (I want my, I want my)"},{"t":"verse","x":"Chicks for free (I want my MTV)"},{"t":"verse","x":"That ain't workin'"},{"t":"gap","x":""},{"t":"cue","x":"3 riffs e zappeio na guitarra"},{"t":"gap","x":""},{"t":"verse","x":"Money for nothing, chicks for free"},{"t":"verse","x":"Money for nothing, chicks for free"}]},{"id":"smoke-on-the-water","title":"SMOKE ON THE WATER","artist":"Deep Purple","key":"Gm","singers":["E"],"setOrder":11,"lines":[{"t":"cue","x":"Dois depois do baixo entrar"},{"t":"gap","x":""},{"t":"verse","x":"We all came out to Montreaux"},{"t":"verse","x":"On the Lake Geneva shoreline"},{"t":"verse","x":"To make records with a mobile"},{"t":"verse","x":"We didn't have much time"},{"t":"gap","x":""},{"t":"verse","x":"Frank Zappa and the Mothers"},{"t":"verse","x":"Were at the best place around"},{"t":"verse","x":"But some stupid with a flare gun"},{"t":"verse","x":"Burned the place to the ground"},{"t":"gap","x":""},{"t":"chorus","x":"Smoke on the water, fire in the sky"},{"t":"chorus","x":"Smoke on the water"},{"t":"cue","x":"Dois Riffs"},{"t":"gap","x":""},{"t":"verse","x":"They burned down the gambling house"},{"t":"verse","x":"It died with an awful sound"},{"t":"verse","x":"Funky Claude was running in and out"},{"t":"verse","x":"Pulling kids out the ground"},{"t":"gap","x":""},{"t":"verse","x":"When it all was over"},{"t":"verse","x":"We had to find another place"},{"t":"verse","x":"But Swiss time was running out"},{"t":"verse","x":"It seemed that we would lose the race"},{"t":"chorus","x":"Smoke on the water, fire in the sky"},{"t":"chorus","x":"Smoke on the water"},{"t":"gap","x":""},{"t":"cue","x":"Dois Riffs - SOLO - Dois riffs"},{"t":"gap","x":""},{"t":"verse","x":"We ended up at the Grand Hotel"},{"t":"verse","x":"It was empty, cold and bare"},{"t":"verse","x":"But with the Rolling truck Stones thing just outside"},{"t":"verse","x":"Making our music there"},{"t":"gap","x":""},{"t":"verse","x":"With a few red lights and a few old beds"},{"t":"verse","x":"We made a place to sweat"},{"t":"verse","x":"No matter what we get out of this"},{"t":"verse","x":"I know, I know we'll never forget"},{"t":"gap","x":""},{"t":"chorus","x":"Smoke on the water, fire in the sky"},{"t":"chorus","x":"Smoke on the water"},{"t":"gap","x":""},{"t":"cue","x":"Dois Riffs - FINALE"}]},{"id":"livin-on-a-prayer","title":"LIVIN' ON A PRAYER","artist":"Bon Jovi","key":"Em","singers":["A"],"setOrder":12,"lines":[{"t":"verse","x":"Tommy used to work on the docks"},{"t":"verse","x":"Union's been on strike, he's down on his luck"},{"t":"verse","x":"It's tough, so tough"},{"t":"verse","x":"Gina works the diner all day"},{"t":"verse","x":"Working for her man, she brings home her pay"},{"t":"verse","x":"For love, for love"},{"t":"gap","x":""},{"t":"chorus","x":"She says: We've got to hold on to what we've got"},{"t":"chorus","x":"It doesn't make a difference if we make it or not"},{"t":"chorus","x":"We've got each other and that's a lot"},{"t":"chorus","x":"For love, we'll give it a shot"},{"t":"gap","x":""},{"t":"chorus","x":"Whoa, we're halfway there"},{"t":"chorus","x":"Oh-oh, living on a prayer"},{"t":"chorus","x":"Take my hand, we'll make it, I swear"},{"t":"chorus","x":"Oh-oh, living on a prayer"},{"t":"gap","x":""},{"t":"verse","x":"Tommy's got his six string in hock"},{"t":"verse","x":"Now he's holding in what he used to make it talk"},{"t":"verse","x":"So tough, it's tough"},{"t":"verse","x":"Gina dreams of running away"},{"t":"verse","x":"When she cries in the night, Tommy whispers"},{"t":"verse","x":"Baby, it's okay, someday"},{"t":"gap","x":""},{"t":"chorus","x":"We've got to hold on to what we've got"},{"t":"chorus","x":"It doesn't make a difference if we make it or not"},{"t":"chorus","x":"We've got each other and that's a lot"},{"t":"chorus","x":"For love, we'll give it a shot"},{"t":"gap","x":""},{"t":"chorus","x":"Whoa, we're halfway there"},{"t":"chorus","x":"Oh-oh, living on a prayer"},{"t":"chorus","x":"Take my hand, we'll make it, I swear"},{"t":"chorus","x":"Oh-oh, living on a prayer"},{"t":"chorus","x":"Living on a prayer"},{"t":"gap","x":""},{"t":"chorus","x":"Ooh, we've got to hold on, ready or not"},{"t":"chorus","x":"You live for the fight when that's all that you've got"},{"t":"gap","x":""},{"t":"chorus","x":"Whoa, we're halfway there"},{"t":"chorus","x":"Oh-oh, living on a prayer"},{"t":"chorus","x":"Take my hand and we'll make it, I swear"},{"t":"chorus","x":"Oh-oh, living on a prayer"},{"t":"chorus","x":"Whoa, we're halfway there"},{"t":"chorus","x":"Oh-oh, living on a prayer"},{"t":"chorus","x":"Take my hand and we'll make it, I swear"},{"t":"chorus","x":"Oh-oh, living on a prayer"},{"t":"chorus","x":"Whoa, we're halfway there"},{"t":"chorus","x":"Oh-oh, living on a prayer"},{"t":"chorus","x":"Take my hand"}]},{"id":"keep-the-faith","title":"KEEP THE FAITH","artist":"Bon Jovi","key":"Gm","singers":["A"],"setOrder":13,"lines":[{"t":"verse","x":"Mother mother tell your children"},{"t":"verse","x":"That their time has just begun"},{"t":"verse","x":"I have suffered for my anger"},{"t":"verse","x":"There are wars that can't be won"},{"t":"gap","x":""},{"t":"verse","x":"Father father please believe me"},{"t":"verse","x":"I am laying down my guns"},{"t":"verse","x":"I am broken like an arrow"},{"t":"verse","x":"Forgive me"},{"t":"verse","x":"Forgive your wayward son"},{"t":"gap","x":""},{"t":"verse","x":"Everybody needs somebody to love (mother, mother)"},{"t":"verse","x":"Everybody needs somebody to hate (please believe me)"},{"t":"verse","x":"Everybody's bitching 'cause they can't get enough"},{"t":"chorus","x":"When it's hard to hold on"},{"t":"chorus","x":"And there's no one to lean on"},{"t":"gap","x":""},{"t":"chorus","x":"Faith! You know you're gonna live through the rain"},{"t":"chorus","x":"Lord we've gotta keep the faith"},{"t":"chorus","x":"Faith!: Don't you let your love turn to hate"},{"t":"chorus","x":"Now we've gotta keep the faith"},{"t":"gap","x":""},{"t":"chorus","x":"Keep the faith, keep the faith"},{"t":"chorus","x":"Lord we've gotta keep the faith"},{"t":"gap","x":""},{"t":"verse","x":"Tell me baby when I hurt you"},{"t":"verse","x":"I've been walking in the footsteps"},{"t":"verse","x":"Of society's lies"},{"t":"verse","x":"I don't like what I see no more"},{"t":"verse","x":"Sometimes I wish I was blind"},{"t":"verse","x":"Sometimes I wait forever"},{"t":"verse","x":"To stand out in the rain"},{"t":"verse","x":"So no one sees me cryin'"},{"t":"verse","x":"Trying to wash away this pain"},{"t":"gap","x":""},{"t":"chorus","x":"Mother father"},{"t":"chorus","x":"There's things I've done I can't erase"},{"t":"chorus","x":"Every night we fall from grace"},{"t":"chorus","x":"It's hard with the world in your face"},{"t":"chorus","x":"Trying to hold on, trying to hold on"},{"t":"gap","x":""},{"t":"chorus","x":"Faith! You know you're gonna live through the rain"},{"t":"chorus","x":"Lord, you got to keep the faith"},{"t":"chorus","x":"Faith! Don't you let your love turn to hate"},{"t":"chorus","x":"Right now, we got to keep the faith"},{"t":"gap","x":""},{"t":"chorus","x":"Keep the faith - Keep the faith"},{"t":"chorus","x":"Trying to hold on, trying to hold on yeah"},{"t":"chorus","x":"Keep the faith - Keep the faith"},{"t":"chorus","x":"Everybody keep the faith"},{"t":"verse","x":"Do you keep it all inside"},{"t":"verse","x":"Do you tell me: All's forgiven"},{"t":"verse","x":"Just hide behind your pride"},{"t":"chorus","x":"Yeah, yeah!"},{"t":"verse","x":"Everybody needs somebody to love (mother, father)"},{"t":"verse","x":"Everybody needs somebody to hate (please don't leave me)"},{"t":"verse","x":"Everybody's bleeding 'cause the times are tough"},{"t":"chorus","x":"Well it's hard to be strong"},{"t":"chorus","x":"When there's no one to dream on"},{"t":"gap","x":""},{"t":"chorus","x":"Faith! You know you're gonna live through the rain"},{"t":"chorus","x":"Lord we've gotta keep the faith"},{"t":"chorus","x":"Faith! Don't you know it's never too late"},{"t":"chorus","x":"Right now we gotta keep the faith"},{"t":"chorus","x":"Faith! Don't you let your love turn to hate"},{"t":"chorus","x":"Lord we gotta keep the faith"},{"t":"gap","x":""},{"t":"chorus","x":"Keep the faith, keep the faith"},{"t":"verse","x":"Oh we got to keep the faith"},{"t":"chorus","x":"Keep the faith, keep the faith"},{"t":"verse","x":"Lord we got to keep the faith"},{"t":"verse","x":"Oh, oh, yeah, yeah, yeah"},{"t":"gap","x":""},{"t":"cue","x":"SOLO"}]},{"id":"born-to-be-wild","title":"BORN TO BE WILD","artist":"Steppenwolf","key":"Em","singers":["E"],"setOrder":14,"lines":[{"t":"cue","x":"4 riffs entra o baixo na saída entra a voz"},{"t":"gap","x":""},{"t":"verse","x":"Get your motor running"},{"t":"verse","x":"Head out on the highway"},{"t":"verse","x":"Looking for adventure"},{"t":"verse","x":"And whatever comes our way"},{"t":"gap","x":""},{"t":"verse","x":"Yeah, darling, gonna make it happen"},{"t":"verse","x":"Take the world in a love embrace"},{"t":"verse","x":"Fire all of your guns at once and"},{"t":"verse","x":"Explode into space"},{"t":"gap","x":""},{"t":"verse","x":"I like smoke and lightning"},{"t":"verse","x":"Heavy metal thunder"},{"t":"verse","x":"Racing in the wind"},{"t":"verse","x":"And the feeling that I'm under"},{"t":"gap","x":""},{"t":"verse","x":"Yeah, darling, gonna make it happen"},{"t":"verse","x":"Take the world in a love embrace"},{"t":"verse","x":"Fire all of your guns at once and"},{"t":"verse","x":"Explode into space"},{"t":"gap","x":""},{"t":"chorus","x":"Like a true nature's child"},{"t":"chorus","x":"We were born, born to be wild"},{"t":"chorus","x":"We can climb so high"},{"t":"chorus","x":"I never wanna die"},{"t":"gap","x":""},{"t":"chorus","x":"Born to be wild"},{"t":"chorus","x":"Born to be wild"},{"t":"gap","x":""},{"t":"cue","x":"SOLO - fim com bateria"},{"t":"gap","x":""},{"t":"verse","x":"Get your motor running"},{"t":"verse","x":"Head out on the highway"},{"t":"verse","x":"Looking for adventure"},{"t":"verse","x":"And whatever comes our way"},{"t":"gap","x":""},{"t":"verse","x":"Yeah, darling, gonna make it happen"},{"t":"verse","x":"Take the world in a love embrace"},{"t":"verse","x":"Fire all of your guns at once and"},{"t":"verse","x":"Explode into space"},{"t":"gap","x":""},{"t":"chorus","x":"Like a true nature's child"},{"t":"chorus","x":"We were born, born to be wild"},{"t":"chorus","x":"We can climb so high"},{"t":"chorus","x":"I never wanna die"},{"t":"gap","x":""},{"t":"chorus","x":"Born to be wild"},{"t":"chorus","x":"Born to be wild"}]},{"id":"sweet-home-alabama","title":"SWEET HOME ALABAMA","artist":"Lynyrd Skynyrd","key":"G","singers":["E"],"setOrder":15,"lines":[]},{"id":"barracuda","title":"BARRACUDA","artist":"Heart","key":"Em","singers":["A"],"setOrder":16,"lines":[{"t":"chorus","x":"So this ain't the end"},{"t":"chorus","x":"I saw you again today"},{"t":"chorus","x":"I had to turn my heart away"},{"t":"chorus","x":"You smiled like the Sun"},{"t":"chorus","x":"Kisses for everyone"},{"t":"chorus","x":"And tales it never fails!"},{"t":"gap","x":""},{"t":"chorus","x":"You're lying so low in the weeds"},{"t":"chorus","x":"I bet you're gonna ambush me"},{"t":"chorus","x":"You'd have me down, down, down, down on my knees"},{"t":"chorus","x":"Now wouldn't you, barracuda?"},{"t":"chorus","x":"Ooh!"},{"t":"gap","x":""},{"t":"chorus","x":"Back over time when we were all trying for free"},{"t":"chorus","x":"You met the porpoise and me"},{"t":"chorus","x":"No right, no wrong, you're selling a song"},{"t":"chorus","x":"A name"},{"t":"chorus","x":"Whisper game"},{"t":"gap","x":""},{"t":"chorus","x":"And if the real thing don't do the trick"},{"t":"chorus","x":"You better make up something quick"},{"t":"chorus","x":"You gonna burn, burn, burn, burn, burn it to the wick"},{"t":"chorus","x":"Ooh, barracuda!"},{"t":"chorus","x":"Ooh, yeah!"},{"t":"gap","x":""},{"t":"chorus","x":"Sell me sell you"},{"t":"chorus","x":"The porpoise said"},{"t":"chorus","x":"Dive down deep down, deeper than you"},{"t":"chorus","x":"I think that you got the blues too"},{"t":"gap","x":""},{"t":"chorus","x":"All that night and all the next"},{"t":"chorus","x":"Swam without looking back"},{"t":"chorus","x":"Made for the western pools"},{"t":"chorus","x":"Silly, silly fools!"},{"t":"gap","x":""},{"t":"chorus","x":"The real thing don't do the trick, no?"},{"t":"chorus","x":"You better make up something quick"},{"t":"chorus","x":"You gonna burn, burn, burn, burn, burn it to the wick"},{"t":"gap","x":""},{"t":"chorus","x":"Aah, barra- barracuda!"},{"t":"chorus","x":"Yeah!"}]},{"id":"seven-nation-army","title":"SEVEN NATION ARMY","artist":"The White Stripes","key":"Em","singers":["A"],"setOrder":17,"lines":[{"t":"verse","x":"I'm going to fight them off"},{"t":"verse","x":"A seven nation army couldn't hold me back"},{"t":"verse","x":"They're gonna rip it off"},{"t":"chorus","x":"Taking their time right behind my back"},{"t":"chorus","x":"And I'm talking to myself at night"},{"t":"chorus","x":"Because I can't forget"},{"t":"chorus","x":"Back and forth through my mind"},{"t":"chorus","x":"Behind a cigarette"},{"t":"gap","x":""},{"t":"chorus","x":"And the message coming from my eyes"},{"t":"chorus","x":"Says: Leave it alone"},{"t":"gap","x":""},{"t":"verse","x":"Don't want to hear about it"},{"t":"verse","x":"Every single one's got a story to tell"},{"t":"verse","x":"Everyone knows about it"},{"t":"verse","x":"From the Queen of England to the hounds of hell"},{"t":"chorus","x":"And if I catch it coming back my way"},{"t":"chorus","x":"I'm gonna serve it to you"},{"t":"chorus","x":"And that ain't what you want to hear"},{"t":"chorus","x":"But that's what I'll do"},{"t":"chorus","x":"And the feeling coming from my bones"},{"t":"chorus","x":"Says: Find a home"},{"t":"gap","x":""},{"t":"cue","x":"SOLO"},{"t":"gap","x":""},{"t":"verse","x":"I'm going to Wichita"},{"t":"verse","x":"Far from this opera forevermore"},{"t":"verse","x":"I'm gonna work the straw"},{"t":"verse","x":"Make the sweat drip out of every pore"},{"t":"chorus","x":"And I'm bleeding, and I'm bleeding"},{"t":"chorus","x":"And I'm bleeding right before my Lord"},{"t":"chorus","x":"All the words are gonna bleed from me"},{"t":"chorus","x":"And I will think no more"},{"t":"gap","x":""},{"t":"chorus","x":"And the stains coming from my blood"},{"t":"chorus","x":"Tell me: Go back home"}]},{"id":"cocaine","title":"COCAINE","artist":"Eric Clapton","key":"E","singers":["E"],"setOrder":18,"lines":[{"t":"cue","x":"Intro 2 riffs"},{"t":"verse","x":"If you wanna hang out"},{"t":"verse","x":"You've got to - take her out"},{"t":"chorus","x":"Cocaine"},{"t":"verse","x":"If you wanna get down"},{"t":"verse","x":"Down on the ground"},{"t":"chorus","x":"Cocaine"},{"t":"gap","x":""},{"t":"chorus","x":"She don't lie"},{"t":"chorus","x":"She don't lie"},{"t":"chorus","x":"She don't lie"},{"t":"chorus","x":"Cocaine"},{"t":"gap","x":""},{"t":"cue","x":"2 riffs"},{"t":"gap","x":""},{"t":"verse","x":"If you got bad news"},{"t":"verse","x":"You wanna kick them blues"},{"t":"chorus","x":"Cocaine"},{"t":"verse","x":"When your day is done"},{"t":"verse","x":"And you wanna run"},{"t":"chorus","x":"Cocaine"},{"t":"gap","x":""},{"t":"chorus","x":"She don't lie"},{"t":"chorus","x":"She don't lie"},{"t":"chorus","x":"She don't lie"},{"t":"chorus","x":"Cocaine"},{"t":"gap","x":""},{"t":"cue","x":"SOLO após 2 riffs"},{"t":"gap","x":""},{"t":"verse","x":"If your thing is gone"},{"t":"verse","x":"And you wanna ride on"},{"t":"chorus","x":"Cocaine"},{"t":"verse","x":"Don't forget this fact"},{"t":"verse","x":"You can't get it back"},{"t":"chorus","x":"Cocaine"},{"t":"gap","x":""},{"t":"chorus","x":"She don't lie"},{"t":"chorus","x":"She don't lie"},{"t":"chorus","x":"She don't lie"},{"t":"chorus","x":"Cocaine"},{"t":"gap","x":""},{"t":"chorus","x":"She don't lie"},{"t":"chorus","x":"She don't lie"},{"t":"chorus","x":"She don't lie"},{"t":"chorus","x":"Cocaine"}]},{"id":"have-you-ever-seen-the-rain","title":"HAVE YOU EVER SEEN THE RAIN","artist":"CCR","key":"C","singers":["A"],"setOrder":19,"lines":[{"t":"verse","x":"Someone told me long ago"},{"t":"verse","x":"There's a calm before the storm"},{"t":"verse","x":"I know, it's been comin' for some time"},{"t":"verse","x":"When it's over, so they say"},{"t":"verse","x":"It'll rain a sunny day"},{"t":"verse","x":"I know, shinin' down like water"},{"t":"gap","x":""},{"t":"verse","x":"I wanna know, have you ever seen the rain?"},{"t":"verse","x":"I wanna know, have you ever seen the rain"},{"t":"verse","x":"Comin' down on a sunny day?"},{"t":"gap","x":""},{"t":"verse","x":"Yesterday and days before"},{"t":"verse","x":"Sun is cold and rain is hard"},{"t":"verse","x":"I know, been that way for all my time"},{"t":"verse","x":"Till forever on it goes"},{"t":"verse","x":"Through the circle, fast and slow"},{"t":"verse","x":"I know, it can't stop, I wonder"},{"t":"gap","x":""},{"t":"verse","x":"I wanna know, have you ever seen the rain?"},{"t":"verse","x":"I wanna know, have you ever seen the rain"},{"t":"verse","x":"Comin' down on a sunny day?"},{"t":"gap","x":""},{"t":"chorus","x":"Yeah"},{"t":"verse","x":"I wanna know, have you ever seen the rain?"},{"t":"verse","x":"I wanna know, have you ever seen the rain"},{"t":"verse","x":"Comin' down on a sunny day?"}]},{"id":"wicked-game","title":"WICKED GAME","artist":"Chris Isaak","key":"Bm","singers":["E","A","R"],"setOrder":20,"lines":[{"t":"verse","x":"The world was on fire and no one could save me but you"},{"t":"verse","x":"It's strange what desire will make foolish people do"},{"t":"verse","x":"I never dreamed that I'd meet somebody like you"},{"t":"verse","x":"And I never dreamed that I'd lose somebody like you"},{"t":"gap","x":""},{"t":"verse","x":"No, I don't wanna fall in love (this world is only gonna break your heart)"},{"t":"verse","x":"No, I don't wanna fall in love (this world is only gonna break your heart)"},{"t":"verse","x":"With you (with you)"},{"t":"cue","x":"This world is only gonna break your heart"},{"t":"gap","x":""},{"t":"verse","x":"What a wicked game to play"},{"t":"verse","x":"To make me feel this way"},{"t":"verse","x":"What a wicked thing to do"},{"t":"verse","x":"To let me dream of you"},{"t":"verse","x":"What a wicked thing to say"},{"t":"verse","x":"You never felt this way"},{"t":"verse","x":"What a wicked thing to do"},{"t":"verse","x":"To make me dream of you"},{"t":"gap","x":""},{"t":"verse","x":"And I don't wanna fall in love (this world is only gonna break your heart)"},{"t":"verse","x":"No, I don't wanna fall in love (this world is only gonna break your heart)"},{"t":"verse","x":"With you"},{"t":"gap","x":""},{"t":"verse","x":"The world was on fire and no one could save me but you"},{"t":"verse","x":"It's strange what desire will make foolish people do"},{"t":"verse","x":"I never dreamed that I'd love somebody like you"},{"t":"verse","x":"And I never dreamed that I'd lose somebody like you"},{"t":"gap","x":""},{"t":"verse","x":"No, I don't wanna fall in love (this world is only gonna break your heart)"},{"t":"verse","x":"No, I don't wanna fall in love (this world is only gonna break your heart)"},{"t":"verse","x":"With you (with you)"},{"t":"cue","x":"This world is only gonna break your heart"},{"t":"verse","x":"No, I (this world is only gonna break your heart)"},{"t":"cue","x":"This world is only gonna break your heart"},{"t":"gap","x":""},{"t":"verse","x":"Nobody loves no one"}]},{"id":"even-flow","title":"EVEN FLOW","artist":"Pearl Jam","key":"G","singers":["R"],"setOrder":21,"lines":[{"t":"verse","x":"Freezin', rests his head"},{"t":"verse","x":"On a pillow made of concrete, again"},{"t":"verse","x":"Oh, feelin', maybe he'll see"},{"t":"verse","x":"A little better set a days, ooh yeah"},{"t":"gap","x":""},{"t":"verse","x":"Oh, hand out, faces that he sees time again"},{"t":"verse","x":"Ain't that familiar, oh, yeah"},{"t":"verse","x":"Oh, dark grin, he can't help"},{"t":"verse","x":"When he's happy, looks insane"},{"t":"chorus","x":"Oh, yeah"},{"t":"gap","x":""},{"t":"chorus","x":"Even flow, thoughts arrive like butterflies"},{"t":"chorus","x":"Oh, he don't know, so he chases them away"},{"t":"chorus","x":"Someday yet, he'll begin his life again"},{"t":"chorus","x":"Life again, life again"},{"t":"gap","x":""},{"t":"verse","x":"Kneelin', looking through the paper"},{"t":"verse","x":"Though he doesn't know to read, oh, yeah"},{"t":"verse","x":"Oh, prayin', now to something"},{"t":"verse","x":"That has never showed him anything, oh"},{"t":"gap","x":""},{"t":"verse","x":"Oh, feelin', understands the weather"},{"t":"verse","x":"Of the winter's on its way, oh"},{"t":"verse","x":"Oh, ceilings, few and far between"},{"t":"verse","x":"All the legal halls of shame, yeah"},{"t":"gap","x":""},{"t":"chorus","x":"Even flow, thoughts arrive like butterflies"},{"t":"chorus","x":"Oh, he don't know, so he chases them away"},{"t":"chorus","x":"Someday yet, he'll begin his life again"},{"t":"chorus","x":"Whispering hands, gently lead him away"},{"t":"chorus","x":"Him away, him away, yeah!"},{"t":"gap","x":""},{"t":"chorus","x":"Even flow, thoughts arrive like butterflies"},{"t":"chorus","x":"Oh, he don't know, so he chases them away"},{"t":"chorus","x":"Someday yet, he'll begin his life again, yeah"},{"t":"chorus","x":"Oh, whispering hands, gently lead him away"},{"t":"chorus","x":"Him away, him away, yeah!"}]},{"id":"welcome-to-the-jungle","title":"WELCOME TO THE JUNGLE","artist":"Guns N' Roses","key":"Em","singers":["A"],"setOrder":22,"lines":[{"t":"verse","x":"Welcome to the jungle"},{"t":"verse","x":"We got fun and games"},{"t":"verse","x":"We got everything you want"},{"t":"verse","x":"Honey, we know the names"},{"t":"gap","x":""},{"t":"verse","x":"aWe are the people that can find"},{"t":"verse","x":"Whatever you may need"},{"t":"verse","x":"If you got the money, honey"},{"t":"verse","x":"We got your disease"},{"t":"gap","x":""},{"t":"chorus","x":"In the jungle, welcome to the jungle"},{"t":"chorus","x":"Watch it bring you to your"},{"t":"chorus","x":"nananannana knees, knees"},{"t":"chorus","x":"Oh, I wanna watch you bleed"},{"t":"gap","x":""},{"t":"verse","x":"Welcome to the jungle"},{"t":"verse","x":"We take it day by day"},{"t":"verse","x":"If you want it, you're gonna bleed"},{"t":"verse","x":"But it's the price you pay"},{"t":"gap","x":""},{"t":"verse","x":"And you're a very sexy girl"},{"t":"verse","x":"That's very hard to please"},{"t":"verse","x":"You can taste the bright lights"},{"t":"verse","x":"But you won't get there for free"},{"t":"gap","x":""},{"t":"chorus","x":"In the jungle, welcome to the jungle"},{"t":"verse","x":"Feel my, my, my, my serpentine"},{"t":"chorus","x":"I wanna hear you scream"},{"t":"gap","x":""},{"t":"verse","x":"Welcome to the jungle"},{"t":"verse","x":"It gets worse here everyday"},{"t":"verse","x":"You learn to live like an animal"},{"t":"verse","x":"In the jungle, where we play"},{"t":"verse","x":"If you got a hunger for what you see"},{"t":"verse","x":"You'll take it eventually"},{"t":"verse","x":"You can have anything you want"},{"t":"verse","x":"But you better not take it from me"},{"t":"gap","x":""},{"t":"chorus","x":"In the jungle, welcome to the jungle"},{"t":"chorus","x":"Watch it bring you to your"},{"t":"chorus","x":"nananannana knees, knees"},{"t":"chorus","x":"Oh, I wanna watch you bleed"},{"t":"gap","x":""},{"t":"chorus","x":"And when you're high, you never"},{"t":"chorus","x":"Ever want to come down"},{"t":"verse","x":"So down, so down, so down, yeah"},{"t":"gap","x":""},{"t":"cue","x":"solo - saída com dois riffs"},{"t":"gap","x":""},{"t":"chorus","x":"You know where you are?"},{"t":"chorus","x":"You're in the jungle, baby"},{"t":"chorus","x":"You're gonna die"},{"t":"chorus","x":"In the jungle, welcome to the jungle"},{"t":"chorus","x":"Watch it bring you to your knees, knees"},{"t":"chorus","x":"In the jungle, welcome to the jungle"},{"t":"chorus","x":"Feel my, my, my serpentine"},{"t":"chorus","x":"In the jungle, welcome to the jungle"},{"t":"chorus","x":"Watch it bring you to your"},{"t":"chorus","x":"knees, knees"},{"t":"chorus","x":"Down in the jungle, welcome to the jungle"},{"t":"chorus","x":"Watch it bring you to you"},{"t":"gap","x":""},{"t":"chorus","x":"It's gonna bring you down!"}]},{"id":"sweet-child-o-mine","title":"SWEET CHILD O' MINE","artist":"Guns N' Roses","key":"D","singers":["A"],"setOrder":23,"lines":[{"t":"verse","x":"She's got a smile that it seems to me"},{"t":"verse","x":"Reminds me of childhood memories"},{"t":"verse","x":"Where everything was as fresh as the bright blue sky (sky, sky)"},{"t":"verse","x":"Now and then when I see her face"},{"t":"verse","x":"She takes me away to that special place"},{"t":"chorus","x":"And if I stared too long, I'd probably break down and cry"},{"t":"gap","x":""},{"t":"chorus","x":"Woah, oh, oh, sweet child of mine"},{"t":"chorus","x":"Woah, oh, oh, oh, sweet love of mine"},{"t":"gap","x":""},{"t":"verse","x":"She's got eyes of the bluest skies"},{"t":"verse","x":"As if they thought of rain"},{"t":"verse","x":"I'd hate to look into those eyes and see an ounce of pain"},{"t":"verse","x":"Her hair reminds me of a warm, safe place"},{"t":"verse","x":"Where, as a child, I'd hide"},{"t":"chorus","x":"And pray for the thunder and the rain to quietly pass me by"},{"t":"gap","x":""},{"t":"chorus","x":"Woah, oh, oh, sweet child of mine"},{"t":"chorus","x":"Woah-woah, oh, oh, oh, sweet love of mine"},{"t":"chorus","x":"Woah, oh, oh, oh, sweet child of mine (ooh, yeah, yeah)"},{"t":"verse","x":"Ooh, sweet love of mine"},{"t":"gap","x":""},{"t":"verse","x":"Where do we go?"},{"t":"verse","x":"Where do we go now?"},{"t":"verse","x":"Where do we go?"},{"t":"verse","x":"Mm-mm, oh, where do we go?"},{"t":"verse","x":"Where do we go now?"},{"t":"verse","x":"Oh, where do we go now?"},{"t":"verse","x":"Where do we go?"},{"t":"verse","x":"Sweet child, where do we go now?"},{"t":"gap","x":""},{"t":"verse","x":"Aye, aye, aye, aye, aye, aye, aye, aye (where do we go?)"},{"t":"verse","x":"Ooh, where do we go now?"},{"t":"verse","x":"Oh-oh-oh-oh-oh, oh, woah, where do we go?"},{"t":"verse","x":"Oh-oh, where do we go now?"},{"t":"verse","x":"Oh, where do we go?"},{"t":"verse","x":"Where do we go now?"},{"t":"verse","x":"Where do we go?"},{"t":"verse","x":"Woah-oh, where do we go now?"},{"t":"chorus","x":"No, no, no, no, no, no, no"},{"t":"chorus","x":"Sweet child, sweet child of mine"},{"t":"gap","x":""},{"t":"verse","x":"🧑‍🤝‍🧑 TWIST AND SHOUT"},{"t":"verse","x":"TWIST AND SHOUT"},{"t":"gap","x":""},{"t":"verse","x":"Well, shake it up, baby, now (shake it up, baby)"},{"t":"verse","x":"Twist and shout (twist and shout)"},{"t":"verse","x":"Come on, come on, come on, come on, baby, now (come on, baby)"},{"t":"verse","x":"Come on and work it on out (work it on out)"},{"t":"gap","x":""},{"t":"verse","x":"Well, work it on out (work it on out)"},{"t":"verse","x":"You know you look so good (look so good)"},{"t":"verse","x":"You know you got me going now (got me going)"},{"t":"verse","x":"Just like I knew you would (like I knew you would)"},{"t":"gap","x":""},{"t":"verse","x":"Well, shake it up, baby, now (shake it up, baby)"},{"t":"verse","x":"Twist and shout (twist and shout)"},{"t":"verse","x":"Come on, come on, come on, come on, baby, now (come on, baby)"},{"t":"verse","x":"Come on and work it on out (work it on out)"},{"t":"gap","x":""},{"t":"verse","x":"You know you twist, little girl (twist, little girl)"},{"t":"verse","x":"You know you twist so fine (twist so fine)"},{"t":"verse","x":"Come on and twist a little closer now (twist a little closer)"},{"t":"verse","x":"And let me know that you're mine (let me know you're mine)"},{"t":"verse","x":"Ah, ah, ah, ah, ah, ah!"},{"t":"verse","x":"Baby, now (shake it up, baby)"},{"t":"verse","x":"Twist and shout (twist and shout)"},{"t":"verse","x":"Come on, come on, come on, come on, baby, now (come on, baby)"},{"t":"verse","x":"Come on and work it on out (work it on out)"},{"t":"gap","x":""},{"t":"verse","x":"You know you twist, little girl (twist, little girl)"},{"t":"verse","x":"You know you twist so fine (twist so fine)"},{"t":"verse","x":"Come on and twist a little closer now (twist a little closer)"},{"t":"verse","x":"And let me know that you're mine (let me know you're mine)"},{"t":"gap","x":""},{"t":"verse","x":"Well, shake it, shake it, shake it, baby, now"},{"t":"verse","x":"Well, shake it, shake it, shake it, baby, now"},{"t":"verse","x":"Well, shake it, shake it, shake it, baby, now"},{"t":"gap","x":""},{"t":"verse","x":"Ah, ah, ah, yeah!"}]},{"id":"paranoid","title":"PARANOID","artist":"Black Sabbath","key":"Em","singers":["E"],"setOrder":24,"lines":[{"t":"cue","x":"dois riffs depois que entra a bateria:"},{"t":"gap","x":""},{"t":"verse","x":"Finished with my woman 'cause she"},{"t":"verse","x":"Couldn't help me with my mind"},{"t":"verse","x":"People think I'm insane because"},{"t":"verse","x":"I am frowning all the time"},{"t":"gap","x":""},{"t":"cue","x":"dois riffs"},{"t":"gap","x":""},{"t":"verse","x":"All day long, I think of things"},{"t":"verse","x":"But nothing seems to satisfy"},{"t":"verse","x":"Think I'll lose my mind if I don't"},{"t":"verse","x":"Find something to pacify"},{"t":"gap","x":""},{"t":"chorus","x":"sustain"},{"t":"gap","x":""},{"t":"chorus","x":"Can you help me"},{"t":"chorus","x":"Occupy my brain?"},{"t":"chorus","x":"Whoa, yeah"},{"t":"gap","x":""},{"t":"cue","x":"dois riffs"},{"t":"verse","x":"I need someone to show me"},{"t":"verse","x":"The things in life that I can't find"},{"t":"verse","x":"I can't see the things that make true happiness"},{"t":"verse","x":"I must be blind"},{"t":"gap","x":""},{"t":"cue","x":"-> solo"},{"t":"gap","x":""},{"t":"verse","x":"Make a joke and I will sigh"},{"t":"verse","x":"And you will laugh and I will cry"},{"t":"verse","x":"Happiness, I cannot feel"},{"t":"verse","x":"And love to me is so unreal"},{"t":"gap","x":""},{"t":"cue","x":"dois riffs"},{"t":"gap","x":""},{"t":"verse","x":"And so, as you hear these words"},{"t":"verse","x":"Telling you now of my state"},{"t":"verse","x":"I tell you to enjoy life, I wish I could"},{"t":"verse","x":"But it's too late"}]},{"id":"war-pigs","title":"WAR PIGS","artist":"Black Sabbath","key":"Em","singers":["E"],"setOrder":25,"lines":[{"t":"cue","x":"Riff e platillos 2x Riff"},{"t":"verse","x":"Generals gathered in their masses"},{"t":"verse","x":"Just like witches at black masses"},{"t":"verse","x":"Evil minds that plot destruction"},{"t":"verse","x":"Sorcerer of death's construction"},{"t":"gap","x":""},{"t":"verse","x":"In the fields, the bodies burning"},{"t":"verse","x":"As the war machine keeps turning"},{"t":"verse","x":"Death and hatred to mankind"},{"t":"verse","x":"Poisoning their brainwashed minds"},{"t":"chorus","x":"Oh, Lord, yeah"},{"t":"gap","x":""},{"t":"cue","x":"4 voltas de riff e muda o riff 3x"},{"t":"gap","x":""},{"t":"chorus","x":"Politicians hide themselves away"},{"t":"chorus","x":"They only started the war"},{"t":"chorus","x":"Why should they go out to fight?"},{"t":"chorus","x":"They leave that role to the poor, yeah"},{"t":"gap","x":""},{"t":"cue","x":"4 voltas de riff"},{"t":"chorus","x":"Time will tell on their power minds"},{"t":"chorus","x":"Making war just for fun"},{"t":"chorus","x":"Treating people just like pawns in chess"},{"t":"chorus","x":"Wait 'til their judgement day comes, yeah"},{"t":"gap","x":""},{"t":"cue","x":"4 voltas de riff e solo e volta ao início"},{"t":"gap","x":""},{"t":"cue","x":"Riff e platillos 2x - Riff"},{"t":"verse","x":"Now in darkness, world stops turning"},{"t":"verse","x":"Ashes where their bodies burning"},{"t":"verse","x":"No more war pigs have the power"},{"t":"gap","x":""},{"t":"verse","x":"Hand of God has struck the hour"},{"t":"verse","x":"Day of judgement, God is calling"},{"t":"verse","x":"On their knees, the war pigs crawling"},{"t":"verse","x":"Begging mercy for their sins"},{"t":"verse","x":"Satan laughing, spreads his wings"},{"t":"chorus","x":"Oh, Lord, yeah"},{"t":"gap","x":""},{"t":"cue","x":"Solo até o final"}]},{"id":"knockin-on-heaven-s-door","title":"KNOCKIN' ON HEAVEN'S DOOR","artist":"Bob Dylan / GN'R","key":"G","singers":["A"],"setOrder":26,"lines":[{"t":"verse","x":"Mama, take this badge from me"},{"t":"verse","x":"I can't use it anymore"},{"t":"verse","x":"It's getting dark, too dark to see"},{"t":"verse","x":"Feels like I'm knockin' on heaven's door"},{"t":"gap","x":""},{"t":"chorus","x":"Knock, knock, knockin' on heaven's door"},{"t":"verse","x":"Hey, hey, hey, hey, yeah"},{"t":"gap","x":""},{"t":"chorus","x":"Knock, knock, knockin' on heaven's door"},{"t":"chorus","x":"Knock, knock, knockin' on heaven's door"},{"t":"chorus","x":"Knock, knock, knockin' on heaven's door"},{"t":"gap","x":""},{"t":"verse","x":"Mama, put my guns in the ground"},{"t":"verse","x":"I can't shoot them anymore"},{"t":"verse","x":"That cold black cloud is coming down"},{"t":"verse","x":"Feels like I'm knockin' on heaven's door"},{"t":"gap","x":""},{"t":"chorus","x":"Knock, knock, knockin' on heaven's door"},{"t":"verse","x":"Hey, hey, hey, hey, yeah"},{"t":"gap","x":""},{"t":"chorus","x":"Knock, knock, knockin' on heaven's door"},{"t":"chorus","x":"Knock, knock, knockin' on heaven's door"},{"t":"chorus","x":"Knock, knock, knockin' on heaven's door"},{"t":"gap","x":""},{"t":"cue","x":"SOLO"},{"t":"gap","x":""},{"t":"chorus","x":"Knock, knock, knockin' on heaven's door"},{"t":"verse","x":"Hey, hey, hey, hey, yeah"},{"t":"cue","x":"Knock, knock, knockin' on heaven's door"},{"t":"gap","x":""},{"t":"chorus","x":"Knock, knock, knockin' on heaven's door"},{"t":"cue","x":"Knock, knock, knockin' on heaven's door"},{"t":"chorus","x":"Knock, knock, knockin' on heaven's door"},{"t":"cue","x":"Knock, knock, knockin' on heaven's door"},{"t":"chorus","x":"Knock, knock, knockin' on heaven's door"},{"t":"cue","x":"Knock, knock, knockin' on heaven's door"},{"t":"chorus","x":"Knock, knock, knockin' on heaven's door"},{"t":"chorus","x":"Knock, knock, knockin' on heaven's door"}]},{"id":"with-or-without-you","title":"WITH OR WITHOUT YOU","artist":"U2","key":"D","singers":["A"],"setOrder":27,"lines":[{"t":"verse","x":"See the stone set in your eyes"},{"t":"verse","x":"See the thorn twist in your side"},{"t":"verse","x":"I'll wait for you"},{"t":"gap","x":""},{"t":"verse","x":"Sleight of hand and twist of fate"},{"t":"verse","x":"On a bed of nails, she makes me wait"},{"t":"verse","x":"And I wait without you"},{"t":"gap","x":""},{"t":"chorus","x":"With or without you"},{"t":"chorus","x":"With or without you"},{"t":"gap","x":""},{"t":"verse","x":"Through the storm, we reach the shore"},{"t":"verse","x":"You give it all, but I want more"},{"t":"verse","x":"And I'm waiting for you"},{"t":"gap","x":""},{"t":"chorus","x":"With or without you"},{"t":"verse","x":"With or without you, ah"},{"t":"verse","x":"I can't live"},{"t":"chorus","x":"With or without you"},{"t":"gap","x":""},{"t":"chorus","x":"And you give yourself away"},{"t":"chorus","x":"And you give yourself away"},{"t":"chorus","x":"And you give, and you give"},{"t":"chorus","x":"And you give yourself away"},{"t":"verse","x":"My hands are tied"},{"t":"verse","x":"My body bruised"},{"t":"verse","x":"She's got me with"},{"t":"verse","x":"Nothing to win and nothing left to lose"},{"t":"gap","x":""},{"t":"chorus","x":"And you give yourself away"},{"t":"chorus","x":"And you give yourself away"},{"t":"chorus","x":"And you give, and you give"},{"t":"chorus","x":"And you give yourself away"},{"t":"gap","x":""},{"t":"chorus","x":"With or without you"},{"t":"chorus","x":"With or without you, oh"},{"t":"chorus","x":"I can't live with or without you"},{"t":"gap","x":""},{"t":"chorus","x":"With or without you"},{"t":"chorus","x":"With or without you, oh"},{"t":"chorus","x":"I can't live with or without you"},{"t":"chorus","x":"With or without you"}]},{"id":"hells-bells","title":"HELLS BELLS","artist":"AC/DC","key":"Am","singers":["E"],"setOrder":28,"lines":[{"t":"cue","x":"quatro finais com a guitarra:"},{"t":"verse","x":"I'm a rolling thunder, pouring rain"},{"t":"verse","x":"I'm coming on like a hurricane"},{"t":"verse","x":"My lightning's flashing across the sky"},{"t":"verse","x":"You're only young, but you're gonna die"},{"t":"chorus","x":"I won't take no prisoners, won't spare no lives"},{"t":"chorus","x":"Nobody's putting up a fight"},{"t":"chorus","x":"I got my bell, I'm gonna take you to hell"},{"t":"chorus","x":"I'm gonna get you, Satan get you"},{"t":"chorus","x":"Hell's bells"},{"t":"chorus","x":"Yeah, hell's bells"},{"t":"verse","x":"You got me ringing hell's bells"},{"t":"verse","x":"My temperature's high, hell's bells"},{"t":"gap","x":""},{"t":"cue","x":"dois riffs"},{"t":"gap","x":""},{"t":"verse","x":"I'll give you black sensations up and down your spine"},{"t":"verse","x":"If you're into evil, you're a friend of mine"},{"t":"verse","x":"See my white light flashing as I split the night"},{"t":"verse","x":"'Cause if good's on the left, then I'm sticking to the right"},{"t":"chorus","x":"I won't take no prisoners, won't spare no lives"},{"t":"chorus","x":"Nobody's putting up a fight"},{"t":"chorus","x":"I got my bell, I'm gonna take you to hell"},{"t":"chorus","x":"I'm gonna get you, Satan get you"},{"t":"cue","x":"dois riffs"},{"t":"chorus","x":"Hell's bells"},{"t":"chorus","x":"Yeah, hell's bells"},{"t":"verse","x":"You got me ringing hell's bells"},{"t":"verse","x":"My temperature's high, hell's bells"},{"t":"gap","x":""},{"t":"cue","x":"-> solo principal"},{"t":"gap","x":""},{"t":"chorus","x":"Hell's bells"},{"t":"chorus","x":"Satan's coming to you"},{"t":"chorus","x":"Hell's bells"},{"t":"chorus","x":"He's ringing them now"},{"t":"chorus","x":"Those hell's bells"},{"t":"chorus","x":"The temperature's high"},{"t":"chorus","x":"Hell's bells"},{"t":"chorus","x":"Across the sky"},{"t":"cue","x":"começa o solo e canta por cima"},{"t":"chorus","x":"Hell's bells"},{"t":"verse","x":"They're taking you down"},{"t":"chorus","x":"Hell's bells"},{"t":"verse","x":"They're dragging you under"},{"t":"chorus","x":"Hell's bells"},{"t":"verse","x":"Gonna split the night"},{"t":"chorus","x":"Hell's bells"},{"t":"verse","x":"There's no way to fight, yeah"},{"t":"cue","x":"SOLO final Hell's bell"}]},{"id":"highway-to-hell","title":"HIGHWAY TO HELL","artist":"AC/DC","key":"G","singers":["E"],"setOrder":29,"lines":[{"t":"cue","x":"Dois riffs e um acorde"},{"t":"verse","x":"Livin easy,"},{"t":"verse","x":"livin' free"},{"t":"chorus","x":"Season ticket, on a one way ride"},{"t":"verse","x":"Asking nothing,"},{"t":"verse","x":"leave me be"},{"t":"chorus","x":"Taking everything in my stride"},{"t":"verse","x":"Don't need reason,"},{"t":"verse","x":"don't need rhyme"},{"t":"chorus","x":"Ain't nothin' that I’d rather do"},{"t":"verse","x":"Going down,"},{"t":"verse","x":"party time"},{"t":"chorus","x":"My friends are gonna be there too"},{"t":"gap","x":""},{"t":"chorus","x":"I'm on the highway to hell"},{"t":"chorus","x":"On the highway to hell"},{"t":"chorus","x":"Highway to hell"},{"t":"chorus","x":"I'm on the highway to hell"},{"t":"gap","x":""},{"t":"verse","x":"No stop signs,"},{"t":"verse","x":"speed limit"},{"t":"chorus","x":"Nobody's gonna slow me down"},{"t":"verse","x":"Like a wheel,"},{"t":"verse","x":"gonna spin it"},{"t":"chorus","x":"Nobody's gonna mess me 'round"},{"t":"verse","x":"Hey, Satan!"},{"t":"verse","x":"Paid my dues"},{"t":"chorus","x":"Playin' in a rockin' band"},{"t":"verse","x":"Hey, mama!"},{"t":"verse","x":"Look at me"},{"t":"chorus","x":"I'm on my way to the promised land"},{"t":"gap","x":""},{"t":"chorus","x":"I'm on the highway to hell"},{"t":"chorus","x":"Highway to hell"},{"t":"chorus","x":"I'm on the highway to hell"},{"t":"chorus","x":"Highway to hell"},{"t":"gap","x":""},{"t":"verse","x":"mmmmmm"},{"t":"verse","x":"Don't stop me!"},{"t":"cue","x":"solo curto"},{"t":"gap","x":""},{"t":"chorus","x":"I'm on the highway to hell"},{"t":"chorus","x":"On the highway to hell"},{"t":"chorus","x":"I'm on the (highway to hell)"},{"t":"chorus","x":"On the highway (to hell)"},{"t":"cue","x":"revirada guitarra"},{"t":"chorus","x":"Highway to hell"},{"t":"chorus","x":"I'm on the highway to hell"},{"t":"chorus","x":"Highway to hell"},{"t":"chorus","x":"Highway to hell"},{"t":"chorus","x":"Highway to hell"},{"t":"gap","x":""},{"t":"chorus","x":"And I'm going down all the way"},{"t":"chorus","x":"On the highway to hell"},{"t":"gap","x":""},{"t":"cue","x":"FIM"},{"t":"cue","x":"ACABA AQUI BAR 54"}]},{"id":"still-loving-you","title":"STILL LOVING YOU","artist":"Scorpions","key":"Gm","singers":["A"],"setOrder":30,"lines":[{"t":"cue","x":"dois compassos só guitarra e voz"},{"t":"verse","x":"Time, it needs time"},{"t":"verse","x":"To win back your love again"},{"t":"verse","x":"I will be there"},{"t":"verse","x":"I will be there"},{"t":"verse","x":"Love, only love"},{"t":"verse","x":"Can bring back your love someday"},{"t":"verse","x":"I will be there"},{"t":"verse","x":"I will be there"},{"t":"cue","x":"solo curto e entra baixo e bateria"},{"t":"verse","x":"Fight, babe, I'll fight"},{"t":"verse","x":"To win back your love again"},{"t":"verse","x":"I will be there"},{"t":"verse","x":"I will be there"},{"t":"verse","x":"Love, only love"},{"t":"verse","x":"Can break down the wall someday"},{"t":"verse","x":"I will be there"},{"t":"verse","x":"I will be there"},{"t":"gap","x":""},{"t":"chorus","x":"If we'd go again all the way from the start"},{"t":"chorus","x":"I would try to change the things that killed our love"},{"t":"chorus","x":"Pride has built a wall so strong that I can't get through"},{"t":"chorus","x":"Is there really no chance to start once again?"},{"t":"chorus","x":"I'm loving you"},{"t":"gap","x":""},{"t":"cue","x":"solo curto"},{"t":"verse","x":"Try, baby, try"},{"t":"verse","x":"To trust in my love again"},{"t":"verse","x":"I will be there"},{"t":"verse","x":"I will be there"},{"t":"chorus","x":"Love, our love"},{"t":"chorus","x":"Just shouldn't be thrown away"},{"t":"verse","x":"I will be there"},{"t":"verse","x":"I will be there"},{"t":"gap","x":""},{"t":"chorus","x":"If we'd go again all the way from the start"},{"t":"chorus","x":"I would try to change the things that killed our love"},{"t":"chorus","x":"Yes, I've hurt your pride and I know what you've been through"},{"t":"chorus","x":"You should give me a chance"},{"t":"chorus","x":"This can't be the end"},{"t":"gap","x":""},{"t":"chorus","x":"I'm still loving you"},{"t":"chorus","x":"I'm still loving you"},{"t":"chorus","x":"I'm still loving you"},{"t":"chorus","x":"I need your love"},{"t":"chorus","x":"I'm still loving you"}]},{"id":"separate-ways","title":"SEPARATE WAYS","artist":"Journey","key":"Em","singers":["A"],"setOrder":31,"lines":[{"t":"verse","x":"Here we stand"},{"t":"verse","x":"Worlds apart, hearts broken in two"},{"t":"verse","x":"Two, two"},{"t":"verse","x":"Sleepless nights"},{"t":"verse","x":"Losing ground, I'm reaching for you"},{"t":"verse","x":"You, you"},{"t":"chorus","x":"Feelin' that it's gooone"},{"t":"chorus","x":"Can change your mind"},{"t":"chorus","x":"If we can't go ooon"},{"t":"chorus","x":"To survive the tide love diviiides"},{"t":"chorus","x":"Someday love will find you"},{"t":"chorus","x":"Break those chains that bind you"},{"t":"chorus","x":"One night will remind you"},{"t":"chorus","x":"How we touched and went our separate ways"},{"t":"chorus","x":"If he ever hurts you"},{"t":"chorus","x":"True love won't desert you"},{"t":"chorus","x":"You know I still love you"},{"t":"chorus","x":"Though we touched"},{"t":"chorus","x":"And went our separate ways"},{"t":"gap","x":""},{"t":"verse","x":"Troubled times"},{"t":"verse","x":"Caught between confusions and pain, pain, pain"},{"t":"verse","x":"Distant eyes"},{"t":"verse","x":"Promises we made were in vain, vaaain"},{"t":"chorus","x":"If you must gooo, I wish you love"},{"t":"chorus","x":"You'll never walk alooone"},{"t":"chorus","x":"Take care my love"},{"t":"chorus","x":"Miss you looove"},{"t":"chorus","x":"Someday love will find you"},{"t":"chorus","x":"Break those chains that bind you"},{"t":"chorus","x":"One night will remind you"},{"t":"chorus","x":"How we touched"},{"t":"chorus","x":"And went our separate ways"},{"t":"chorus","x":"If he ever hurts you"},{"t":"chorus","x":"True love won't desert you"},{"t":"chorus","x":"You know I still love you"},{"t":"chorus","x":"Though we touched"},{"t":"chorus","x":"And went our separate ways"},{"t":"cue","x":"solo guitarra + batera"},{"t":"chorus","x":"Oooh"},{"t":"chorus","x":"Someday love will find you"},{"t":"chorus","x":"Break those chains that bind you"},{"t":"chorus","x":"One night will remind you"},{"t":"chorus","x":"How we touched"},{"t":"chorus","x":"And went our separate ways"},{"t":"chorus","x":"If he ever hurts you"},{"t":"chorus","x":"True love won't desert you"},{"t":"chorus","x":"You know I still love you"},{"t":"chorus","x":"Though we touched"},{"t":"chorus","x":"And went our separate ways"},{"t":"chorus","x":"I still love you girl"},{"t":"chorus","x":"I really love you girl"},{"t":"chorus","x":"And if he ever hurts you"},{"t":"chorus","x":"True love won't desert you"},{"t":"gap","x":""},{"t":"chorus","x":"Noooo! noooo!"}]},{"id":"love-gun","title":"LOVE GUN","artist":"KISS","key":"Em","singers":["A","E"],"setOrder":32,"lines":[{"t":"cue","x":"2 riffs e redoblo"},{"t":"verse","x":"I really love you, baby"},{"t":"verse","x":"I love what you got"},{"t":"verse","x":"Let's get together, we can"},{"t":"verse","x":"Get hot"},{"t":"gap","x":""},{"t":"verse","x":"No more tomorrow, baby"},{"t":"verse","x":"Time is today"},{"t":"verse","x":"Girl, I can make you feel"},{"t":"verse","x":"Okay"},{"t":"gap","x":""},{"t":"verse","x":"No place for hiding, baby"},{"t":"verse","x":"No place to run"},{"t":"verse","x":"You pull the trigger of my"},{"t":"gap","x":""},{"t":"chorus","x":"Love gun (love gun)"},{"t":"chorus","x":"Love gun"},{"t":"chorus","x":"Love gun (love gun)"},{"t":"chorus","x":"Love gun"},{"t":"gap","x":""},{"t":"verse","x":"You can't forget me, baby"},{"t":"verse","x":"Don't try to lie"},{"t":"verse","x":"You'll never leave me, mama"},{"t":"verse","x":"So don't try"},{"t":"gap","x":""},{"t":"verse","x":"I'll be a gambler, baby"},{"t":"verse","x":"Lay down the bet"},{"t":"verse","x":"We'll get together, mama"},{"t":"verse","x":"You'll sweat"},{"t":"gap","x":""},{"t":"verse","x":"No place for hiding, baby"},{"t":"verse","x":"No place to run"},{"t":"verse","x":"You pull the trigger of my"},{"t":"gap","x":""},{"t":"chorus","x":"Love gun (love gun)"},{"t":"chorus","x":"Love gun"},{"t":"chorus","x":"Love gun (love gun)"},{"t":"chorus","x":"Love gun"},{"t":"gap","x":""},{"t":"cue","x":"Love gun"},{"t":"cue","x":"Love gun"},{"t":"gap","x":""},{"t":"cue","x":"Redoblo de ponte"},{"t":"gap","x":""},{"t":"chorus","x":"Love gun (love gun)"},{"t":"chorus","x":"Love gun"},{"t":"chorus","x":"Love gun (love gun)"},{"t":"chorus","x":"Love gun"},{"t":"gap","x":""},{"t":"chorus","x":"Love gun (love gun)"},{"t":"chorus","x":"Love gun"},{"t":"chorus","x":"Love gun (love gun)"},{"t":"chorus","x":"Love gun"},{"t":"gap","x":""},{"t":"chorus","x":"Love gun (love gun)"},{"t":"chorus","x":"Love gun (love gun)"},{"t":"chorus","x":"Love gun (love gun)"},{"t":"chorus","x":"Love gun (love gun)"},{"t":"gap","x":""},{"t":"chorus","x":"Love gun"}]},{"id":"enter-sandman","title":"ENTER SANDMAN","artist":"Metallica","key":"Em","singers":["E"],"setOrder":33,"lines":[{"t":"cue","x":"2x riff principal"},{"t":"verse","x":"Say your prayers, little one, don't forget, my son"},{"t":"verse","x":"To include everyone"},{"t":"verse","x":"I tuck you in, warm within, keep you free from sin"},{"t":"verse","x":"'Til the Sandman, he comes, ah"},{"t":"chorus","x":"Sleep with one eye open"},{"t":"chorus","x":"Gripping your pillow tight"},{"t":"gap","x":""},{"t":"chorus","x":"Exit light"},{"t":"chorus","x":"Enter night"},{"t":"chorus","x":"Take my hand"},{"t":"chorus","x":"We're off to Never-Neverland"},{"t":"cue","x":"2x riff"},{"t":"verse","x":"Something's wrong, shut the light, heavy thoughts tonight"},{"t":"verse","x":"And they aren't of Snow White"},{"t":"verse","x":"Dreams of war, dreams of liars, dreams of dragons' fire"},{"t":"verse","x":"And of things that will bite, yeah"},{"t":"chorus","x":"Sleep with one eye open"},{"t":"chorus","x":"Gripping your pillow tight"},{"t":"gap","x":""},{"t":"chorus","x":"Exit light"},{"t":"chorus","x":"Enter night"},{"t":"chorus","x":"Take my hand"},{"t":"chorus","x":"We're off to Never-Neverland"},{"t":"chorus","x":"hehe!"},{"t":"gap","x":""},{"t":"cue","x":"solo longo"},{"t":"verse","x":"Now, I lay me down to sleep"},{"t":"cue","x":"now, I lay me down to sleep"},{"t":"verse","x":"Pray the Lord my soul to keep"},{"t":"cue","x":"pray the Lord my soul to keep"},{"t":"verse","x":"If I die before I wake"},{"t":"cue","x":"if I die before I wake"},{"t":"verse","x":"Pray the Lord my soul to take"},{"t":"cue","x":"pray the Lord my soul to take"},{"t":"gap","x":""},{"t":"chorus","x":"Hush, little baby, don't say a word"},{"t":"chorus","x":"And never mind that noise you heard"},{"t":"chorus","x":"It's just the beasts under your bed"},{"t":"chorus","x":"In your closet, in your head"},{"t":"gap","x":""},{"t":"chorus","x":"Exit light"},{"t":"chorus","x":"Enter night"},{"t":"chorus","x":"Grain of sand"},{"t":"gap","x":""},{"t":"chorus","x":"Exit light"},{"t":"chorus","x":"Enter night"},{"t":"chorus","x":"Take my hand"},{"t":"chorus","x":"We're off to Never-Neverland"},{"t":"chorus","x":"hahaha"},{"t":"gap","x":""},{"t":"chorus","x":"Oh"},{"t":"chorus","x":"Yeah, yeah"},{"t":"chorus","x":"Whoa, oh"},{"t":"gap","x":""},{"t":"chorus","x":"(We're off to Never-Neverland) take my hand"},{"t":"chorus","x":"(We're off to Never-Neverland) take my hand"},{"t":"chorus","x":"e assim vai descendo…"}]},{"id":"the-trooper","title":"THE TROOPER","artist":"Iron Maiden","key":"Em","singers":["E"],"setOrder":34,"lines":[]},{"id":"rock-you-like-a-hurricane","title":"ROCK YOU LIKE A HURRICANE","artist":"Scorpions","key":"Em","singers":["A"],"setOrder":35,"lines":[{"t":"verse","x":"ROCK I LIKE A HURRICANE (Em)"},{"t":"verse","x":"It's early morning, the sun comes out"},{"t":"verse","x":"Last night was shaking and pretty loud"},{"t":"verse","x":"My cat is purring, it scratches my skin"},{"t":"verse","x":"So what is wrong with another sin?"},{"t":"chorus","x":"The bitch is hungry, she needs to tell"},{"t":"chorus","x":"So give her inches and feed her well"},{"t":"chorus","x":"More days to come, new places to go"},{"t":"chorus","x":"I've got to leave, it's time for a show"},{"t":"gap","x":""},{"t":"chorus","x":"Here I am"},{"t":"chorus","x":"Rock you like a hurricane"},{"t":"chorus","x":"Here I am"},{"t":"chorus","x":"Rock you like a hurricane"},{"t":"gap","x":""},{"t":"verse","x":"My body is burning, it starts to shout"},{"t":"verse","x":"Desire is coming, it breaks out loud"},{"t":"verse","x":"Lust is in cages 'til storm breaks loose"},{"t":"verse","x":"Just have to make it with someone I choose"},{"t":"chorus","x":"The night is calling, I have to go"},{"t":"chorus","x":"The wolf is hungry, he runs the show"},{"t":"chorus","x":"He's licking his lips, he's ready to win"},{"t":"chorus","x":"On the hunt tonight for love at first sting"},{"t":"gap","x":""},{"t":"chorus","x":"Here I am"},{"t":"chorus","x":"Rock you like a hurricane"},{"t":"chorus","x":"Here I am"},{"t":"chorus","x":"Rock you like a hurricane"},{"t":"chorus","x":"Here I am"},{"t":"chorus","x":"Rock you like a hurricane"},{"t":"chorus","x":"Here I am"},{"t":"chorus","x":"Rock you like a hurricane"},{"t":"gap","x":""},{"t":"chorus","x":"Rock you like a hurricane"},{"t":"gap","x":""},{"t":"cue","x":"solo"},{"t":"gap","x":""},{"t":"verse","x":"It's early morning, the sun comes out"},{"t":"verse","x":"Last night was shaking and pretty loud"},{"t":"verse","x":"My cat is purring, it scratches my skin"},{"t":"verse","x":"So what is wrong with another sin?"},{"t":"chorus","x":"The night is calling, I have to go"},{"t":"chorus","x":"The wolf is hungry, he runs the show"},{"t":"chorus","x":"He's licking his lips, he's ready to win"},{"t":"chorus","x":"On the hunt tonight for love at first sting"},{"t":"gap","x":""},{"t":"chorus","x":"Here I am"},{"t":"chorus","x":"Rock you like a hurricane"},{"t":"chorus","x":"Here I am"},{"t":"chorus","x":"Rock you like a hurricane"},{"t":"gap","x":""},{"t":"chorus","x":"Here I am"},{"t":"chorus","x":"Rock you like a hurricane"},{"t":"chorus","x":"Here I am"},{"t":"chorus","x":"Rock you like a hurricane"}]},{"id":"ticket-to-ride","title":"TICKET TO RIDE","artist":"The Beatles","key":"A","singers":["A"],"setOrder":null,"lines":[{"t":"verse","x":"I think I'm gonna be sad"},{"t":"verse","x":"I think it's today, yeah"},{"t":"verse","x":"The girl that's drivin' me mad"},{"t":"verse","x":"Is goin' away"},{"t":"gap","x":""},{"t":"cue","x":"Refrão"},{"t":"gap","x":""},{"t":"verse","x":"She said that livin' with me"},{"t":"verse","x":"Was bringin' her down, yeah"},{"t":"verse","x":"She would never be free"},{"t":"verse","x":"When I was around"},{"t":"gap","x":""},{"t":"cue","x":"Refrão"},{"t":"gap","x":""},{"t":"verse","x":"I don't know why she's ridin' so high"},{"t":"verse","x":"She ought to think twice"},{"t":"verse","x":"She ought to do right by me"},{"t":"verse","x":"Before she gets to sayin' goodbye"},{"t":"verse","x":"She ought to think twice"},{"t":"verse","x":"She ought to do right by me"},{"t":"gap","x":""},{"t":"verse","x":"I think I'm gonna be sad"},{"t":"verse","x":"I think it's today, yeah"},{"t":"verse","x":"The girl that's drivin' me mad"},{"t":"verse","x":"Is goin' away, yeah"},{"t":"gap","x":""},{"t":"cue","x":"Refrão"},{"t":"gap","x":""},{"t":"verse","x":"I don't know why she's ridin' so high"},{"t":"verse","x":"She ought to think twice"},{"t":"verse","x":"She ought to do right by me"},{"t":"verse","x":"Before she gets to sayin' goodbye"},{"t":"verse","x":"She ought to think twice"},{"t":"verse","x":"She ought to do right by me"},{"t":"gap","x":""},{"t":"verse","x":"She said that livin' with me"},{"t":"verse","x":"Was bringin' her down, yeah"},{"t":"verse","x":"She would never be free"},{"t":"verse","x":"When I was around"},{"t":"gap","x":""},{"t":"cue","x":"Refrão"},{"t":"gap","x":""},{"t":"verse","x":"My baby don't care"},{"t":"verse","x":"My baby don't care"},{"t":"verse","x":"My baby don't care"},{"t":"verse","x":"My baby don't care"}]},{"id":"help","title":"HELP","artist":"The Beatles","key":"A","singers":["A"],"setOrder":null,"lines":[]},{"id":"proud-mary","title":"PROUD MARY","artist":"CCR","key":"A","singers":["A","E"],"setOrder":null,"lines":[{"t":"verse","x":"Left a good job in the city"},{"t":"verse","x":"Workin' for the man ev'ry night and day"},{"t":"verse","x":"And I never lost one minute of sleepin'"},{"t":"verse","x":"Worryin' 'bout the way things might have been"},{"t":"gap","x":""},{"t":"chorus","x":"Big wheel, keep on turnin'"},{"t":"chorus","x":"Proud Mary, keep on burnin'"},{"t":"chorus","x":"Rollin', rollin'"},{"t":"chorus","x":"Rollin' on the river"},{"t":"gap","x":""},{"t":"verse","x":"Cleaned a lot of plates in Memphis"},{"t":"verse","x":"Pumped a lot of 'pane down in New Orleans"},{"t":"verse","x":"But I never saw the good side of the city"},{"t":"verse","x":"'Til I hitched a ride on a Riverboat Queen"},{"t":"gap","x":""},{"t":"chorus","x":"Big wheel, keep on turnin'"},{"t":"chorus","x":"Proud Mary, keep on burnin'"},{"t":"chorus","x":"Rollin', rollin'"},{"t":"chorus","x":"Rollin' on the river"},{"t":"gap","x":""},{"t":"chorus","x":"Rollin', rollin'"},{"t":"chorus","x":"Rollin' on the river"},{"t":"verse","x":"If you come down to the river"},{"t":"verse","x":"Bet you gonna find some people who live"},{"t":"verse","x":"You don't have to worry 'cause you have no money"},{"t":"verse","x":"People on the river are happy to give"},{"t":"gap","x":""},{"t":"chorus","x":"Big wheel, keep on turnin'"},{"t":"chorus","x":"Proud Mary, keep on burnin'"},{"t":"chorus","x":"Rollin', rollin'"},{"t":"chorus","x":"Rollin' on the river"},{"t":"gap","x":""},{"t":"verse","x":"Rollin' (rollin'), rollin'"},{"t":"chorus","x":"Rollin' on the river"},{"t":"chorus","x":"Rollin', rollin'"},{"t":"chorus","x":"Rollin' on the river"},{"t":"gap","x":""},{"t":"chorus","x":"Rollin', rollin'"},{"t":"chorus","x":"Rollin' on the river"},{"t":"chorus","x":"Rollin', rollin'"},{"t":"chorus","x":"Rollin' on the river"}]},{"id":"fortunate-son","title":"FORTUNATE SON","artist":"CCR","key":null,"singers":["E"],"setOrder":null,"lines":[{"t":"verse","x":"Some folks are born"},{"t":"verse","x":"Made to wave the flag"},{"t":"verse","x":"They're red, white and blue"},{"t":"verse","x":"And when the band plays"},{"t":"verse","x":"Hail To The Chief"},{"t":"verse","x":"They point the cannon at you, Lord"},{"t":"gap","x":""},{"t":"verse","x":"It ain't me, it ain't me"},{"t":"verse","x":"I ain't no senator's son"},{"t":"verse","x":"It ain't me, it ain't me"},{"t":"verse","x":"I ain't no fortunate one, no"},{"t":"gap","x":""},{"t":"verse","x":"Some folks are born"},{"t":"verse","x":"Silver spoon in hand"},{"t":"verse","x":"Lord, don't they help themselves"},{"t":"verse","x":"But when the taxman"},{"t":"verse","x":"Come to the door"},{"t":"verse","x":"Lord, the house look like a rummage sale"},{"t":"gap","x":""},{"t":"verse","x":"It ain't me, it ain't me"},{"t":"verse","x":"I ain't no millionaire's son"},{"t":"verse","x":"It ain't me, it ain't me"},{"t":"verse","x":"I ain't no fortunate one, no"},{"t":"gap","x":""},{"t":"verse","x":"Some folks inherit"},{"t":"verse","x":"Star spangled eyes"},{"t":"verse","x":"They send you down to war, Lord"},{"t":"gap","x":""},{"t":"verse","x":"And when you ask them"},{"t":"verse","x":"How much should we give?"},{"t":"verse","x":"They only answer"},{"t":"verse","x":"More, more, more"},{"t":"gap","x":""},{"t":"verse","x":"It ain't me, it ain't me"},{"t":"verse","x":"I ain't no military son"},{"t":"verse","x":"It ain't me, it ain't me"},{"t":"verse","x":"I ain't no fortunate one, no"},{"t":"gap","x":""},{"t":"verse","x":"It ain't me, it ain't me"},{"t":"verse","x":"I ain't no fortunate one, no"},{"t":"verse","x":"It ain't me, it ain't me"},{"t":"verse","x":"I ain't no fortunate son, no"}]},{"id":"doctor-doctor","title":"DOCTOR DOCTOR","artist":"UFO","key":"Dm","singers":["E"],"setOrder":null,"lines":[{"t":"chorus","x":"Início dois Riffs após a bateria"},{"t":"gap","x":""},{"t":"verse","x":"Doctor doctor, please"},{"t":"verse","x":"Don't you know I'm goin' fast"},{"t":"verse","x":"Doctor doctor, please"},{"t":"verse","x":"Don't you know I just can't last"},{"t":"verse","x":"She walked up to me"},{"t":"verse","x":"and really stole my heart"},{"t":"verse","x":"And then she started"},{"t":"verse","x":"to take my body apart"},{"t":"chorus","x":"Livin' lovin' I'm on the run"},{"t":"chorus","x":"So far away from you"},{"t":"chorus","x":"Livin' lovin' I'm on the run"},{"t":"chorus","x":"So far away from you"},{"t":"gap","x":""},{"t":"cue","x":"dois Riffs"},{"t":"gap","x":""},{"t":"verse","x":"Doctor doctor, please"},{"t":"verse","x":"Don't you know, I'm just can't last"},{"t":"verse","x":"Doctor doctor, please"},{"t":"verse","x":"Don't you know, I'm goin' fast"},{"t":"verse","x":"It's only just a moment"},{"t":"verse","x":"She's turning paranoid"},{"t":"verse","x":"It's another situation"},{"t":"verse","x":"for a nervous boy"},{"t":"gap","x":""},{"t":"cue","x":"dois Riffs e solo"},{"t":"gap","x":""},{"t":"verse","x":"Doctor doctor, please"},{"t":"verse","x":"Don't you know, I'm goin' fast"},{"t":"verse","x":"Doctor doctor, please"},{"t":"verse","x":"Don't you know I just can't last"},{"t":"verse","x":"But you look so angry"},{"t":"verse","x":"as I crawled across your floor"},{"t":"verse","x":"She's got the strength,"},{"t":"verse","x":"I just can't take anymore"},{"t":"chorus","x":"Livin' lovin' I'm on the run"},{"t":"chorus","x":"So far away from you"},{"t":"chorus","x":"Livin' lovin' I'm on the run"},{"t":"chorus","x":"So far away from you"},{"t":"gap","x":""},{"t":"cue","x":"três Riffs completos e encerramento"},{"t":"gap","x":""},{"t":"verse","x":"Oooh! I'm on the run"}]},{"id":"i-live-my-life-for-you","title":"I LIVE MY LIFE FOR YOU","artist":"Firehouse","key":"Bm","singers":["A"],"setOrder":null,"lines":[{"t":"verse","x":"You know you're everything to me"},{"t":"verse","x":"And I could never see the two of us apart"},{"t":"verse","x":"And you know I give myself to you"},{"t":"verse","x":"And no matter what you do, I promise you my heart"},{"t":"gap","x":""},{"t":"verse","x":"I've built my world around you and I want you to know"},{"t":"verse","x":"I need you, like I've never needed anyone before"},{"t":"gap","x":""},{"t":"verse","x":"I live my life for you"},{"t":"verse","x":"I want to be by your side in everything that you do"},{"t":"verse","x":"And if there's only one thing you can believe is true"},{"t":"verse","x":"I live my life for you"},{"t":"gap","x":""},{"t":"verse","x":"I dedicate my life to you"},{"t":"verse","x":"You know that I would die for you"},{"t":"verse","x":"But our love would last forever"},{"t":"verse","x":"And I will always be with you"},{"t":"verse","x":"And there is nothing we can't do"},{"t":"verse","x":"As long as we're together"},{"t":"gap","x":""},{"t":"verse","x":"I just can't live without you and I want you to know"},{"t":"verse","x":"I need you, like I've never needed anyone before"},{"t":"gap","x":""},{"t":"verse","x":"I live my life for you"},{"t":"verse","x":"I want to be by your side in everything that you do"},{"t":"verse","x":"And if there's only one thing you can believe is true"},{"t":"verse","x":"I live my life for you"},{"t":"gap","x":""},{"t":"verse","x":"I've built my world around you and I want you to know"},{"t":"verse","x":"I need you, like I've never needed anyone before"},{"t":"gap","x":""},{"t":"verse","x":"I live my life for you"},{"t":"verse","x":"I want to be by your side in everything that you do"},{"t":"verse","x":"And if there's only one thing you can believe is true"},{"t":"verse","x":"I live my life for you oooh oh yeah"},{"t":"gap","x":""},{"t":"verse","x":"I live my life for you"}]},{"id":"iron-man","title":"IRON MAN","artist":"Black Sabbath","key":"Em","singers":["E"],"setOrder":null,"lines":[{"t":"chorus","x":"após o primeiro dissonante"},{"t":"cue","x":"I am Iron Man"},{"t":"gap","x":""},{"t":"cue","x":"dois riffs"},{"t":"verse","x":"Has he lost his mind?"},{"t":"verse","x":"Can he see or is he blind?"},{"t":"verse","x":"Can he walk at all"},{"t":"verse","x":"Or if he moves, will he fall?"},{"t":"cue","x":"UM riff"},{"t":"verse","x":"Is he alive or dead?"},{"t":"verse","x":"Has he thoughts within his head?"},{"t":"verse","x":"We'll just pass him there"},{"t":"verse","x":"Why should we even care?"},{"t":"gap","x":""},{"t":"cue","x":"quatro steps e volta aos dois riffs"},{"t":"gap","x":""},{"t":"verse","x":"He was turned to steel"},{"t":"verse","x":"In the great magnetic field"},{"t":"verse","x":"When he travelled time"},{"t":"verse","x":"For the future of mankind"},{"t":"chorus","x":"acorde sustain"},{"t":"chorus","x":"Nobody wants him"},{"t":"chorus","x":"He just stares at the world"},{"t":"chorus","x":"Planning his vengeance"},{"t":"chorus","x":"That he will soon unfurl"},{"t":"cue","x":"dois riffs"},{"t":"gap","x":""},{"t":"verse","x":"Now the time is here"},{"t":"verse","x":"For Iron Man to spread fear"},{"t":"verse","x":"Vengeance from the grave"},{"t":"verse","x":"Kills the people he once saved"},{"t":"chorus","x":"acorde sustain"},{"t":"chorus","x":"Nobody wants him"},{"t":"chorus","x":"They just turn their heads"},{"t":"chorus","x":"Nobody helps him"},{"t":"chorus","x":"Now he has his revenge"},{"t":"gap","x":""},{"t":"cue","x":"solo - saída com dois riffs"},{"t":"gap","x":""},{"t":"verse","x":"Heavy boots of lead"},{"t":"verse","x":"Fills his victims full of dread"},{"t":"verse","x":"Running as fast as they can"},{"t":"verse","x":"Iron Man lives again"},{"t":"chorus","x":"ieeeeeeeeee"},{"t":"gap","x":""},{"t":"cue","x":"solo final longo"}]},{"id":"blitzkrieg-bop","title":"BLITZKRIEG BOP","artist":"Ramones","key":"A","singers":["E"],"setOrder":null,"lines":[{"t":"chorus","x":"Hey Ho, Lets Go"},{"t":"chorus","x":"Hey Ho, Lets Go"},{"t":"chorus","x":"Hey Ho, Lets Go"},{"t":"chorus","x":"Hey Ho, Lets Go"},{"t":"gap","x":""},{"t":"verse","x":"They're forming in a straight line"},{"t":"verse","x":"They're going in a tight wind"},{"t":"verse","x":"The kids are losing their minds"},{"t":"chorus","x":"Blitzkrieg Bop"},{"t":"gap","x":""},{"t":"verse","x":"They're piling in the backseat"},{"t":"verse","x":"They're generation steam heat"},{"t":"verse","x":"Pulsating to the back seat"},{"t":"chorus","x":"Blitzkrieg Bop"},{"t":"gap","x":""},{"t":"chorus","x":"Hey Ho Lets Go"},{"t":"chorus","x":"Shoot em' in the back now"},{"t":"chorus","x":"What they want, I don't know"},{"t":"chorus","x":"They're all revved up and ready to go"},{"t":"gap","x":""},{"t":"verse","x":"They're forming in a straight line"},{"t":"verse","x":"They're going through a tight wind"},{"t":"verse","x":"The kids are losing their minds"},{"t":"chorus","x":"Blitzkrieg Bop"},{"t":"gap","x":""},{"t":"verse","x":"They're piling in the backseat"},{"t":"verse","x":"They're generation steam heat"},{"t":"verse","x":"Pulsating to the back seat"},{"t":"chorus","x":"Blitzkrieg Bop"},{"t":"gap","x":""},{"t":"chorus","x":"Hey Ho Lets Go"},{"t":"chorus","x":"Shoot em' in the back now"},{"t":"chorus","x":"What they want, I don't know"},{"t":"chorus","x":"They're all revved up and ready to go"},{"t":"gap","x":""},{"t":"verse","x":"They're forming in a straight line"},{"t":"verse","x":"They're going through a tight wind"},{"t":"verse","x":"The kids are losing their minds"},{"t":"chorus","x":"Blitzkrieg Bop"},{"t":"gap","x":""},{"t":"verse","x":"They're piling in the backseat"},{"t":"verse","x":"They're generation steam heat"},{"t":"verse","x":"Pulsating to the back seat"},{"t":"chorus","x":"Blitzkrieg Bop"},{"t":"gap","x":""},{"t":"chorus","x":"Hey Ho Lets Go"},{"t":"chorus","x":"Shoot em' in the back now"},{"t":"chorus","x":"What they want, I don't know"},{"t":"chorus","x":"They're all revved up and ready to go"},{"t":"gap","x":""},{"t":"chorus","x":"Hey Ho, Lets Go"},{"t":"chorus","x":"Hey Ho, Lets Go"},{"t":"chorus","x":"Hey Ho, Lets Go"},{"t":"chorus","x":"Hey Ho, Lets Go"}]},{"id":"back-in-black","title":"BACK IN BLACK","artist":"AC/DC","key":"Em","singers":["E"],"setOrder":null,"lines":[{"t":"cue","x":"Dois riffs completos"},{"t":"verse","x":"Back in black -  I hit the sack"},{"t":"verse","x":"I've been too long, I'm glad to be back"},{"t":"verse","x":"Yes, I'm let loose - from the noose"},{"t":"verse","x":"That's kept me hanging about"},{"t":"gap","x":""},{"t":"verse","x":"I'm just looking at the sky 'cause it's getting me high"},{"t":"verse","x":"Forget the hearse 'cause I'll never die"},{"t":"verse","x":"I got - nine lives, cat's eyes"},{"t":"chorus","x":"Abusing every one of them and running wild - 'Cause I'm back"},{"t":"gap","x":""},{"t":"chorus","x":"Yes, I'm back"},{"t":"chorus","x":"Well, I'm back"},{"t":"chorus","x":"Yes, I'm back"},{"t":"gap","x":""},{"t":"chorus","x":"Well, I'm back, back"},{"t":"chorus","x":"Well, I'm back in black"},{"t":"chorus","x":"Yes, I'm back in black"},{"t":"gap","x":""},{"t":"verse","x":"Back in the back of a - Cadillac"},{"t":"verse","x":"Number one with a bullet, I'm a power pack"},{"t":"verse","x":"Yes, I'm - in a bang with a gang"},{"t":"verse","x":"They've got to catch me if they want me to hang"},{"t":"gap","x":""},{"t":"verse","x":"Cause I'm back on the track and I'm beating the flack"},{"t":"verse","x":"Nobody's gonna get me on another rap"},{"t":"verse","x":"So look at me now, I'm just making my play"},{"t":"chorus","x":"Don't try to push your luck, just get out of my way - 'Cause I'm back"},{"t":"gap","x":""},{"t":"chorus","x":"Yes, I'm back"},{"t":"chorus","x":"Well, I'm back"},{"t":"chorus","x":"Yes, I'm back"},{"t":"gap","x":""},{"t":"chorus","x":"Well, I'm back, back"},{"t":"chorus","x":"Well, I'm back in black"},{"t":"chorus","x":"Yes, I'm back in black"},{"t":"gap","x":""},{"t":"cue","x":"solo"},{"t":"gap","x":""},{"t":"chorus","x":"Well, I'm back"},{"t":"chorus","x":"Yes, I'm back"},{"t":"chorus","x":"Well, I'm back"},{"t":"chorus","x":"Yes, I'm back"},{"t":"gap","x":""},{"t":"chorus","x":"Well, I'm back, back"},{"t":"chorus","x":"Well, I'm back in black"},{"t":"chorus","x":"Yes, I'm back in black, yow"},{"t":"gap","x":""},{"t":"verse","x":"Ah, yeah"},{"t":"chorus","x":"Oh, yeah"},{"t":"verse","x":"Take my love"},{"t":"chorus","x":"Yeah, yeah"},{"t":"chorus","x":"Yeah"},{"t":"verse","x":"Ah, hey, yeah"},{"t":"chorus","x":"Oh, yeah"},{"t":"gap","x":""},{"t":"verse","x":"Well, I'm back (I'm back)"},{"t":"verse","x":"Back (well, I'm back)"},{"t":"verse","x":"Back (I'm back)"},{"t":"verse","x":"Back (I'm back)"},{"t":"gap","x":""},{"t":"verse","x":"Back (I'm back)"},{"t":"chorus","x":"Back in black"},{"t":"chorus","x":"Yes, I'm back in black"},{"t":"gap","x":""},{"t":"chorus","x":"Out of the sack"}]},{"id":"sultans-of-swing","title":"SULTANS OF SWING","artist":"Dire Straits","key":"Dm","singers":["E"],"setOrder":null,"lines":[{"t":"cue","x":"sai do solo redoble de bateria e entra:"},{"t":"verse","x":"You get a shiver in the dark"},{"t":"verse","x":"It's raining in the park but meantime"},{"t":"verse","x":"esticada de corda:"},{"t":"verse","x":"South of the river, you stop and you hold everything"},{"t":"verse","x":"solito:"},{"t":"verse","x":"A band is blowing Dixie, double-four time"},{"t":"verse","x":"solito:"},{"t":"verse","x":"You feel alright - when you hear the music ring"},{"t":"verse","x":"solito maior:"},{"t":"verse","x":"Well, now you step inside, but you don't see too many faces"},{"t":"verse","x":"solito:"},{"t":"verse","x":"Coming in out of the rain, they hear the jazz go down"},{"t":"verse","x":"solito:"},{"t":"verse","x":"Competition in other places"},{"t":"verse","x":"solito:"},{"t":"verse","x":"Uh, but the horns they blowin' that sound"},{"t":"verse","x":"solito:"},{"t":"verse","x":"Way on down south"},{"t":"verse","x":"solito:"},{"t":"verse","x":"Way on down south, London town"},{"t":"cue","x":"riff 2x:"},{"t":"verse","x":"You check out -- guitar George,"},{"t":"cue","x":"riff:"},{"t":"verse","x":"he knows -- all the chords"},{"t":"verse","x":"solito:"},{"t":"verse","x":"solito:"},{"t":"verse","x":"They don't give a damn -- about any trumpet -- playin' band"},{"t":"verse","x":"solito:"},{"t":"verse","x":"It ain't what they call -- rock and roll"},{"t":"verse","x":"solito:"},{"t":"verse","x":"And the Sultans"},{"t":"verse","x":"solito:"},{"t":"verse","x":"Yeah, the Sultans, they play Creole,"},{"t":"verse","x":"solito: Creole"},{"t":"gap","x":""},{"t":"cue","x":"solo longo e entra no riff 2x:"},{"t":"gap","x":""},{"t":"verse","x":"Mind, it's strictly rhythm, he doesn't want to make it cry or sing"},{"t":"verse","x":"solito:"},{"t":"verse","x":"They said an old guitar is all - - he can afford"},{"t":"verse","x":"solito:"},{"t":"verse","x":"When he gets up under the lights - - to play his thing"},{"t":"verse","x":"solito mais longo :"},{"t":"verse","x":"And Harry doesn't mind if he doesn't - -  make the scene"},{"t":"verse","x":"solito:"},{"t":"verse","x":"He's got a daytime job, he's doing alright"},{"t":"verse","x":"solito:"},{"t":"verse","x":"He can play the honky-tonk like anything"},{"t":"verse","x":"solito:"},{"t":"verse","x":"Savin' it up -- for Friday night"},{"t":"verse","x":"solito:"},{"t":"verse","x":"With the Sultans"},{"t":"verse","x":"solito:"},{"t":"verse","x":"We're the Sultans of Swing"},{"t":"cue","x":"riff e solito 2x:"},{"t":"verse","x":"Then a crowd of young boys, they're foolin' around in the corner"},{"t":"verse","x":"solito:"},{"t":"verse","x":"Drunk and dressed in their best, brown baggies and their platform soles"},{"t":"verse","x":"And then the man, he steps right up to the microphone"},{"t":"verse","x":"solito:"},{"t":"verse","x":"And says at last, just as the time bell rings"},{"t":"verse","x":"solito:"},{"t":"verse","x":"\"Goodnight,--  now it's time - to go home\""},{"t":"verse","x":"solito:"},{"t":"verse","x":"Then he makes it fast -- with one more thing"},{"t":"verse","x":"solito:"},{"t":"verse","x":"\"We are the Sultans"},{"t":"verse","x":"solito:"},{"t":"verse","x":"We are the Sultans of Swing\""}]},{"id":"best-of-you","title":"BEST OF YOU","artist":"Foo Fighters","key":null,"singers":["E"],"setOrder":null,"lines":[{"t":"chorus","x":"I've got another confession to make"},{"t":"chorus","x":"I'm your fool"},{"t":"chorus","x":"Everyone's got their chains to break"},{"t":"chorus","x":"Holding you"},{"t":"gap","x":""},{"t":"chorus","x":"Were you born to resist"},{"t":"chorus","x":"Or be abused?"},{"t":"gap","x":""},{"t":"chorus","x":"Is someone getting the best"},{"t":"chorus","x":"The best, the best, the best of you?"},{"t":"chorus","x":"Is someone getting the best"},{"t":"chorus","x":"The best, the best, the best of you?"},{"t":"gap","x":""},{"t":"verse","x":"Or are you gone and onto someone new?"},{"t":"gap","x":""},{"t":"verse","x":"I needed somewhere to hang my head"},{"t":"chorus","x":"Without your noose"},{"t":"verse","x":"You gave me something that I didn't have"},{"t":"chorus","x":"But had no use"},{"t":"verse","x":"I was too weak to give in"},{"t":"chorus","x":"Too strong to lose"},{"t":"gap","x":""},{"t":"verse","x":"My heart is under arrest again"},{"t":"chorus","x":"But I break loose"},{"t":"verse","x":"My head is giving me life or death"},{"t":"chorus","x":"But I can't choose"},{"t":"chorus","x":"I swear I'll never give in"},{"t":"chorus","x":"I refuse"},{"t":"gap","x":""},{"t":"chorus","x":"I've got another confession, my friend"},{"t":"chorus","x":"I'm no fool"},{"t":"chorus","x":"I'm getting tired of starting again"},{"t":"chorus","x":"Somewhere new"},{"t":"chorus","x":"Were you born to resist or be abused?"},{"t":"chorus","x":"I swear I'll never give in"},{"t":"chorus","x":"I refuse"},{"t":"gap","x":""},{"t":"chorus","x":"Is someone getting the best"},{"t":"chorus","x":"The best, the best, the best of you?"},{"t":"chorus","x":"Is someone getting the best"},{"t":"chorus","x":"The best, the best, the best of you?"},{"t":"gap","x":""},{"t":"chorus","x":"Is someone getting the best"},{"t":"chorus","x":"The best, the best, the best of you?"},{"t":"chorus","x":"Is someone getting the best"},{"t":"chorus","x":"The best, the best, the best of you?"},{"t":"gap","x":""},{"t":"chorus","x":"Has someone taken your faith?"},{"t":"chorus","x":"It's real, the pain you feel?"},{"t":"chorus","x":"Your trust?"},{"t":"chorus","x":"You must confess"},{"t":"gap","x":""},{"t":"chorus","x":"Is someone getting the best"},{"t":"chorus","x":"The best, the best, the best of you?"},{"t":"chorus","x":"ohhhhhhhhh"},{"t":"cue","x":"solo dois riffs"},{"t":"chorus","x":"ohhhh - ohhhh"},{"t":"chorus","x":"ohhhh - ohhhh"},{"t":"gap","x":""},{"t":"chorus","x":"Has someone taken your faith?"},{"t":"chorus","x":"It's real, the pain you feel?"},{"t":"chorus","x":"The life, the love you'd die to heal"},{"t":"chorus","x":"The hope that starts"},{"t":"chorus","x":"The broken hearts"},{"t":"chorus","x":"Your trust"},{"t":"chorus","x":"You must confess"},{"t":"gap","x":""},{"t":"chorus","x":"Is someone getting the best"},{"t":"chorus","x":"The best, the best, the best of you?"},{"t":"chorus","x":"Is someone getting the best"},{"t":"chorus","x":"The best, the best, the best of you?"},{"t":"gap","x":""},{"t":"chorus","x":"Has someone taken your faith?"},{"t":"chorus","x":"It's real, the pain you feel?"},{"t":"chorus","x":"Your trust?"},{"t":"chorus","x":"You must confess"},{"t":"gap","x":""},{"t":"chorus","x":"Is someone getting the best"},{"t":"chorus","x":"The best, the best, the best of you?"},{"t":"chorus","x":"Is someone getting the best"},{"t":"chorus","x":"The best, the best, the best of you?"}]},{"id":"2-minutes-to-midnight","title":"2 MINUTES TO MIDNIGHT","artist":"Iron Maiden","key":null,"singers":["E"],"setOrder":null,"lines":[{"t":"cue","x":"4 riffs entra instrumentos + 2 riffs entra a voz"},{"t":"gap","x":""},{"t":"verse","x":"Kill for gain or shoot to maim"},{"t":"verse","x":"But we don't need a reason"},{"t":"verse","x":"The Golden Goose is on the loose"},{"t":"verse","x":"And never out of season"},{"t":"verse","x":"Blackened pride still burns inside"},{"t":"verse","x":"This shell of bloody treason"},{"t":"verse","x":"Here's my gun for a barrel of fun"},{"t":"verse","x":"For the love of living death"},{"t":"gap","x":""},{"t":"verse","x":"The killer's breed or the Demon's seed"},{"t":"verse","x":"The glamour, the fortune, the pain"},{"t":"verse","x":"Go to war again, blood is freedom's stain"},{"t":"verse","x":"Don't you pray for my soul anymore"},{"t":"gap","x":""},{"t":"chorus","x":"2 minutes to midnight"},{"t":"chorus","x":"The hands that threaten doom"},{"t":"chorus","x":"2 minutes to midnight"},{"t":"chorus","x":"To kill the unborn in the womb"},{"t":"gap","x":""},{"t":"cue","x":"2 riffs"},{"t":"gap","x":""},{"t":"verse","x":"The blind men shout: Let the creatures out"},{"t":"verse","x":"We'll show the unbelievers"},{"t":"verse","x":"To put the finger right on you"},{"t":"verse","x":"As the madmen play on words and make us all"},{"t":"verse","x":"Dance to their song"},{"t":"verse","x":"To the tune of starving millions"},{"t":"verse","x":"To make a better kind of gun"},{"t":"gap","x":""},{"t":"verse","x":"The killer's breed or the Demon's seed"},{"t":"verse","x":"The glamour, the fortune, the pain"},{"t":"verse","x":"Go to war again, blood is freedom's stain"},{"t":"verse","x":"Don't you pray for my soul anymore"},{"t":"gap","x":""},{"t":"verse","x":"The Napalm screams of human flames"},{"t":"verse","x":"Of a prime time Belsen feast, yeah!"},{"t":"verse","x":"As the reasons for the carnage cut their meat"},{"t":"verse","x":"And lick the gravy"},{"t":"verse","x":"We oil the jaws of the war machine"},{"t":"verse","x":"And feed it with our babies"},{"t":"gap","x":""},{"t":"verse","x":"The killer's breed or the Demon's seed"},{"t":"verse","x":"The glamour, the fortune, the pain"},{"t":"verse","x":"Go to war again, blood is freedom's stain"},{"t":"verse","x":"Don't you pray for my soul anymore"},{"t":"gap","x":""},{"t":"chorus","x":"2 minutes to midnight"},{"t":"chorus","x":"The hands that threaten doom"},{"t":"chorus","x":"2 minutes to midnight"},{"t":"chorus","x":"To kill the unborn in the womb"},{"t":"gap","x":""},{"t":"cue","x":"SOLO - na saída 2 riffs"},{"t":"gap","x":""},{"t":"verse","x":"The body bags and little rags"},{"t":"verse","x":"Of children torn in two"},{"t":"verse","x":"And the jellied brains of those who remain"},{"t":"chorus","x":"2 minutes to midnight"},{"t":"chorus","x":"The hands that threaten doom"},{"t":"chorus","x":"2 minutes to midnight"},{"t":"chorus","x":"To kill the unborn in the womb"},{"t":"gap","x":""},{"t":"chorus","x":"Midnight, midnight, midnight, is all night"},{"t":"chorus","x":"Midnight, midnight, midnight, is all night"},{"t":"gap","x":""},{"t":"cue","x":"Solo final 2 voltas"},{"t":"gap","x":""},{"t":"verse","x":"midnight all night"}]}];
+/* ================= Head Puppets Stage ================= */
+'use strict';
+
+/* ---------- helpers ---------- */
+const $ = (s, el) => (el || document).querySelector(s);
+const app = $('#app');
+const strip = s => s.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+const LS = {
+  get(k, d) { try { const v = localStorage.getItem(k); return v === null ? d : JSON.parse(v); } catch (e) { return d; } },
+  set(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} }
+};
+const byId = {}; SONGS.forEach(s => byId[s.id] = s);
+
+/* ---------- icons (SVG — sem emoji, renderiza igual em qualquer aparelho) ---------- */
+const ICON = {
+  piano: '<svg class="ic" viewBox="0 0 24 18" width="18" height="14" aria-hidden="true"><rect x="1" y="1" width="22" height="16" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><line x1="8.7" y1="9" x2="8.7" y2="16" stroke="currentColor" stroke-width="2"/><line x1="15.3" y1="9" x2="15.3" y2="16" stroke="currentColor" stroke-width="2"/><rect x="6.6" y="1.5" width="4.2" height="7.5" fill="currentColor"/><rect x="13.2" y="1.5" width="4.2" height="7.5" fill="currentColor"/></svg>',
+  harp: '<svg class="ic" viewBox="0 0 24 12" width="20" height="12" aria-hidden="true"><rect x="1" y="1" width="22" height="10" rx="3" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="6" cy="6" r="1.5" fill="currentColor"/><circle cx="10" cy="6" r="1.5" fill="currentColor"/><circle cx="14" cy="6" r="1.5" fill="currentColor"/><circle cx="18" cy="6" r="1.5" fill="currentColor"/></svg>',
+  pencil: '<svg class="ic" viewBox="0 0 24 24" width="17" height="17" aria-hidden="true"><path d="M3 17.2V21h3.8L18 9.8 14.2 6 3 17.2z" fill="currentColor"/><path d="M20.7 7.1a1 1 0 0 0 0-1.4l-2.4-2.4a1 1 0 0 0-1.4 0L15 5.2 18.8 9l1.9-1.9z" fill="currentColor"/></svg>'
+};
+
+/* ---------- músicas adicionadas/editadas pelo usuário ---------- */
+function parseRaw(raw) {
+  const out = [];
+  String(raw || '').split('\n').forEach(l => {
+    const s = l.trim();
+    if (!s) { if (out.length && out[out.length-1].t !== 'gap') out.push({ t: 'gap', x: '' }); return; }
+    if (/^\(.*\)$/.test(s)) out.push({ t: 'cue', x: s.replace(/^\(|\)$/g, '').trim() });
+    else if (s.startsWith('*')) out.push({ t: 'chorus', x: s.replace(/^\*+\s*/, '') });
+    else out.push({ t: 'verse', x: s });
+  });
+  while (out.length && out[out.length-1].t === 'gap') out.pop();
+  return out;
+}
+function linesToRaw(lines) {
+  return (lines || []).map(l =>
+    l.t === 'gap' ? '' : l.t === 'cue' ? `(${l.x})` : l.t === 'chorus' ? `* ${l.x}` : l.x
+  ).join('\n');
+}
+const custom = (() => {
+  const c = LS.get('hp_custom', { added: [], edits: {} });
+  if (!Array.isArray(c.added)) c.added = [];
+  if (!c.edits || typeof c.edits !== 'object') c.edits = {};
+  return c;
+})();
+const saveCustom = () => LS.set('hp_custom', custom);
+function applyCustom() {
+  custom.added.forEach(a => {
+    let s = byId[a.id];
+    if (!s) { s = { setOrder: null }; SONGS.push(s); byId[a.id] = s; }
+    Object.assign(s, { id: a.id, title: a.title, artist: a.artist || '', key: a.key || null,
+                       singers: a.singers, lines: parseRaw(a.raw), custom: true });
+  });
+  Object.keys(custom.edits).forEach(id => {
+    const e = custom.edits[id], s = byId[id];
+    if (!s) return;
+    if (e.title) s.title = e.title;
+    if (e.artist != null) s.artist = e.artist;
+    if ('key' in e) s.key = e.key || null;
+    if (e.singers) s.singers = e.singers;
+    if (e.raw != null) s.lines = parseRaw(e.raw);
+  });
+}
+applyCustom();
+
+/* ---------- music theory ---------- */
+const SHARP = ['C','C#','D','D#','E','F','F#','G','G#','A','A#','B'];
+const FLAT  = ['C','Db','D','Eb','E','F','Gb','G','Ab','A','Bb','B'];
+const HARPN = ['C','Db','D','Eb','E','F','F#','G','Ab','A','Bb','B'];
+const PC = {C:0,'C#':1,Db:1,D:2,'D#':3,Eb:3,E:4,F:5,'F#':6,Gb:6,G:7,'G#':8,Ab:8,A:9,'A#':10,Bb:10,B:11};
+
+function parseKey(k) {
+  if (!k) return null;
+  const first = k.split('/')[0].trim();
+  const m = first.match(/^([A-G][#b]?)(m?)$/);
+  if (!m) return null;
+  return { root: PC[m[1]], minor: m[2] === 'm', label: first };
+}
+function noteName(pc, flats) { return (flats ? FLAT : SHARP)[((pc % 12) + 12) % 12]; }
+
+function keyChords(key) {
+  const flats = key.minor ? [2,7,0,5,10].includes(key.root) : [5,10,3,8].includes(key.root);
+  const N = pc => noteName(pc, flats);
+  const r = key.root;
+  if (!key.minor) return [
+    { name: N(r),        fun: 'I — tônica',        root: r,    minor: false },
+    { name: N(r+5),      fun: 'IV — subdominante', root: r+5,  minor: false },
+    { name: N(r+7),      fun: 'V — dominante',     root: r+7,  minor: false },
+    { name: N(r+9)+'m',  fun: 'vi — relativa',     root: r+9,  minor: true  },
+  ];
+  return [
+    { name: N(r)+'m',    fun: 'i — tônica',        root: r,    minor: true  },
+    { name: N(r+3),      fun: 'III — relativa',    root: r+3,  minor: false },
+    { name: N(r+5)+'m',  fun: 'iv',                root: r+5,  minor: true  },
+    { name: N(r+7)+'m',  fun: 'v',                 root: r+7,  minor: true  },
+    { name: N(r+8),      fun: 'VI',                root: r+8,  minor: false },
+    { name: N(r+10),     fun: 'VII',               root: r+10, minor: false },
+  ];
+}
+
+/* piano SVG: 2 octaves from C */
+const WHITE_PCS = [0,2,4,5,7,9,11];
+const BLACK_AFTER = {1:0, 3:1, 6:3, 8:4, 10:5}; /* pc -> white index it follows */
+function chordSVG(rootPc, minor) {
+  const tones = [rootPc % 12, (rootPc + (minor ? 3 : 4)) % 12, (rootPc + 7) % 12];
+  /* absolute voicing starting at root within 2 octaves */
+  const base = rootPc % 12;
+  const abs = [base, base + (minor ? 3 : 4), base + 7];
+  const wW = 26, wH = 82, bW = 16, bH = 52, nW = 14;
+  let whites = '', blacks = '';
+  for (let i = 0; i < nW; i++) {
+    const oct = Math.floor(i / 7), pc = WHITE_PCS[i % 7], a = oct * 12 + pc;
+    const hi = abs.indexOf(a);
+    const fill = hi === 0 ? '#FFB84D' : hi > 0 ? '#63C4FF' : '#F2F2F5';
+    whites += `<rect x="${i*wW}" y="0" width="${wW-1.2}" height="${wH}" rx="3" fill="${fill}" stroke="#0A0A0F" stroke-width="1.2"/>`;
+  }
+  for (let oct = 0; oct < 2; oct++) for (const pcs in BLACK_AFTER) {
+    const pc = +pcs, wi = oct * 7 + BLACK_AFTER[pcs], a = oct * 12 + pc;
+    const hi = abs.indexOf(a);
+    const fill = hi === 0 ? '#FFB84D' : hi > 0 ? '#63C4FF' : '#16161E';
+    blacks += `<rect x="${(wi+1)*wW - bW/2}" y="0" width="${bW}" height="${bH}" rx="2.5" fill="${fill}" stroke="#0A0A0F" stroke-width="1.2"/>`;
+  }
+  return `<svg viewBox="0 0 ${nW*wW} ${wH}" style="width:100%;display:block">${whites}${blacks}</svg>`;
+}
+
+/* harmonica */
+function harpInfo(key) {
+  const N = pc => HARPN[((pc % 12) + 12) % 12];
+  if (key.minor) return [
+    { harp: N(key.root + 10), pos: '3ª posição — recomendada', why: 'Sonoridade menor natural: encaixa direto no tom menor da música, sem forçar bends.',
+      boxes: [['Nota do tom', '4 aspirada (também 1 e 8)'], ['Solos', 'caixas 4 a 8'], ['Base / riffs', 'caixas 1 a 4 aspiradas']],
+      note: 'Toque puxando mais AR (aspiradas) — é onde mora o acorde menor. Cuidado com a 3 soprada: solta a terça maior e briga com o tom.' },
+    { harp: N(key.root + 5), pos: '2ª posição — alternativa blues', why: 'Pegada blues/rock para solos mais sujos e com bends.',
+      boxes: [['Nota do tom', '2 aspirada (= 3 soprada)'], ['Solos', 'caixas 2 a 6, bends nas 2, 3 e 4'], ['Agudos', 'caixas 6 a 9']],
+      note: 'Funciona pela escala de blues; evite sustentar a 5 soprada e a 7 aspirada nas partes menores.' },
+  ];
+  return [
+    { harp: N(key.root + 5), pos: '2ª posição (cross harp) — recomendada', why: 'A posição clássica de rock e blues: solos com peso e bends expressivos.',
+      boxes: [['Nota do tom', '2 aspirada (= 3 soprada)'], ['Base / ritmo', 'caixas 1 a 5'], ['Solos', 'caixas 2 a 6 aspiradas, bends nas 2, 3 e 4'], ['Agudos', 'caixas 6 a 9']],
+      note: 'É a gaita para acompanhar e solar na maioria das músicas em tom maior.' },
+    { harp: N(key.root), pos: '1ª posição — alternativa melódica', why: 'Boa para tocar o tema/melodia da música, som mais limpo.',
+      boxes: [['Nota do tom', '1 e 4 sopradas'], ['Melodia', 'caixas 4 a 7'], ['Acordes', 'caixas 1 a 3 sopradas']],
+      note: 'Use quando quiser dobrar a melodia do vocal ou fazer o riff literal.' },
+  ];
+}
+
+/* ---------- state ---------- */
+let view = { name: 'home' };
+let playlist = SONGS.filter(s => s.setOrder).map(s => s.id); /* navigation context */
+let homeQ = '', homeChip = 'sab';
+let fontSize = LS.get('hp_fs', 27);
+const speeds = LS.get('hp_speeds', {});
+let wakeLock = null;
+
+async function grabWake() {
+  try { if ('wakeLock' in navigator) { wakeLock = await navigator.wakeLock.request('screen'); } } catch (e) {}
+}
+function dropWake() { try { if (wakeLock) { wakeLock.release(); wakeLock = null; } } catch (e) {} }
+document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'visible' && view.name === 'song') grabWake(); });
+
+/* ---------- setlists ---------- */
+function seedSets() {
+  let sets = LS.get('hp_sets', null);
+  if (!sets) {
+    sets = [{ id: 'show-2208', name: 'Show 22/08 · Sábado', songs: SONGS.filter(s => s.setOrder).map(s => s.id) }];
+    LS.set('hp_sets', sets);
+  }
+  return sets;
+}
+let sets = seedSets();
+const saveSets = () => LS.set('hp_sets', sets);
+
+/* ---------- rendering ---------- */
+function render() {
+  if (view.name === 'home') renderHome();
+  else if (view.name === 'song') renderSong();
+  else if (view.name === 'edit') renderEdit();
+  else renderSets();
+}
+function nav(html) {
+  return `<div class="nav">
+    <div class="brand">Head Puppets<small>STAGE</small></div>
+    <button class="tab ${view.name==='home'?'on':''}" data-go="home">Músicas</button>
+    <button class="tab ${view.name==='sets'?'on':''}" data-go="sets">Setlists</button>
+  </div>`;
+}
+function bindNav() {
+  app.querySelectorAll('[data-go]').forEach(b => b.onclick = () => { stopTP(); dropWake(); view = { name: b.dataset.go }; render(); });
+}
+
+/* ----- home ----- */
+function songMatches(s, q) {
+  if (!q) return true;
+  return strip(s.title + ' ' + s.artist + ' ' + (s.key || '')).includes(q);
+}
+function homeList() {
+  const q = strip(homeQ.trim());
+  let list = SONGS.slice();
+  if (homeChip === 'sab') list = list.filter(s => s.setOrder).sort((a,b) => a.setOrder - b.setOrder);
+  else {
+    if (homeChip !== 'all') list = list.filter(s => s.singers.includes(homeChip));
+    list.sort((a,b) => a.title.localeCompare(b.title));
+  }
+  return list.filter(s => songMatches(s, q));
+}
+function renderHome() {
+  const list = homeList();
+  app.innerHTML = nav() + `
+    <div class="screen">
+      <div class="searchwrap">
+        <input class="search" id="q" type="search" placeholder="Buscar música, artista ou tom…" value="${homeQ.replace(/"/g,'&quot;')}">
+        <button class="btn addnew" id="addsong">+ NOVA<br>MÚSICA</button>
+      </div>
+      <div class="chips">
+        ${[['sab','SÁBADO 22/08'],['all','TODAS'],['E','ENRIQUE'],['A','ANNA'],['R','RAFAEL']].map(([v,l]) =>
+          `<button class="chip ${homeChip===v?'on':''}" data-chip="${v}">${l}</button>`).join('')}
+      </div>
+      <div class="count">${list.length} música${list.length===1?'':'s'}</div>
+      <div class="songlist">
+        ${list.map(s => `
+          <button class="songrow" data-song="${s.id}">
+            <span class="num">${s.setOrder || ''}</span>
+            <span class="tt">
+              <span class="t1">${s.title}</span>
+              <span class="t2">${s.artist}${s.lines.length ? '' : ' &nbsp;·&nbsp; <span class="warn">SEM LETRA AINDA</span>'}</span>
+            </span>
+            ${s.singers.map(x => `<span class="dot ${x}"></span>`).join('')}
+            <span class="badge-key">${s.key || '—'}</span>
+          </button>`).join('') || '<div class="empty">Nada encontrado.</div>'}
+      </div>
+    </div>`;
+  bindNav();
+  $('#addsong').onclick = () => { view = { name: 'edit', id: null }; render(); };
+  const q = $('#q');
+  q.oninput = () => { homeQ = q.value; renderHomeListOnly(); };
+  app.querySelectorAll('[data-chip]').forEach(b => b.onclick = () => { homeChip = b.dataset.chip; renderHome(); });
+  bindSongRows();
+}
+function renderHomeListOnly() {
+  const list = homeList();
+  $('.count').textContent = `${list.length} música${list.length===1?'':'s'}`;
+  $('.songlist').innerHTML = list.map(s => `
+    <button class="songrow" data-song="${s.id}">
+      <span class="num">${s.setOrder || ''}</span>
+      <span class="tt"><span class="t1">${s.title}</span>
+        <span class="t2">${s.artist}${s.lines.length ? '' : ' &nbsp;·&nbsp; <span class="warn">SEM LETRA AINDA</span>'}</span></span>
+      ${s.singers.map(x => `<span class="dot ${x}"></span>`).join('')}
+      <span class="badge-key">${s.key || '—'}</span>
+    </button>`).join('') || '<div class="empty">Nada encontrado.</div>';
+  bindSongRows();
+}
+function bindSongRows() {
+  app.querySelectorAll('[data-song]').forEach(b => b.onclick = () => {
+    playlist = homeList().map(s => s.id);
+    openSong(b.dataset.song);
+  });
+}
+function openSong(id) {
+  stopTP();
+  view = { name: 'song', id };
+  render();
+  grabWake();
+}
+
+/* ----- song view ----- */
+const tp = { running: false, raf: 0, last: 0 };
+function stopTP() {
+  tp.running = false;
+  if (tp.raf) cancelAnimationFrame(tp.raf);
+  tp.raf = 0;
+}
+function verseClass(s) {
+  if (s.singers.length > 1) return 'multi';
+  return s.singers[0];
+}
+function renderSong() {
+  const s = byId[view.id];
+  const idx = playlist.indexOf(s.id);
+  const speed = speeds[s.id] || 35;
+  const multi = s.singers.length > 1;
+  const vColor = multi ? 'var(--text)' : s.singers[0] === 'E' ? 'var(--enrique)' : s.singers[0] === 'A' ? 'var(--anna)' : 'var(--rafael)';
+  const singerNames = s.singers.map(x => x === 'E' ? 'Enrique' : x === 'A' ? 'Anna' : 'Rafael').join(' + ');
+
+  app.innerHTML = `
+    <div class="screen">
+      <div class="songbar">
+        <button class="back" id="back">‹</button>
+        <div class="stitle">${s.title}<span class="sartist">${s.artist} &nbsp;·&nbsp; ${singerNames}</span></div>
+        <button class="navarrow" id="prev" ${idx > 0 ? '' : 'disabled'}>«</button>
+        <button class="navarrow" id="next" ${idx >= 0 && idx < playlist.length - 1 ? '' : 'disabled'}>»</button>
+        <button class="navarrow" id="editbtn" title="Editar letra">${ICON.pencil}</button>
+        <button class="badge-key kbtn" id="keybtn" title="Acordes de piano">${s.key || '—'} ${ICON.piano}</button>
+      </div>
+      <div class="lyrics" id="lyr">
+        <div class="lwrap" style="font-size:${fontSize}px">
+          <div class="legend">
+            ${multi
+              ? `<span><span class="dot" style="background:var(--text)"></span>versos divididos</span>`
+              : `<span><span class="dot" style="background:${vColor}"></span>${singerNames}</span>`}
+            <span><span class="dot" style="background:var(--coro)"></span>coro / juntos</span>
+            <span><span class="dot" style="background:var(--cue)"></span>deixa / arranjo</span>
+          </div>
+          ${s.lines.length ? s.lines.map(l =>
+              l.t === 'gap' ? '<div class="lgap"></div>'
+            : l.t === 'cue' ? `<p class="lline cue">${esc(l.x)}</p>`
+            : l.t === 'chorus' ? `<p class="lline chorus">${esc(l.x)}</p>`
+            : `<p class="lline verse" style="color:${vColor}">${esc(l.x)}</p>`
+          ).join('') : `<div class="nolyrics">Esta música ainda está sem letra.<br><br><button class="btn primary" id="addlyric">ADICIONAR LETRA</button></div>`}
+        </div>
+      </div>
+      <div class="controls" id="ctrl">
+        <button class="btn primary go" id="go">▶ INICIAR</button>
+        <div class="speed">
+          <label>VEL.</label>
+          <input type="range" id="spd" min="8" max="110" step="1" value="${speed}">
+        </div>
+        <button class="btn fbtn" id="fminus">A−</button>
+        <button class="btn fbtn" id="fplus">A+</button>
+        <button class="btn" id="piano">${ICON.piano} PIANO</button>
+        <button class="btn" id="harp">${ICON.harp} GAITA</button>
+      </div>
+    </div>`;
+
+  const lyr = $('#lyr'), go = $('#go'), ctrl = $('#ctrl');
+
+  $('#back').onclick = () => { stopTP(); dropWake(); view = { name: 'home' }; render(); };
+  $('#prev').onclick = () => { if (idx > 0) openSong(playlist[idx - 1]); };
+  $('#next').onclick = () => { if (idx < playlist.length - 1) openSong(playlist[idx + 1]); };
+
+  /* teleprompter */
+  function setBtn() {
+    go.innerHTML = tp.running ? '❚❚ PAUSAR' : '▶ INICIAR';
+    ctrl.classList.toggle('dim', tp.running);
+  }
+  function loop(now) {
+    if (!tp.running) return;
+    const dt = Math.min(now - tp.last, 100); tp.last = now;
+    lyr.scrollTop += (speeds[s.id] || 35) * dt / 1000;
+    if (lyr.scrollTop + lyr.clientHeight >= lyr.scrollHeight - 2) { stopTP(); setBtn(); return; }
+    tp.raf = requestAnimationFrame(loop);
+  }
+  function startTP() {
+    if (!s.lines.length) return;
+    tp.running = true; tp.last = performance.now();
+    tp.raf = requestAnimationFrame(loop);
+    setBtn();
+  }
+  go.onclick = () => { tp.running ? (stopTP(), setBtn()) : startTP(); };
+
+  /* tap lyrics toggles; drag pauses */
+  let t0 = null, moved = false;
+  lyr.addEventListener('touchstart', e => { t0 = e.touches[0].clientY; moved = false; }, { passive: true });
+  lyr.addEventListener('touchmove', e => {
+    if (t0 !== null && Math.abs(e.touches[0].clientY - t0) > 12) { moved = true; if (tp.running) { stopTP(); setBtn(); } }
+  }, { passive: true });
+  lyr.addEventListener('click', () => { if (!moved) { tp.running ? (stopTP(), setBtn()) : startTP(); } });
+
+  $('#spd').oninput = e => { speeds[s.id] = +e.target.value; LS.set('hp_speeds', speeds); };
+  $('#fminus').onclick = () => { fontSize = Math.max(17, fontSize - 2); LS.set('hp_fs', fontSize); $('.lwrap').style.fontSize = fontSize + 'px'; };
+  $('#fplus').onclick = () => { fontSize = Math.min(46, fontSize + 2); LS.set('hp_fs', fontSize); $('.lwrap').style.fontSize = fontSize + 'px'; };
+
+  $('#piano').onclick = () => showPiano(s);
+  $('#harp').onclick = () => showHarp(s);
+  $('#keybtn').onclick = () => showPiano(s);
+  $('#editbtn').onclick = () => { stopTP(); view = { name: 'edit', id: s.id }; render(); };
+  const al = $('#addlyric');
+  if (al) al.onclick = e => { e.stopPropagation(); stopTP(); view = { name: 'edit', id: s.id }; render(); };
+}
+
+/* ----- editor de música ----- */
+const SINGOPTS = [['E','Enrique'],['A','Anna'],['R','Rafael'],['AE','Anna + Enrique'],['ALL','Todos']];
+const SINGMAP = { E:['E'], A:['A'], R:['R'], AE:['A','E'], ALL:['E','A','R'] };
+const KEYOPTS = ['','C','G','D','A','E','B','F#','F','Bb','Eb','Ab','Db','Am','Em','Bm','F#m','C#m','G#m','Dm','Gm','Cm','Fm','Bbm'];
+function singersCode(arr) {
+  if (!arr || !arr.length) return 'E';
+  if (arr.length >= 3) return 'ALL';
+  if (arr.length === 2) return 'AE';
+  return arr[0];
+}
+function renderEdit() {
+  const s = view.id ? byId[view.id] : null;
+  const isCustom = !!(s && s.custom);
+  const raw = s ? linesToRaw(s.lines) : '';
+  const code = s ? singersCode(s.singers) : 'E';
+  app.innerHTML = `
+    <div class="screen"><div class="setwrap">
+      <button class="btn ghost" id="cancel" style="margin-bottom:12px;color:var(--muted)">‹ Cancelar</button>
+      <h2 style="font-family:var(--font-d);letter-spacing:.04em;margin:0 0 16px;text-transform:uppercase">${s ? 'Editar música' : 'Nova música'}</h2>
+      <div class="field"><label>TÍTULO</label>
+        <input type="text" class="setname" id="f-title" value="${s ? s.title.replace(/"/g,'&quot;') : ''}" maxlength="80" placeholder="Nome da música"></div>
+      <div class="field"><label>ARTISTA</label>
+        <input type="text" class="setname" id="f-artist" value="${s ? (s.artist||'').replace(/"/g,'&quot;') : ''}" maxlength="60" placeholder="Banda / artista"></div>
+      <div class="field"><label>TOM</label>
+        <select class="setname" id="f-key">${KEYOPTS.map(k =>
+          `<option value="${k}" ${s && (s.key||'')===k ? 'selected' : ''}>${k || '— sem tom —'}</option>`).join('')}</select></div>
+      <div class="field"><label>QUEM CANTA (define a cor dos versos)</label>
+        <div class="chips" style="padding:8px 0">${SINGOPTS.map(([v,l]) =>
+          `<button class="chip singopt ${code===v?'on':''}" data-sing="${v}">${l}</button>`).join('')}</div></div>
+      <div class="field"><label>LETRA</label>
+        <div class="hint">Cole a letra abaixo. Linha em branco separa os blocos.<br>
+        Comece a linha com <b style="color:var(--coro)">*</b> para marcar CORO (fica verde).<br>
+        Linha entre <b style="color:var(--cue)">(parênteses)</b> vira deixa de arranjo (fica laranja).</div>
+        <textarea class="setname lyr-ta" id="f-raw" placeholder="Cole a letra aqui…">${esc(raw)}</textarea></div>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:6px">
+        <button class="btn primary" id="save" style="font-weight:800;padding:13px 22px">SALVAR</button>
+        ${isCustom ? '<button class="btn" id="delsong" style="color:var(--action)">EXCLUIR MÚSICA</button>' : ''}
+      </div>
+      <div class="hint" style="margin-top:14px">As músicas e letras salvas aqui ficam guardadas neste aparelho (navegador).</div>
+    </div></div>`;
+  let sel = code;
+  app.querySelectorAll('.singopt').forEach(b => b.onclick = () => {
+    sel = b.dataset.sing;
+    app.querySelectorAll('.singopt').forEach(x => x.classList.toggle('on', x.dataset.sing === sel));
+  });
+  $('#cancel').onclick = () => { view = s ? { name: 'song', id: s.id } : { name: 'home' }; render(); };
+  $('#save').onclick = () => {
+    const title = $('#f-title').value.trim();
+    if (!title) { $('#f-title').focus(); return; }
+    const artist = $('#f-artist').value.trim();
+    const key = $('#f-key').value || null;
+    const singers = SINGMAP[sel];
+    const rawv = $('#f-raw').value;
+    if (!s) {
+      const id = 'u-' + Date.now();
+      custom.added.push({ id, title, artist, key, singers, raw: rawv });
+      saveCustom(); applyCustom();
+      playlist = [id];
+      openSong(id);
+      return;
+    }
+    if (isCustom) {
+      const a = custom.added.find(x => x.id === s.id);
+      if (a) Object.assign(a, { title, artist, key, singers, raw: rawv });
+    } else {
+      custom.edits[s.id] = { title, artist, key, singers, raw: rawv };
+    }
+    saveCustom(); applyCustom();
+    openSong(s.id);
+  };
+  const del = $('#delsong');
+  if (del) del.onclick = () => {
+    if (!confirm('Excluir esta música do repertório?')) return;
+    custom.added = custom.added.filter(x => x.id !== s.id);
+    const i = SONGS.indexOf(s); if (i >= 0) SONGS.splice(i, 1);
+    delete byId[s.id];
+    sets.forEach(st => st.songs = st.songs.filter(id => id !== s.id)); saveSets();
+    saveCustom();
+    view = { name: 'home' }; render();
+  };
+}
+function esc(t) { return t.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;'); }
+
+/* ----- modals ----- */
+function modal(html) {
+  const bg = document.createElement('div');
+  bg.className = 'modal-bg';
+  bg.innerHTML = `<div class="modal">${html}</div>`;
+  bg.onclick = e => { if (e.target === bg) bg.remove(); };
+  bg.querySelector('.modal').insertAdjacentHTML('afterbegin', '<button class="mclose">✕</button>');
+  bg.querySelector('.mclose').onclick = () => bg.remove();
+  document.body.appendChild(bg);
+  return bg;
+}
+function showPiano(s) {
+  const key = parseKey(s.key);
+  if (!key) { modal(`<h2>Piano</h2><p class="sub">O tom desta música ainda não está definido no repertório.</p>`); return; }
+  const chords = keyChords(key);
+  const flats = key.minor ? [2,7,0,5,10].includes(key.root) : [5,10,3,8].includes(key.root);
+  modal(`
+    <h2>${ICON.piano} Piano — tom de ${key.label}</h2>
+    <p class="sub">Acordes principais do tom. <span style="color:var(--cue)">Laranja = fundamental</span> · <span style="color:var(--enrique)">azul = demais notas</span>.</p>
+    <div class="chordgrid">
+      ${chords.map(c => {
+        const tones = [c.root, c.root + (c.minor ? 3 : 4), c.root + 7].map(p => noteName(p, flats));
+        return `<div class="chordcard">
+          <div class="cname">${c.name}</div>
+          <div class="cfun">${c.fun}</div>
+          ${chordSVG(((c.root % 12) + 12) % 12, c.minor)}
+          <div class="cnotes">${tones.join(' – ')}</div>
+        </div>`;
+      }).join('')}
+    </div>`);
+}
+function showHarp(s) {
+  const key = parseKey(s.key);
+  if (!key) { modal(`<h2>Gaita</h2><p class="sub">O tom desta música ainda não está definido no repertório.</p>`); return; }
+  const infos = harpInfo(key);
+  modal(`
+    <h2>${ICON.harp} Gaita — tom de ${key.label}</h2>
+    <p class="sub">Gaita diatônica de 10 caixas. “Caixa” = furo; aspirada = puxando o ar, soprada = soprando.</p>
+    ${infos.map(i => `
+      <div class="harpcard">
+        <div class="pos">${i.pos}</div>
+        <div class="harpkey">Gaita em ${i.harp}</div>
+        <h3>${i.why}</h3>
+        <div class="harprow">${i.boxes.map(([l, v]) => `<span class="hbx">${l}: <b>${v}</b></span>`).join('')}</div>
+        <div class="harpnote">${i.note}</div>
+      </div>`).join('')}`);
+}
+
+/* ----- setlists ----- */
+function renderSets() {
+  if (view.edit) return renderSetEditor(view.edit);
+  app.innerHTML = nav() + `
+    <div class="screen"><div class="setwrap">
+      <button class="btn primary" id="newset" style="margin-bottom:16px">+ NOVA SETLIST</button>
+      ${sets.map(st => `
+        <div class="setcard">
+          <h3>${esc(st.name)}</h3>
+          <div class="meta">${st.songs.length} músicas · ${fmtDur(st.songs.length)}</div>
+          <div class="setbtns">
+            <button class="btn primary" data-play="${st.id}">▶ TOCAR</button>
+            <button class="btn" data-edit="${st.id}">EDITAR</button>
+            <button class="btn" data-dup="${st.id}">DUPLICAR</button>
+            <button class="btn" data-del="${st.id}" style="color:var(--action)">EXCLUIR</button>
+          </div>
+        </div>`).join('') || '<div class="empty">Nenhuma setlist ainda.</div>'}
+    </div></div>`;
+  bindNav();
+  $('#newset').onclick = () => {
+    const st = { id: 'set-' + Date.now(), name: 'Nova setlist', songs: [] };
+    sets.unshift(st); saveSets();
+    view.edit = st.id; render();
+  };
+  app.querySelectorAll('[data-play]').forEach(b => b.onclick = () => {
+    const st = sets.find(x => x.id === b.dataset.play);
+    const ids = st.songs.filter(id => byId[id]);
+    if (!ids.length) return;
+    playlist = ids;
+    openSong(ids[0]);
+  });
+  app.querySelectorAll('[data-edit]').forEach(b => b.onclick = () => { view.edit = b.dataset.edit; render(); });
+  app.querySelectorAll('[data-dup]').forEach(b => b.onclick = () => {
+    const st = sets.find(x => x.id === b.dataset.dup);
+    sets.unshift({ id: 'set-' + Date.now(), name: st.name + ' (cópia)', songs: st.songs.slice() });
+    saveSets(); render();
+  });
+  app.querySelectorAll('[data-del]').forEach(b => b.onclick = () => {
+    if (!confirm('Excluir esta setlist?')) return;
+    sets = sets.filter(x => x.id !== b.dataset.del); saveSets(); render();
+  });
+}
+function fmtDur(n) { const min = n * 4.5; return '~' + Math.round(min) + ' min'; }
+function renderSetEditor(id) {
+  const st = sets.find(x => x.id === id);
+  if (!st) { view.edit = null; return renderSets(); }
+  let pickQ = view.pickQ || '';
+  const results = pickQ.trim()
+    ? SONGS.filter(s => songMatches(s, strip(pickQ)) && !st.songs.includes(s.id)).slice(0, 12)
+    : [];
+  app.innerHTML = nav() + `
+    <div class="screen"><div class="setwrap">
+      <button class="btn ghost" id="backsets" style="margin-bottom:12px;color:var(--muted)">‹ Setlists</button>
+      <input type="text" class="setname" id="setname" value="${st.name.replace(/"/g,'&quot;')}" maxlength="60">
+      <div class="meta" style="color:var(--muted);font-size:12.5px;margin-bottom:10px">${st.songs.length} músicas — toque nas setas para reordenar</div>
+      ${st.songs.map((sid, i) => {
+        const s = byId[sid]; if (!s) return '';
+        return `<div class="editrow">
+          <span style="color:var(--muted);font-size:12px;width:22px;text-align:right;font-variant-numeric:tabular-nums">${i+1}</span>
+          <span class="tt">${s.title} <span class="k">· ${s.key || '—'}</span></span>
+          <button class="mini" data-up="${i}" ${i===0?'disabled':''}>↑</button>
+          <button class="mini" data-dn="${i}" ${i===st.songs.length-1?'disabled':''}>↓</button>
+          <button class="mini del" data-rm="${i}">✕</button>
+        </div>`;
+      }).join('') || '<div class="empty">Setlist vazia — busque abaixo para adicionar.</div>'}
+      <div class="addarea">
+        <input type="text" class="setname" id="pick" placeholder="Adicionar música… (buscar)" value="${pickQ.replace(/"/g,'&quot;')}">
+        ${results.length ? `<div class="pickresults">${results.map(s =>
+          `<button class="pickrow" data-add="${s.id}">${s.title}<span class="k">${s.key || '—'}</span></button>`).join('')}</div>` : ''}
+      </div>
+    </div></div>`;
+  bindNav();
+  $('#backsets').onclick = () => { view.edit = null; view.pickQ = ''; render(); };
+  const nameEl = $('#setname');
+  nameEl.onchange = () => { st.name = nameEl.value.trim() || st.name; saveSets(); };
+  app.querySelectorAll('[data-up]').forEach(b => b.onclick = () => {
+    const i = +b.dataset.up; [st.songs[i-1], st.songs[i]] = [st.songs[i], st.songs[i-1]]; saveSets(); render();
+  });
+  app.querySelectorAll('[data-dn]').forEach(b => b.onclick = () => {
+    const i = +b.dataset.dn; [st.songs[i+1], st.songs[i]] = [st.songs[i], st.songs[i+1]]; saveSets(); render();
+  });
+  app.querySelectorAll('[data-rm]').forEach(b => b.onclick = () => {
+    st.songs.splice(+b.dataset.rm, 1); saveSets(); render();
+  });
+  const pick = $('#pick');
+  pick.oninput = () => { view.pickQ = pick.value; render(); const p = $('#pick'); p.focus(); p.setSelectionRange(p.value.length, p.value.length); };
+  app.querySelectorAll('[data-add]').forEach(b => b.onclick = () => {
+    st.songs.push(b.dataset.add); saveSets(); view.pickQ = ''; render();
+    const p = $('#pick'); if (p) p.focus();
+  });
+}
+
+render();
+
+</script>

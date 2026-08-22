@@ -1,0 +1,238 @@
+{
+  "id": "highway-to-hell",
+  "title": "HIGHWAY TO HELL",
+  "artist": "AC/DC",
+  "key": "G",
+  "singers": ["E"],
+  "setOrder": 29,
+  "lines": [
+    {
+      "t": "cue",
+      "x": "Dois riffs e um acorde"
+    },
+    {
+      "t": "verse",
+      "x": "Livin easy,"
+    },
+    {
+      "t": "verse",
+      "x": "livin' free"
+    },
+    {
+      "t": "chorus",
+      "x": "Season ticket, on a one way ride"
+    },
+    {
+      "t": "verse",
+      "x": "Asking nothing,"
+    },
+    {
+      "t": "verse",
+      "x": "leave me be"
+    },
+    {
+      "t": "chorus",
+      "x": "Taking everything in my stride"
+    },
+    {
+      "t": "verse",
+      "x": "Don't need reason,"
+    },
+    {
+      "t": "verse",
+      "x": "don't need rhyme"
+    },
+    {
+      "t": "chorus",
+      "x": "Ain't nothin' that I’d rather do"
+    },
+    {
+      "t": "verse",
+      "x": "Going down,"
+    },
+    {
+      "t": "verse",
+      "x": "party time"
+    },
+    {
+      "t": "chorus",
+      "x": "My friends are gonna be there too"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "chorus",
+      "x": "I'm on the highway to hell"
+    },
+    {
+      "t": "chorus",
+      "x": "On the highway to hell"
+    },
+    {
+      "t": "chorus",
+      "x": "Highway to hell"
+    },
+    {
+      "t": "chorus",
+      "x": "I'm on the highway to hell"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "verse",
+      "x": "No stop signs,"
+    },
+    {
+      "t": "verse",
+      "x": "speed limit"
+    },
+    {
+      "t": "chorus",
+      "x": "Nobody's gonna slow me down"
+    },
+    {
+      "t": "verse",
+      "x": "Like a wheel,"
+    },
+    {
+      "t": "verse",
+      "x": "gonna spin it"
+    },
+    {
+      "t": "chorus",
+      "x": "Nobody's gonna mess me 'round"
+    },
+    {
+      "t": "verse",
+      "x": "Hey, Satan!"
+    },
+    {
+      "t": "verse",
+      "x": "Paid my dues"
+    },
+    {
+      "t": "chorus",
+      "x": "Playin' in a rockin' band"
+    },
+    {
+      "t": "verse",
+      "x": "Hey, mama!"
+    },
+    {
+      "t": "verse",
+      "x": "Look at me"
+    },
+    {
+      "t": "chorus",
+      "x": "I'm on my way to the promised land"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "chorus",
+      "x": "I'm on the highway to hell"
+    },
+    {
+      "t": "chorus",
+      "x": "Highway to hell"
+    },
+    {
+      "t": "chorus",
+      "x": "I'm on the highway to hell"
+    },
+    {
+      "t": "chorus",
+      "x": "Highway to hell"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "verse",
+      "x": "mmmmmm"
+    },
+    {
+      "t": "verse",
+      "x": "Don't stop me!"
+    },
+    {
+      "t": "cue",
+      "x": "solo curto"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "chorus",
+      "x": "I'm on the highway to hell"
+    },
+    {
+      "t": "chorus",
+      "x": "On the highway to hell"
+    },
+    {
+      "t": "chorus",
+      "x": "I'm on the (highway to hell)"
+    },
+    {
+      "t": "chorus",
+      "x": "On the highway (to hell)"
+    },
+    {
+      "t": "cue",
+      "x": "revirada guitarra"
+    },
+    {
+      "t": "chorus",
+      "x": "Highway to hell"
+    },
+    {
+      "t": "chorus",
+      "x": "I'm on the highway to hell"
+    },
+    {
+      "t": "chorus",
+      "x": "Highway to hell"
+    },
+    {
+      "t": "chorus",
+      "x": "Highway to hell"
+    },
+    {
+      "t": "chorus",
+      "x": "Highway to hell"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "chorus",
+      "x": "And I'm going down all the way"
+    },
+    {
+      "t": "chorus",
+      "x": "On the highway to hell"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "cue",
+      "x": "FIM"
+    },
+    {
+      "t": "cue",
+      "x": "ACABA AQUI BAR 54"
+    }
+  ]
+}

@@ -1,0 +1,262 @@
+{
+  "id": "welcome-to-the-jungle",
+  "title": "WELCOME TO THE JUNGLE",
+  "artist": "Guns N' Roses",
+  "key": "Em",
+  "singers": ["A"],
+  "setOrder": 22,
+  "lines": [
+    {
+      "t": "verse",
+      "x": "Welcome to the jungle"
+    },
+    {
+      "t": "verse",
+      "x": "We got fun and games"
+    },
+    {
+      "t": "verse",
+      "x": "We got everything you want"
+    },
+    {
+      "t": "verse",
+      "x": "Honey, we know the names"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "verse",
+      "x": "aWe are the people that can find"
+    },
+    {
+      "t": "verse",
+      "x": "Whatever you may need"
+    },
+    {
+      "t": "verse",
+      "x": "If you got the money, honey"
+    },
+    {
+      "t": "verse",
+      "x": "We got your disease"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "chorus",
+      "x": "In the jungle, welcome to the jungle"
+    },
+    {
+      "t": "chorus",
+      "x": "Watch it bring you to your"
+    },
+    {
+      "t": "chorus",
+      "x": "nananannana knees, knees"
+    },
+    {
+      "t": "chorus",
+      "x": "Oh, I wanna watch you bleed"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "verse",
+      "x": "Welcome to the jungle"
+    },
+    {
+      "t": "verse",
+      "x": "We take it day by day"
+    },
+    {
+      "t": "verse",
+      "x": "If you want it, you're gonna bleed"
+    },
+    {
+      "t": "verse",
+      "x": "But it's the price you pay"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "verse",
+      "x": "And you're a very sexy girl"
+    },
+    {
+      "t": "verse",
+      "x": "That's very hard to please"
+    },
+    {
+      "t": "verse",
+      "x": "You can taste the bright lights"
+    },
+    {
+      "t": "verse",
+      "x": "But you won't get there for free"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "chorus",
+      "x": "In the jungle, welcome to the jungle"
+    },
+    {
+      "t": "verse",
+      "x": "Feel my, my, my, my serpentine"
+    },
+    {
+      "t": "chorus",
+      "x": "I wanna hear you scream"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "verse",
+      "x": "Welcome to the jungle"
+    },
+    {
+      "t": "verse",
+      "x": "It gets worse here everyday"
+    },
+    {
+      "t": "verse",
+      "x": "You learn to live like an animal"
+    },
+    {
+      "t": "verse",
+      "x": "In the jungle, where we play"
+    },
+    {
+      "t": "verse",
+      "x": "If you got a hunger for what you see"
+    },
+    {
+      "t": "verse",
+      "x": "You'll take it eventually"
+    },
+    {
+      "t": "verse",
+      "x": "You can have anything you want"
+    },
+    {
+      "t": "verse",
+      "x": "But you better not take it from me"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "chorus",
+      "x": "In the jungle, welcome to the jungle"
+    },
+    {
+      "t": "chorus",
+      "x": "Watch it bring you to your"
+    },
+    {
+      "t": "chorus",
+      "x": "nananannana knees, knees"
+    },
+    {
+      "t": "chorus",
+      "x": "Oh, I wanna watch you bleed"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "chorus",
+      "x": "And when you're high, you never"
+    },
+    {
+      "t": "chorus",
+      "x": "Ever want to come down"
+    },
+    {
+      "t": "verse",
+      "x": "So down, so down, so down, yeah"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "cue",
+      "x": "solo - saída com dois riffs"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "chorus",
+      "x": "You know where you are?"
+    },
+    {
+      "t": "chorus",
+      "x": "You're in the jungle, baby"
+    },
+    {
+      "t": "chorus",
+      "x": "You're gonna die"
+    },
+    {
+      "t": "chorus",
+      "x": "In the jungle, welcome to the jungle"
+    },
+    {
+      "t": "chorus",
+      "x": "Watch it bring you to your knees, knees"
+    },
+    {
+      "t": "chorus",
+      "x": "In the jungle, welcome to the jungle"
+    },
+    {
+      "t": "chorus",
+      "x": "Feel my, my, my serpentine"
+    },
+    {
+      "t": "chorus",
+      "x": "In the jungle, welcome to the jungle"
+    },
+    {
+      "t": "chorus",
+      "x": "Watch it bring you to your"
+    },
+    {
+      "t": "chorus",
+      "x": "knees, knees"
+    },
+    {
+      "t": "chorus",
+      "x": "Down in the jungle, welcome to the jungle"
+    },
+    {
+      "t": "chorus",
+      "x": "Watch it bring you to you"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "chorus",
+      "x": "It's gonna bring you down!"
+    }
+  ]
+}

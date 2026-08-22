@@ -1,0 +1,154 @@
+{
+  "id": "wicked-game",
+  "title": "WICKED GAME",
+  "artist": "Chris Isaak",
+  "key": "Bm",
+  "singers": ["E", "A", "R"],
+  "setOrder": 20,
+  "lines": [
+    {
+      "t": "verse",
+      "x": "The world was on fire and no one could save me but you"
+    },
+    {
+      "t": "verse",
+      "x": "It's strange what desire will make foolish people do"
+    },
+    {
+      "t": "verse",
+      "x": "I never dreamed that I'd meet somebody like you"
+    },
+    {
+      "t": "verse",
+      "x": "And I never dreamed that I'd lose somebody like you"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "verse",
+      "x": "No, I don't wanna fall in love (this world is only gonna break your heart)"
+    },
+    {
+      "t": "verse",
+      "x": "No, I don't wanna fall in love (this world is only gonna break your heart)"
+    },
+    {
+      "t": "verse",
+      "x": "With you (with you)"
+    },
+    {
+      "t": "cue",
+      "x": "This world is only gonna break your heart"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "verse",
+      "x": "What a wicked game to play"
+    },
+    {
+      "t": "verse",
+      "x": "To make me feel this way"
+    },
+    {
+      "t": "verse",
+      "x": "What a wicked thing to do"
+    },
+    {
+      "t": "verse",
+      "x": "To let me dream of you"
+    },
+    {
+      "t": "verse",
+      "x": "What a wicked thing to say"
+    },
+    {
+      "t": "verse",
+      "x": "You never felt this way"
+    },
+    {
+      "t": "verse",
+      "x": "What a wicked thing to do"
+    },
+    {
+      "t": "verse",
+      "x": "To make me dream of you"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "verse",
+      "x": "And I don't wanna fall in love (this world is only gonna break your heart)"
+    },
+    {
+      "t": "verse",
+      "x": "No, I don't wanna fall in love (this world is only gonna break your heart)"
+    },
+    {
+      "t": "verse",
+      "x": "With you"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "verse",
+      "x": "The world was on fire and no one could save me but you"
+    },
+    {
+      "t": "verse",
+      "x": "It's strange what desire will make foolish people do"
+    },
+    {
+      "t": "verse",
+      "x": "I never dreamed that I'd love somebody like you"
+    },
+    {
+      "t": "verse",
+      "x": "And I never dreamed that I'd lose somebody like you"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "verse",
+      "x": "No, I don't wanna fall in love (this world is only gonna break your heart)"
+    },
+    {
+      "t": "verse",
+      "x": "No, I don't wanna fall in love (this world is only gonna break your heart)"
+    },
+    {
+      "t": "verse",
+      "x": "With you (with you)"
+    },
+    {
+      "t": "cue",
+      "x": "This world is only gonna break your heart"
+    },
+    {
+      "t": "verse",
+      "x": "No, I (this world is only gonna break your heart)"
+    },
+    {
+      "t": "cue",
+      "x": "This world is only gonna break your heart"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "verse",
+      "x": "Nobody loves no one"
+    }
+  ]
+}

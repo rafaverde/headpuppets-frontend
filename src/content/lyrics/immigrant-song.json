@@ -1,0 +1,170 @@
+{
+  "id": "immigrant-song",
+  "title": "IMMIGRANT SONG",
+  "artist": "Led Zeppelin",
+  "key": "F#m",
+  "singers": ["A"],
+  "setOrder": 3,
+  "lines": [
+    {
+      "t": "cue",
+      "x": "Intro Grito"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "verse",
+      "x": "We came from the land"
+    },
+    {
+      "t": "verse",
+      "x": "Of the ice and snow"
+    },
+    {
+      "t": "verse",
+      "x": "From the midnight sun"
+    },
+    {
+      "t": "verse",
+      "x": "Where the hot springs blow"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "verse",
+      "x": "The hammer of the gods"
+    },
+    {
+      "t": "verse",
+      "x": "Will drive our ships to new lands"
+    },
+    {
+      "t": "verse",
+      "x": "To fight the horde, singing and crying"
+    },
+    {
+      "t": "verse",
+      "x": "Valhalla, I am coming"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "chorus",
+      "x": "On we sweep"
+    },
+    {
+      "t": "chorus",
+      "x": "With threshing oar"
+    },
+    {
+      "t": "chorus",
+      "x": "Our only goal"
+    },
+    {
+      "t": "chorus",
+      "x": "Will be the western shore"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "cue",
+      "x": "Grito"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "verse",
+      "x": "We came from the land"
+    },
+    {
+      "t": "verse",
+      "x": "Of the ice and snow"
+    },
+    {
+      "t": "verse",
+      "x": "From the midnight sun"
+    },
+    {
+      "t": "verse",
+      "x": "Where the hot springs flow"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "verse",
+      "x": "How soft your fields so green"
+    },
+    {
+      "t": "verse",
+      "x": "Can whisper tales of gore"
+    },
+    {
+      "t": "verse",
+      "x": "Of how we calmed the tides of war"
+    },
+    {
+      "t": "verse",
+      "x": "We are your overlords"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "chorus",
+      "x": "On we sweep"
+    },
+    {
+      "t": "chorus",
+      "x": "With threshing oar"
+    },
+    {
+      "t": "chorus",
+      "x": "Our only goal"
+    },
+    {
+      "t": "chorus",
+      "x": "Will be the western shore"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "verse",
+      "x": "So now you'd better stop"
+    },
+    {
+      "t": "verse",
+      "x": "And rebuild all your ruins"
+    },
+    {
+      "t": "verse",
+      "x": "For peace and trust can win the day"
+    },
+    {
+      "t": "verse",
+      "x": "Despite of all your losing"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "cue",
+      "x": "FINALE"
+    }
+  ]
+}

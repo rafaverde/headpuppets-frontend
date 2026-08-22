@@ -1,0 +1,290 @@
+{
+  "id": "sultans-of-swing",
+  "title": "SULTANS OF SWING",
+  "artist": "Dire Straits",
+  "key": "Dm",
+  "singers": ["E"],
+  "setOrder": null,
+  "lines": [
+    {
+      "t": "cue",
+      "x": "sai do solo redoble de bateria e entra:"
+    },
+    {
+      "t": "verse",
+      "x": "You get a shiver in the dark"
+    },
+    {
+      "t": "verse",
+      "x": "It's raining in the park but meantime"
+    },
+    {
+      "t": "verse",
+      "x": "esticada de corda:"
+    },
+    {
+      "t": "verse",
+      "x": "South of the river, you stop and you hold everything"
+    },
+    {
+      "t": "verse",
+      "x": "solito:"
+    },
+    {
+      "t": "verse",
+      "x": "A band is blowing Dixie, double-four time"
+    },
+    {
+      "t": "verse",
+      "x": "solito:"
+    },
+    {
+      "t": "verse",
+      "x": "You feel alright - when you hear the music ring"
+    },
+    {
+      "t": "verse",
+      "x": "solito maior:"
+    },
+    {
+      "t": "verse",
+      "x": "Well, now you step inside, but you don't see too many faces"
+    },
+    {
+      "t": "verse",
+      "x": "solito:"
+    },
+    {
+      "t": "verse",
+      "x": "Coming in out of the rain, they hear the jazz go down"
+    },
+    {
+      "t": "verse",
+      "x": "solito:"
+    },
+    {
+      "t": "verse",
+      "x": "Competition in other places"
+    },
+    {
+      "t": "verse",
+      "x": "solito:"
+    },
+    {
+      "t": "verse",
+      "x": "Uh, but the horns they blowin' that sound"
+    },
+    {
+      "t": "verse",
+      "x": "solito:"
+    },
+    {
+      "t": "verse",
+      "x": "Way on down south"
+    },
+    {
+      "t": "verse",
+      "x": "solito:"
+    },
+    {
+      "t": "verse",
+      "x": "Way on down south, London town"
+    },
+    {
+      "t": "cue",
+      "x": "riff 2x:"
+    },
+    {
+      "t": "verse",
+      "x": "You check out -- guitar George,"
+    },
+    {
+      "t": "cue",
+      "x": "riff:"
+    },
+    {
+      "t": "verse",
+      "x": "he knows -- all the chords"
+    },
+    {
+      "t": "verse",
+      "x": "solito:"
+    },
+    {
+      "t": "verse",
+      "x": "solito:"
+    },
+    {
+      "t": "verse",
+      "x": "They don't give a damn -- about any trumpet -- playin' band"
+    },
+    {
+      "t": "verse",
+      "x": "solito:"
+    },
+    {
+      "t": "verse",
+      "x": "It ain't what they call -- rock and roll"
+    },
+    {
+      "t": "verse",
+      "x": "solito:"
+    },
+    {
+      "t": "verse",
+      "x": "And the Sultans"
+    },
+    {
+      "t": "verse",
+      "x": "solito:"
+    },
+    {
+      "t": "verse",
+      "x": "Yeah, the Sultans, they play Creole,"
+    },
+    {
+      "t": "verse",
+      "x": "solito: Creole"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "cue",
+      "x": "solo longo e entra no riff 2x:"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "verse",
+      "x": "Mind, it's strictly rhythm, he doesn't want to make it cry or sing"
+    },
+    {
+      "t": "verse",
+      "x": "solito:"
+    },
+    {
+      "t": "verse",
+      "x": "They said an old guitar is all - - he can afford"
+    },
+    {
+      "t": "verse",
+      "x": "solito:"
+    },
+    {
+      "t": "verse",
+      "x": "When he gets up under the lights - - to play his thing"
+    },
+    {
+      "t": "verse",
+      "x": "solito mais longo :"
+    },
+    {
+      "t": "verse",
+      "x": "And Harry doesn't mind if he doesn't - -  make the scene"
+    },
+    {
+      "t": "verse",
+      "x": "solito:"
+    },
+    {
+      "t": "verse",
+      "x": "He's got a daytime job, he's doing alright"
+    },
+    {
+      "t": "verse",
+      "x": "solito:"
+    },
+    {
+      "t": "verse",
+      "x": "He can play the honky-tonk like anything"
+    },
+    {
+      "t": "verse",
+      "x": "solito:"
+    },
+    {
+      "t": "verse",
+      "x": "Savin' it up -- for Friday night"
+    },
+    {
+      "t": "verse",
+      "x": "solito:"
+    },
+    {
+      "t": "verse",
+      "x": "With the Sultans"
+    },
+    {
+      "t": "verse",
+      "x": "solito:"
+    },
+    {
+      "t": "verse",
+      "x": "We're the Sultans of Swing"
+    },
+    {
+      "t": "cue",
+      "x": "riff e solito 2x:"
+    },
+    {
+      "t": "verse",
+      "x": "Then a crowd of young boys, they're foolin' around in the corner"
+    },
+    {
+      "t": "verse",
+      "x": "solito:"
+    },
+    {
+      "t": "verse",
+      "x": "Drunk and dressed in their best, brown baggies and their platform soles"
+    },
+    {
+      "t": "verse",
+      "x": "And then the man, he steps right up to the microphone"
+    },
+    {
+      "t": "verse",
+      "x": "solito:"
+    },
+    {
+      "t": "verse",
+      "x": "And says at last, just as the time bell rings"
+    },
+    {
+      "t": "verse",
+      "x": "solito:"
+    },
+    {
+      "t": "verse",
+      "x": "\"Goodnight,--  now it's time - to go home\""
+    },
+    {
+      "t": "verse",
+      "x": "solito:"
+    },
+    {
+      "t": "verse",
+      "x": "Then he makes it fast -- with one more thing"
+    },
+    {
+      "t": "verse",
+      "x": "solito:"
+    },
+    {
+      "t": "verse",
+      "x": "\"We are the Sultans"
+    },
+    {
+      "t": "verse",
+      "x": "solito:"
+    },
+    {
+      "t": "verse",
+      "x": "We are the Sultans of Swing\""
+    }
+  ]
+}

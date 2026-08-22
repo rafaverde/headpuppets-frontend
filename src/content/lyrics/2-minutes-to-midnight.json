@@ -1,0 +1,286 @@
+{
+  "id": "2-minutes-to-midnight",
+  "title": "2 MINUTES TO MIDNIGHT",
+  "artist": "Iron Maiden",
+  "key": null,
+  "singers": ["E"],
+  "setOrder": null,
+  "lines": [
+    {
+      "t": "cue",
+      "x": "4 riffs entra instrumentos + 2 riffs entra a voz"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "verse",
+      "x": "Kill for gain or shoot to maim"
+    },
+    {
+      "t": "verse",
+      "x": "But we don't need a reason"
+    },
+    {
+      "t": "verse",
+      "x": "The Golden Goose is on the loose"
+    },
+    {
+      "t": "verse",
+      "x": "And never out of season"
+    },
+    {
+      "t": "verse",
+      "x": "Blackened pride still burns inside"
+    },
+    {
+      "t": "verse",
+      "x": "This shell of bloody treason"
+    },
+    {
+      "t": "verse",
+      "x": "Here's my gun for a barrel of fun"
+    },
+    {
+      "t": "verse",
+      "x": "For the love of living death"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "verse",
+      "x": "The killer's breed or the Demon's seed"
+    },
+    {
+      "t": "verse",
+      "x": "The glamour, the fortune, the pain"
+    },
+    {
+      "t": "verse",
+      "x": "Go to war again, blood is freedom's stain"
+    },
+    {
+      "t": "verse",
+      "x": "Don't you pray for my soul anymore"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "chorus",
+      "x": "2 minutes to midnight"
+    },
+    {
+      "t": "chorus",
+      "x": "The hands that threaten doom"
+    },
+    {
+      "t": "chorus",
+      "x": "2 minutes to midnight"
+    },
+    {
+      "t": "chorus",
+      "x": "To kill the unborn in the womb"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "cue",
+      "x": "2 riffs"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "verse",
+      "x": "The blind men shout: Let the creatures out"
+    },
+    {
+      "t": "verse",
+      "x": "We'll show the unbelievers"
+    },
+    {
+      "t": "verse",
+      "x": "To put the finger right on you"
+    },
+    {
+      "t": "verse",
+      "x": "As the madmen play on words and make us all"
+    },
+    {
+      "t": "verse",
+      "x": "Dance to their song"
+    },
+    {
+      "t": "verse",
+      "x": "To the tune of starving millions"
+    },
+    {
+      "t": "verse",
+      "x": "To make a better kind of gun"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "verse",
+      "x": "The killer's breed or the Demon's seed"
+    },
+    {
+      "t": "verse",
+      "x": "The glamour, the fortune, the pain"
+    },
+    {
+      "t": "verse",
+      "x": "Go to war again, blood is freedom's stain"
+    },
+    {
+      "t": "verse",
+      "x": "Don't you pray for my soul anymore"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "verse",
+      "x": "The Napalm screams of human flames"
+    },
+    {
+      "t": "verse",
+      "x": "Of a prime time Belsen feast, yeah!"
+    },
+    {
+      "t": "verse",
+      "x": "As the reasons for the carnage cut their meat"
+    },
+    {
+      "t": "verse",
+      "x": "And lick the gravy"
+    },
+    {
+      "t": "verse",
+      "x": "We oil the jaws of the war machine"
+    },
+    {
+      "t": "verse",
+      "x": "And feed it with our babies"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "verse",
+      "x": "The killer's breed or the Demon's seed"
+    },
+    {
+      "t": "verse",
+      "x": "The glamour, the fortune, the pain"
+    },
+    {
+      "t": "verse",
+      "x": "Go to war again, blood is freedom's stain"
+    },
+    {
+      "t": "verse",
+      "x": "Don't you pray for my soul anymore"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "chorus",
+      "x": "2 minutes to midnight"
+    },
+    {
+      "t": "chorus",
+      "x": "The hands that threaten doom"
+    },
+    {
+      "t": "chorus",
+      "x": "2 minutes to midnight"
+    },
+    {
+      "t": "chorus",
+      "x": "To kill the unborn in the womb"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "cue",
+      "x": "SOLO - na saída 2 riffs"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "verse",
+      "x": "The body bags and little rags"
+    },
+    {
+      "t": "verse",
+      "x": "Of children torn in two"
+    },
+    {
+      "t": "verse",
+      "x": "And the jellied brains of those who remain"
+    },
+    {
+      "t": "chorus",
+      "x": "2 minutes to midnight"
+    },
+    {
+      "t": "chorus",
+      "x": "The hands that threaten doom"
+    },
+    {
+      "t": "chorus",
+      "x": "2 minutes to midnight"
+    },
+    {
+      "t": "chorus",
+      "x": "To kill the unborn in the womb"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "chorus",
+      "x": "Midnight, midnight, midnight, is all night"
+    },
+    {
+      "t": "chorus",
+      "x": "Midnight, midnight, midnight, is all night"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "cue",
+      "x": "Solo final 2 voltas"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "verse",
+      "x": "midnight all night"
+    }
+  ]
+}

@@ -1,0 +1,150 @@
+{
+  "id": "gimme-all-your-loving",
+  "title": "GIMME ALL YOUR LOVING",
+  "artist": "ZZ Top",
+  "key": "Cm",
+  "singers": ["E"],
+  "setOrder": 4,
+  "lines": [
+    {
+      "t": "cue",
+      "x": "Solo - sai do solo com o riff"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "verse",
+      "x": "I got to have a shot"
+    },
+    {
+      "t": "verse",
+      "x": "Of what you got is, oh, so sweet"
+    },
+    {
+      "t": "verse",
+      "x": "You got to make it hot"
+    },
+    {
+      "t": "verse",
+      "x": "Like a boomerang I need a repeat"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "chorus",
+      "x": "Gimme all your lovin'"
+    },
+    {
+      "t": "chorus",
+      "x": "All your hugs and kisses too"
+    },
+    {
+      "t": "chorus",
+      "x": "Gimme all your lovin'"
+    },
+    {
+      "t": "chorus",
+      "x": "Don't let up until we're through"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "verse",
+      "x": "You got to whip it up"
+    },
+    {
+      "t": "verse",
+      "x": "And hit me like a ton of lead"
+    },
+    {
+      "t": "verse",
+      "x": "If I blow my top"
+    },
+    {
+      "t": "verse",
+      "x": "Will you let it go to your head?"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "chorus",
+      "x": "Gimme all your lovin'"
+    },
+    {
+      "t": "chorus",
+      "x": "All your hugs and kisses too"
+    },
+    {
+      "t": "chorus",
+      "x": "Gimme all your lovin'"
+    },
+    {
+      "t": "chorus",
+      "x": "Don't let up until we're through"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "cue",
+      "x": "Solo - sai do solo com o riff"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "verse",
+      "x": "You got to move it up"
+    },
+    {
+      "t": "verse",
+      "x": "And use it like a screwball would"
+    },
+    {
+      "t": "verse",
+      "x": "You got to pack it up"
+    },
+    {
+      "t": "verse",
+      "x": "Work it like a new boy should"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "chorus",
+      "x": "Gimme all your lovin'"
+    },
+    {
+      "t": "chorus",
+      "x": "All your hugs and kisses too"
+    },
+    {
+      "t": "chorus",
+      "x": "Gimme all your lovin'"
+    },
+    {
+      "t": "chorus",
+      "x": "Don't let up until we're through"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "cue",
+      "x": "2 voltas de riff e solo final"
+    }
+  ]
+}

@@ -1,0 +1,306 @@
+{
+  "id": "keep-the-faith",
+  "title": "KEEP THE FAITH",
+  "artist": "Bon Jovi",
+  "key": "Gm",
+  "singers": ["A"],
+  "setOrder": 13,
+  "lines": [
+    {
+      "t": "verse",
+      "x": "Mother mother tell your children"
+    },
+    {
+      "t": "verse",
+      "x": "That their time has just begun"
+    },
+    {
+      "t": "verse",
+      "x": "I have suffered for my anger"
+    },
+    {
+      "t": "verse",
+      "x": "There are wars that can't be won"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "verse",
+      "x": "Father father please believe me"
+    },
+    {
+      "t": "verse",
+      "x": "I am laying down my guns"
+    },
+    {
+      "t": "verse",
+      "x": "I am broken like an arrow"
+    },
+    {
+      "t": "verse",
+      "x": "Forgive me"
+    },
+    {
+      "t": "verse",
+      "x": "Forgive your wayward son"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "verse",
+      "x": "Everybody needs somebody to love (mother, mother)"
+    },
+    {
+      "t": "verse",
+      "x": "Everybody needs somebody to hate (please believe me)"
+    },
+    {
+      "t": "verse",
+      "x": "Everybody's bitching 'cause they can't get enough"
+    },
+    {
+      "t": "chorus",
+      "x": "When it's hard to hold on"
+    },
+    {
+      "t": "chorus",
+      "x": "And there's no one to lean on"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "chorus",
+      "x": "Faith! You know you're gonna live through the rain"
+    },
+    {
+      "t": "chorus",
+      "x": "Lord we've gotta keep the faith"
+    },
+    {
+      "t": "chorus",
+      "x": "Faith!: Don't you let your love turn to hate"
+    },
+    {
+      "t": "chorus",
+      "x": "Now we've gotta keep the faith"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "chorus",
+      "x": "Keep the faith, keep the faith"
+    },
+    {
+      "t": "chorus",
+      "x": "Lord we've gotta keep the faith"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "verse",
+      "x": "Tell me baby when I hurt you"
+    },
+    {
+      "t": "verse",
+      "x": "I've been walking in the footsteps"
+    },
+    {
+      "t": "verse",
+      "x": "Of society's lies"
+    },
+    {
+      "t": "verse",
+      "x": "I don't like what I see no more"
+    },
+    {
+      "t": "verse",
+      "x": "Sometimes I wish I was blind"
+    },
+    {
+      "t": "verse",
+      "x": "Sometimes I wait forever"
+    },
+    {
+      "t": "verse",
+      "x": "To stand out in the rain"
+    },
+    {
+      "t": "verse",
+      "x": "So no one sees me cryin'"
+    },
+    {
+      "t": "verse",
+      "x": "Trying to wash away this pain"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "chorus",
+      "x": "Mother father"
+    },
+    {
+      "t": "chorus",
+      "x": "There's things I've done I can't erase"
+    },
+    {
+      "t": "chorus",
+      "x": "Every night we fall from grace"
+    },
+    {
+      "t": "chorus",
+      "x": "It's hard with the world in your face"
+    },
+    {
+      "t": "chorus",
+      "x": "Trying to hold on, trying to hold on"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "chorus",
+      "x": "Faith! You know you're gonna live through the rain"
+    },
+    {
+      "t": "chorus",
+      "x": "Lord, you got to keep the faith"
+    },
+    {
+      "t": "chorus",
+      "x": "Faith! Don't you let your love turn to hate"
+    },
+    {
+      "t": "chorus",
+      "x": "Right now, we got to keep the faith"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "chorus",
+      "x": "Keep the faith - Keep the faith"
+    },
+    {
+      "t": "chorus",
+      "x": "Trying to hold on, trying to hold on yeah"
+    },
+    {
+      "t": "chorus",
+      "x": "Keep the faith - Keep the faith"
+    },
+    {
+      "t": "chorus",
+      "x": "Everybody keep the faith"
+    },
+    {
+      "t": "verse",
+      "x": "Do you keep it all inside"
+    },
+    {
+      "t": "verse",
+      "x": "Do you tell me: All's forgiven"
+    },
+    {
+      "t": "verse",
+      "x": "Just hide behind your pride"
+    },
+    {
+      "t": "chorus",
+      "x": "Yeah, yeah!"
+    },
+    {
+      "t": "verse",
+      "x": "Everybody needs somebody to love (mother, father)"
+    },
+    {
+      "t": "verse",
+      "x": "Everybody needs somebody to hate (please don't leave me)"
+    },
+    {
+      "t": "verse",
+      "x": "Everybody's bleeding 'cause the times are tough"
+    },
+    {
+      "t": "chorus",
+      "x": "Well it's hard to be strong"
+    },
+    {
+      "t": "chorus",
+      "x": "When there's no one to dream on"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "chorus",
+      "x": "Faith! You know you're gonna live through the rain"
+    },
+    {
+      "t": "chorus",
+      "x": "Lord we've gotta keep the faith"
+    },
+    {
+      "t": "chorus",
+      "x": "Faith! Don't you know it's never too late"
+    },
+    {
+      "t": "chorus",
+      "x": "Right now we gotta keep the faith"
+    },
+    {
+      "t": "chorus",
+      "x": "Faith! Don't you let your love turn to hate"
+    },
+    {
+      "t": "chorus",
+      "x": "Lord we gotta keep the faith"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "chorus",
+      "x": "Keep the faith, keep the faith"
+    },
+    {
+      "t": "verse",
+      "x": "Oh we got to keep the faith"
+    },
+    {
+      "t": "chorus",
+      "x": "Keep the faith, keep the faith"
+    },
+    {
+      "t": "verse",
+      "x": "Lord we got to keep the faith"
+    },
+    {
+      "t": "verse",
+      "x": "Oh, oh, yeah, yeah, yeah"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "cue",
+      "x": "SOLO"
+    }
+  ]
+}

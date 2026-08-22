@@ -1,0 +1,178 @@
+{
+  "id": "with-or-without-you",
+  "title": "WITH OR WITHOUT YOU",
+  "artist": "U2",
+  "key": "D",
+  "singers": ["A"],
+  "setOrder": 27,
+  "lines": [
+    {
+      "t": "verse",
+      "x": "See the stone set in your eyes"
+    },
+    {
+      "t": "verse",
+      "x": "See the thorn twist in your side"
+    },
+    {
+      "t": "verse",
+      "x": "I'll wait for you"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "verse",
+      "x": "Sleight of hand and twist of fate"
+    },
+    {
+      "t": "verse",
+      "x": "On a bed of nails, she makes me wait"
+    },
+    {
+      "t": "verse",
+      "x": "And I wait without you"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "chorus",
+      "x": "With or without you"
+    },
+    {
+      "t": "chorus",
+      "x": "With or without you"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "verse",
+      "x": "Through the storm, we reach the shore"
+    },
+    {
+      "t": "verse",
+      "x": "You give it all, but I want more"
+    },
+    {
+      "t": "verse",
+      "x": "And I'm waiting for you"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "chorus",
+      "x": "With or without you"
+    },
+    {
+      "t": "verse",
+      "x": "With or without you, ah"
+    },
+    {
+      "t": "verse",
+      "x": "I can't live"
+    },
+    {
+      "t": "chorus",
+      "x": "With or without you"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "chorus",
+      "x": "And you give yourself away"
+    },
+    {
+      "t": "chorus",
+      "x": "And you give yourself away"
+    },
+    {
+      "t": "chorus",
+      "x": "And you give, and you give"
+    },
+    {
+      "t": "chorus",
+      "x": "And you give yourself away"
+    },
+    {
+      "t": "verse",
+      "x": "My hands are tied"
+    },
+    {
+      "t": "verse",
+      "x": "My body bruised"
+    },
+    {
+      "t": "verse",
+      "x": "She's got me with"
+    },
+    {
+      "t": "verse",
+      "x": "Nothing to win and nothing left to lose"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "chorus",
+      "x": "And you give yourself away"
+    },
+    {
+      "t": "chorus",
+      "x": "And you give yourself away"
+    },
+    {
+      "t": "chorus",
+      "x": "And you give, and you give"
+    },
+    {
+      "t": "chorus",
+      "x": "And you give yourself away"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "chorus",
+      "x": "With or without you"
+    },
+    {
+      "t": "chorus",
+      "x": "With or without you, oh"
+    },
+    {
+      "t": "chorus",
+      "x": "I can't live with or without you"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "chorus",
+      "x": "With or without you"
+    },
+    {
+      "t": "chorus",
+      "x": "With or without you, oh"
+    },
+    {
+      "t": "chorus",
+      "x": "I can't live with or without you"
+    },
+    {
+      "t": "chorus",
+      "x": "With or without you"
+    }
+  ]
+}
