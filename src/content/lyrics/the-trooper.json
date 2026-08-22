@@ -5,5 +5,158 @@
   "key": "Em",
   "singers": ["E"],
   "setOrder": 34,
-  "lines": []
+  "lines": [
+    {
+      "t": "verse",
+      "x": "You'll take my life, but I'll take yours too"
+    },
+    {
+      "t": "verse",
+      "x": "You'll fire your musket, but I'll run you through"
+    },
+    {
+      "t": "verse",
+      "x": "So when you're waiting for the next attack"
+    },
+    {
+      "t": "verse",
+      "x": "You'd better stand, there's no turning back"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "verse",
+      "x": "The bugle sounds and the charge begins"
+    },
+    {
+      "t": "verse",
+      "x": "But on this battlefield no one wins"
+    },
+    {
+      "t": "verse",
+      "x": "The smell of acrid smoke and horses breath"
+    },
+    {
+      "t": "verse",
+      "x": "As I plunge on into certain death"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "chorus",
+      "x": "Oh!"
+    },
+    {
+      "t": "chorus",
+      "x": "Oh!"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "verse",
+      "x": "The horse he sweats, with fear, we break to run"
+    },
+    {
+      "t": "verse",
+      "x": "The mighty roar of the Russian guns"
+    },
+    {
+      "t": "verse",
+      "x": "And as we race towards the human wall"
+    },
+    {
+      "t": "verse",
+      "x": "The screams of pain as my comrades fall"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "verse",
+      "x": "We hurdle bodies that lay on the ground"
+    },
+    {
+      "t": "verse",
+      "x": "And the Russians fire another round"
+    },
+    {
+      "t": "verse",
+      "x": "We get so near yet so far away"
+    },
+    {
+      "t": "verse",
+      "x": "We won't live to fight another day"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "chorus",
+      "x": "Oh!"
+    },
+    {
+      "t": "chorus",
+      "x": "Oh!"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "verse",
+      "x": "We get so close, near enough to fight"
+    },
+    {
+      "t": "verse",
+      "x": "When a Russian gets me in his sights"
+    },
+    {
+      "t": "verse",
+      "x": "He pulls the trigger, and I feel the blow"
+    },
+    {
+      "t": "verse",
+      "x": "A burst of rounds take my horse below"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "verse",
+      "x": "And as I lay there gazing at the sky"
+    },
+    {
+      "t": "verse",
+      "x": "My body's numb and my throat is dry"
+    },
+    {
+      "t": "verse",
+      "x": "And as I lay forgotten and alone"
+    },
+    {
+      "t": "verse",
+      "x": "Without a tear I draw my parting groan"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "chorus",
+      "x": "Oh!"
+    },
+    {
+      "t": "chorus",
+      "x": "Oh!"
+    }
+  ]
 }
