@@ -1,0 +1,194 @@
+{
+  "id": "ticket-to-ride",
+  "title": "TICKET TO RIDE",
+  "artist": "The Beatles",
+  "key": "A",
+  "singers": ["A"],
+  "setOrder": null,
+  "lines": [
+    {
+      "t": "verse",
+      "x": "I think I'm gonna be sad"
+    },
+    {
+      "t": "verse",
+      "x": "I think it's today, yeah"
+    },
+    {
+      "t": "verse",
+      "x": "The girl that's drivin' me mad"
+    },
+    {
+      "t": "verse",
+      "x": "Is goin' away"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "cue",
+      "x": "Refrão"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "verse",
+      "x": "She said that livin' with me"
+    },
+    {
+      "t": "verse",
+      "x": "Was bringin' her down, yeah"
+    },
+    {
+      "t": "verse",
+      "x": "She would never be free"
+    },
+    {
+      "t": "verse",
+      "x": "When I was around"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "cue",
+      "x": "Refrão"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "verse",
+      "x": "I don't know why she's ridin' so high"
+    },
+    {
+      "t": "verse",
+      "x": "She ought to think twice"
+    },
+    {
+      "t": "verse",
+      "x": "She ought to do right by me"
+    },
+    {
+      "t": "verse",
+      "x": "Before she gets to sayin' goodbye"
+    },
+    {
+      "t": "verse",
+      "x": "She ought to think twice"
+    },
+    {
+      "t": "verse",
+      "x": "She ought to do right by me"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "verse",
+      "x": "I think I'm gonna be sad"
+    },
+    {
+      "t": "verse",
+      "x": "I think it's today, yeah"
+    },
+    {
+      "t": "verse",
+      "x": "The girl that's drivin' me mad"
+    },
+    {
+      "t": "verse",
+      "x": "Is goin' away, yeah"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "cue",
+      "x": "Refrão"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "verse",
+      "x": "I don't know why she's ridin' so high"
+    },
+    {
+      "t": "verse",
+      "x": "She ought to think twice"
+    },
+    {
+      "t": "verse",
+      "x": "She ought to do right by me"
+    },
+    {
+      "t": "verse",
+      "x": "Before she gets to sayin' goodbye"
+    },
+    {
+      "t": "verse",
+      "x": "She ought to think twice"
+    },
+    {
+      "t": "verse",
+      "x": "She ought to do right by me"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "verse",
+      "x": "She said that livin' with me"
+    },
+    {
+      "t": "verse",
+      "x": "Was bringin' her down, yeah"
+    },
+    {
+      "t": "verse",
+      "x": "She would never be free"
+    },
+    {
+      "t": "verse",
+      "x": "When I was around"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "cue",
+      "x": "Refrão"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "verse",
+      "x": "My baby don't care"
+    },
+    {
+      "t": "verse",
+      "x": "My baby don't care"
+    },
+    {
+      "t": "verse",
+      "x": "My baby don't care"
+    },
+    {
+      "t": "verse",
+      "x": "My baby don't care"
+    }
+  ]
+}

@@ -1,0 +1,190 @@
+{
+  "id": "hold-the-line",
+  "title": "HOLD THE LINE",
+  "artist": "Toto",
+  "key": "F#m",
+  "singers": ["A"],
+  "setOrder": 5,
+  "lines": [
+    {
+      "t": "verse",
+      "x": "It's not in the way that you hold me"
+    },
+    {
+      "t": "verse",
+      "x": "It's not in the way you say you care"
+    },
+    {
+      "t": "verse",
+      "x": "It's not in the way you've been treating my friends"
+    },
+    {
+      "t": "verse",
+      "x": "It's not in the way that you stayed till the end"
+    },
+    {
+      "t": "chorus",
+      "x": "It's not in the way you look or the things that you say that you do"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "chorus",
+      "x": "Hold the line"
+    },
+    {
+      "t": "verse",
+      "x": "Love isn't always on time, oh oh oh"
+    },
+    {
+      "t": "chorus",
+      "x": "Hold the line"
+    },
+    {
+      "t": "verse",
+      "x": "Love isn't always on time, oh oh oh"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "verse",
+      "x": "It's not in the words that you told me, girl"
+    },
+    {
+      "t": "verse",
+      "x": "It's not in the way you say you're mine"
+    },
+    {
+      "t": "verse",
+      "x": "It's not in the way that you came back to me"
+    },
+    {
+      "t": "verse",
+      "x": "It's not in the way that your love set me free"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "chorus",
+      "x": "It's not in the way you look or the things that you say that you do"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "chorus",
+      "x": "Hold the line"
+    },
+    {
+      "t": "verse",
+      "x": "Love isn't always on time, oh oh oh"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "chorus",
+      "x": "Hold the line"
+    },
+    {
+      "t": "verse",
+      "x": "Love isn't always on time, oh oh oh"
+    },
+    {
+      "t": "cue",
+      "x": "SOLO"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "verse",
+      "x": "It's not in the words that you told me"
+    },
+    {
+      "t": "verse",
+      "x": "It's not in the way you say you're mine"
+    },
+    {
+      "t": "verse",
+      "x": "It's not in the way that you came back to me"
+    },
+    {
+      "t": "verse",
+      "x": "It's not in the way that your love set me free"
+    },
+    {
+      "t": "chorus",
+      "x": "It's not in the way you look or the things that you say that you do"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "chorus",
+      "x": "Hold the line"
+    },
+    {
+      "t": "verse",
+      "x": "Love isn't always on time, oh oh oh"
+    },
+    {
+      "t": "chorus",
+      "x": "Hold the line"
+    },
+    {
+      "t": "chorus",
+      "x": "Love isn't always on time"
+    },
+    {
+      "t": "chorus",
+      "x": "Love isn't always on time"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "chorus",
+      "x": "Hold the line"
+    },
+    {
+      "t": "chorus",
+      "x": "Love isn't always on time"
+    },
+    {
+      "t": "chorus",
+      "x": "Love isn't always, love isn't always on time"
+    },
+    {
+      "t": "chorus",
+      "x": "Hold the line"
+    },
+    {
+      "t": "chorus",
+      "x": "Love isn't always on time"
+    },
+    {
+      "t": "chorus",
+      "x": "Love isn't always on time"
+    },
+    {
+      "t": "chorus",
+      "x": "Love isn't always on time"
+    },
+    {
+      "t": "verse",
+      "x": "Love isn't always on time, oh oh o"
+    }
+  ]
+}

@@ -1,0 +1,174 @@
+{
+  "id": "barracuda",
+  "title": "BARRACUDA",
+  "artist": "Heart",
+  "key": "Em",
+  "singers": ["A"],
+  "setOrder": 16,
+  "lines": [
+    {
+      "t": "chorus",
+      "x": "So this ain't the end"
+    },
+    {
+      "t": "chorus",
+      "x": "I saw you again today"
+    },
+    {
+      "t": "chorus",
+      "x": "I had to turn my heart away"
+    },
+    {
+      "t": "chorus",
+      "x": "You smiled like the Sun"
+    },
+    {
+      "t": "chorus",
+      "x": "Kisses for everyone"
+    },
+    {
+      "t": "chorus",
+      "x": "And tales it never fails!"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "chorus",
+      "x": "You're lying so low in the weeds"
+    },
+    {
+      "t": "chorus",
+      "x": "I bet you're gonna ambush me"
+    },
+    {
+      "t": "chorus",
+      "x": "You'd have me down, down, down, down on my knees"
+    },
+    {
+      "t": "chorus",
+      "x": "Now wouldn't you, barracuda?"
+    },
+    {
+      "t": "chorus",
+      "x": "Ooh!"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "chorus",
+      "x": "Back over time when we were all trying for free"
+    },
+    {
+      "t": "chorus",
+      "x": "You met the porpoise and me"
+    },
+    {
+      "t": "chorus",
+      "x": "No right, no wrong, you're selling a song"
+    },
+    {
+      "t": "chorus",
+      "x": "A name"
+    },
+    {
+      "t": "chorus",
+      "x": "Whisper game"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "chorus",
+      "x": "And if the real thing don't do the trick"
+    },
+    {
+      "t": "chorus",
+      "x": "You better make up something quick"
+    },
+    {
+      "t": "chorus",
+      "x": "You gonna burn, burn, burn, burn, burn it to the wick"
+    },
+    {
+      "t": "chorus",
+      "x": "Ooh, barracuda!"
+    },
+    {
+      "t": "chorus",
+      "x": "Ooh, yeah!"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "chorus",
+      "x": "Sell me sell you"
+    },
+    {
+      "t": "chorus",
+      "x": "The porpoise said"
+    },
+    {
+      "t": "chorus",
+      "x": "Dive down deep down, deeper than you"
+    },
+    {
+      "t": "chorus",
+      "x": "I think that you got the blues too"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "chorus",
+      "x": "All that night and all the next"
+    },
+    {
+      "t": "chorus",
+      "x": "Swam without looking back"
+    },
+    {
+      "t": "chorus",
+      "x": "Made for the western pools"
+    },
+    {
+      "t": "chorus",
+      "x": "Silly, silly fools!"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "chorus",
+      "x": "The real thing don't do the trick, no?"
+    },
+    {
+      "t": "chorus",
+      "x": "You better make up something quick"
+    },
+    {
+      "t": "chorus",
+      "x": "You gonna burn, burn, burn, burn, burn it to the wick"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "chorus",
+      "x": "Aah, barra- barracuda!"
+    },
+    {
+      "t": "chorus",
+      "x": "Yeah!"
+    }
+  ]
+}

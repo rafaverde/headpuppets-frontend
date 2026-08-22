@@ -1,0 +1,242 @@
+{
+  "id": "it-s-a-long-way-to-the-top",
+  "title": "IT'S A LONG WAY TO THE TOP",
+  "artist": "AC/DC",
+  "key": "A",
+  "singers": ["E"],
+  "setOrder": 7,
+  "lines": [
+    {
+      "t": "cue",
+      "x": "quatro finais com a guitarra:"
+    },
+    {
+      "t": "verse",
+      "x": "Ridin' down the highway"
+    },
+    {
+      "t": "verse",
+      "x": "Goin' to a show"
+    },
+    {
+      "t": "verse",
+      "x": "Stop in all the byways"
+    },
+    {
+      "t": "verse",
+      "x": "Playin' rock 'n' roll"
+    },
+    {
+      "t": "verse",
+      "x": "Gettin' robbed"
+    },
+    {
+      "t": "verse",
+      "x": "Gettin' stoned"
+    },
+    {
+      "t": "verse",
+      "x": "Gettin' beat up"
+    },
+    {
+      "t": "verse",
+      "x": "Broken boned"
+    },
+    {
+      "t": "verse",
+      "x": "Gettin' had"
+    },
+    {
+      "t": "verse",
+      "x": "Gettin' took"
+    },
+    {
+      "t": "chorus",
+      "x": "I tell you folks: - It's harder than it looks"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "chorus",
+      "x": "It's a long way to the top if you wanna rock 'n' roll"
+    },
+    {
+      "t": "chorus",
+      "x": "It's a long way to the top if you wanna rock 'n' roll"
+    },
+    {
+      "t": "cue",
+      "x": "dois riffs:"
+    },
+    {
+      "t": "chorus",
+      "x": "If you - think it's easy doing one night stand"
+    },
+    {
+      "t": "chorus",
+      "x": "Try playin' in a rock roll band"
+    },
+    {
+      "t": "chorus",
+      "x": "It's a long way to the top if you wanna rock 'n' roll"
+    },
+    {
+      "t": "cue",
+      "x": "Solo de Gaita de Fole, e para e começa novamente"
+    },
+    {
+      "t": "cue",
+      "x": "dois riffs"
+    },
+    {
+      "t": "verse",
+      "x": "Hotel, motel"
+    },
+    {
+      "t": "verse",
+      "x": "Make you wanna cry"
+    },
+    {
+      "t": "verse",
+      "x": "Lady, do the hard sell"
+    },
+    {
+      "t": "verse",
+      "x": "Know the reason why"
+    },
+    {
+      "t": "verse",
+      "x": "Gettin' old"
+    },
+    {
+      "t": "verse",
+      "x": "Gettin' grey"
+    },
+    {
+      "t": "verse",
+      "x": "Gettin' ripped off"
+    },
+    {
+      "t": "verse",
+      "x": "Under-paid"
+    },
+    {
+      "t": "verse",
+      "x": "Gettin' sold"
+    },
+    {
+      "t": "verse",
+      "x": "Second hand"
+    },
+    {
+      "t": "chorus",
+      "x": "That's how it goes, playing in a band"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "chorus",
+      "x": "It's a long way to the top if you wanna rock 'n' roll"
+    },
+    {
+      "t": "chorus",
+      "x": "It's a long way to the top if you wanna rock 'n' roll"
+    },
+    {
+      "t": "cue",
+      "x": "dois riffs:"
+    },
+    {
+      "t": "chorus",
+      "x": "If you - wanna be a star of stage and screen"
+    },
+    {
+      "t": "chorus",
+      "x": "Look out it's rough and mean"
+    },
+    {
+      "t": "chorus",
+      "x": "It's a long way to the top if you wanna rock 'n' roll"
+    },
+    {
+      "t": "chorus",
+      "x": "It's a long way to the top if you wanna rock 'n' roll"
+    },
+    {
+      "t": "cue",
+      "x": "dois riffs:"
+    },
+    {
+      "t": "chorus",
+      "x": "It's a long way to the top if you wanna rock 'n' roll"
+    },
+    {
+      "t": "chorus",
+      "x": "It's a long way to the top if you wanna rock 'n' roll"
+    },
+    {
+      "t": "cue",
+      "x": "dois riffs:"
+    },
+    {
+      "t": "verse",
+      "x": "Well, it's a long way"
+    },
+    {
+      "t": "verse",
+      "x": "Oh, it's a long way (you should've told me)"
+    },
+    {
+      "t": "verse",
+      "x": "It's a long way - Such a long way"
+    },
+    {
+      "t": "verse",
+      "x": "2a'.....4a......"
+    },
+    {
+      "t": "verse",
+      "x": "5s 4a 4s 4a....."
+    },
+    {
+      "t": "verse",
+      "x": "5s 4a 4s 4a...."
+    },
+    {
+      "t": "verse",
+      "x": "4s 4a 4s 3a....."
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "verse",
+      "x": "4s 4a'4a.....5s 4a 4s 4a....."
+    },
+    {
+      "t": "verse",
+      "x": "5s 4a 4s 4a....."
+    },
+    {
+      "t": "verse",
+      "x": "4s 4a 4s 3a....."
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "verse",
+      "x": "3a\" 3a 6s.....................(4X)"
+    },
+    {
+      "t": "verse",
+      "x": "5a 5s 4a..................... (4X)"
+    }
+  ]
+}

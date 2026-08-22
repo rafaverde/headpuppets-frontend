@@ -1,0 +1,334 @@
+{
+  "id": "best-of-you",
+  "title": "BEST OF YOU",
+  "artist": "Foo Fighters",
+  "key": null,
+  "singers": ["E"],
+  "setOrder": null,
+  "lines": [
+    {
+      "t": "chorus",
+      "x": "I've got another confession to make"
+    },
+    {
+      "t": "chorus",
+      "x": "I'm your fool"
+    },
+    {
+      "t": "chorus",
+      "x": "Everyone's got their chains to break"
+    },
+    {
+      "t": "chorus",
+      "x": "Holding you"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "chorus",
+      "x": "Were you born to resist"
+    },
+    {
+      "t": "chorus",
+      "x": "Or be abused?"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "chorus",
+      "x": "Is someone getting the best"
+    },
+    {
+      "t": "chorus",
+      "x": "The best, the best, the best of you?"
+    },
+    {
+      "t": "chorus",
+      "x": "Is someone getting the best"
+    },
+    {
+      "t": "chorus",
+      "x": "The best, the best, the best of you?"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "verse",
+      "x": "Or are you gone and onto someone new?"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "verse",
+      "x": "I needed somewhere to hang my head"
+    },
+    {
+      "t": "chorus",
+      "x": "Without your noose"
+    },
+    {
+      "t": "verse",
+      "x": "You gave me something that I didn't have"
+    },
+    {
+      "t": "chorus",
+      "x": "But had no use"
+    },
+    {
+      "t": "verse",
+      "x": "I was too weak to give in"
+    },
+    {
+      "t": "chorus",
+      "x": "Too strong to lose"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "verse",
+      "x": "My heart is under arrest again"
+    },
+    {
+      "t": "chorus",
+      "x": "But I break loose"
+    },
+    {
+      "t": "verse",
+      "x": "My head is giving me life or death"
+    },
+    {
+      "t": "chorus",
+      "x": "But I can't choose"
+    },
+    {
+      "t": "chorus",
+      "x": "I swear I'll never give in"
+    },
+    {
+      "t": "chorus",
+      "x": "I refuse"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "chorus",
+      "x": "I've got another confession, my friend"
+    },
+    {
+      "t": "chorus",
+      "x": "I'm no fool"
+    },
+    {
+      "t": "chorus",
+      "x": "I'm getting tired of starting again"
+    },
+    {
+      "t": "chorus",
+      "x": "Somewhere new"
+    },
+    {
+      "t": "chorus",
+      "x": "Were you born to resist or be abused?"
+    },
+    {
+      "t": "chorus",
+      "x": "I swear I'll never give in"
+    },
+    {
+      "t": "chorus",
+      "x": "I refuse"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "chorus",
+      "x": "Is someone getting the best"
+    },
+    {
+      "t": "chorus",
+      "x": "The best, the best, the best of you?"
+    },
+    {
+      "t": "chorus",
+      "x": "Is someone getting the best"
+    },
+    {
+      "t": "chorus",
+      "x": "The best, the best, the best of you?"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "chorus",
+      "x": "Is someone getting the best"
+    },
+    {
+      "t": "chorus",
+      "x": "The best, the best, the best of you?"
+    },
+    {
+      "t": "chorus",
+      "x": "Is someone getting the best"
+    },
+    {
+      "t": "chorus",
+      "x": "The best, the best, the best of you?"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "chorus",
+      "x": "Has someone taken your faith?"
+    },
+    {
+      "t": "chorus",
+      "x": "It's real, the pain you feel?"
+    },
+    {
+      "t": "chorus",
+      "x": "Your trust?"
+    },
+    {
+      "t": "chorus",
+      "x": "You must confess"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "chorus",
+      "x": "Is someone getting the best"
+    },
+    {
+      "t": "chorus",
+      "x": "The best, the best, the best of you?"
+    },
+    {
+      "t": "chorus",
+      "x": "ohhhhhhhhh"
+    },
+    {
+      "t": "cue",
+      "x": "solo dois riffs"
+    },
+    {
+      "t": "chorus",
+      "x": "ohhhh - ohhhh"
+    },
+    {
+      "t": "chorus",
+      "x": "ohhhh - ohhhh"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "chorus",
+      "x": "Has someone taken your faith?"
+    },
+    {
+      "t": "chorus",
+      "x": "It's real, the pain you feel?"
+    },
+    {
+      "t": "chorus",
+      "x": "The life, the love you'd die to heal"
+    },
+    {
+      "t": "chorus",
+      "x": "The hope that starts"
+    },
+    {
+      "t": "chorus",
+      "x": "The broken hearts"
+    },
+    {
+      "t": "chorus",
+      "x": "Your trust"
+    },
+    {
+      "t": "chorus",
+      "x": "You must confess"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "chorus",
+      "x": "Is someone getting the best"
+    },
+    {
+      "t": "chorus",
+      "x": "The best, the best, the best of you?"
+    },
+    {
+      "t": "chorus",
+      "x": "Is someone getting the best"
+    },
+    {
+      "t": "chorus",
+      "x": "The best, the best, the best of you?"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "chorus",
+      "x": "Has someone taken your faith?"
+    },
+    {
+      "t": "chorus",
+      "x": "It's real, the pain you feel?"
+    },
+    {
+      "t": "chorus",
+      "x": "Your trust?"
+    },
+    {
+      "t": "chorus",
+      "x": "You must confess"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "chorus",
+      "x": "Is someone getting the best"
+    },
+    {
+      "t": "chorus",
+      "x": "The best, the best, the best of you?"
+    },
+    {
+      "t": "chorus",
+      "x": "Is someone getting the best"
+    },
+    {
+      "t": "chorus",
+      "x": "The best, the best, the best of you?"
+    }
+  ]
+}

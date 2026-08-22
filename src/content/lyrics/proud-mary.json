@@ -1,0 +1,174 @@
+{
+  "id": "proud-mary",
+  "title": "PROUD MARY",
+  "artist": "CCR",
+  "key": "A",
+  "singers": ["A", "E"],
+  "setOrder": null,
+  "lines": [
+    {
+      "t": "verse",
+      "x": "Left a good job in the city"
+    },
+    {
+      "t": "verse",
+      "x": "Workin' for the man ev'ry night and day"
+    },
+    {
+      "t": "verse",
+      "x": "And I never lost one minute of sleepin'"
+    },
+    {
+      "t": "verse",
+      "x": "Worryin' 'bout the way things might have been"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "chorus",
+      "x": "Big wheel, keep on turnin'"
+    },
+    {
+      "t": "chorus",
+      "x": "Proud Mary, keep on burnin'"
+    },
+    {
+      "t": "chorus",
+      "x": "Rollin', rollin'"
+    },
+    {
+      "t": "chorus",
+      "x": "Rollin' on the river"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "verse",
+      "x": "Cleaned a lot of plates in Memphis"
+    },
+    {
+      "t": "verse",
+      "x": "Pumped a lot of 'pane down in New Orleans"
+    },
+    {
+      "t": "verse",
+      "x": "But I never saw the good side of the city"
+    },
+    {
+      "t": "verse",
+      "x": "'Til I hitched a ride on a Riverboat Queen"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "chorus",
+      "x": "Big wheel, keep on turnin'"
+    },
+    {
+      "t": "chorus",
+      "x": "Proud Mary, keep on burnin'"
+    },
+    {
+      "t": "chorus",
+      "x": "Rollin', rollin'"
+    },
+    {
+      "t": "chorus",
+      "x": "Rollin' on the river"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "chorus",
+      "x": "Rollin', rollin'"
+    },
+    {
+      "t": "chorus",
+      "x": "Rollin' on the river"
+    },
+    {
+      "t": "verse",
+      "x": "If you come down to the river"
+    },
+    {
+      "t": "verse",
+      "x": "Bet you gonna find some people who live"
+    },
+    {
+      "t": "verse",
+      "x": "You don't have to worry 'cause you have no money"
+    },
+    {
+      "t": "verse",
+      "x": "People on the river are happy to give"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "chorus",
+      "x": "Big wheel, keep on turnin'"
+    },
+    {
+      "t": "chorus",
+      "x": "Proud Mary, keep on burnin'"
+    },
+    {
+      "t": "chorus",
+      "x": "Rollin', rollin'"
+    },
+    {
+      "t": "chorus",
+      "x": "Rollin' on the river"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "verse",
+      "x": "Rollin' (rollin'), rollin'"
+    },
+    {
+      "t": "chorus",
+      "x": "Rollin' on the river"
+    },
+    {
+      "t": "chorus",
+      "x": "Rollin', rollin'"
+    },
+    {
+      "t": "chorus",
+      "x": "Rollin' on the river"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "chorus",
+      "x": "Rollin', rollin'"
+    },
+    {
+      "t": "chorus",
+      "x": "Rollin' on the river"
+    },
+    {
+      "t": "chorus",
+      "x": "Rollin', rollin'"
+    },
+    {
+      "t": "chorus",
+      "x": "Rollin' on the river"
+    }
+  ]
+}

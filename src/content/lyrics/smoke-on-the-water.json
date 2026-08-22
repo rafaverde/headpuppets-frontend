@@ -1,0 +1,186 @@
+{
+  "id": "smoke-on-the-water",
+  "title": "SMOKE ON THE WATER",
+  "artist": "Deep Purple",
+  "key": "Gm",
+  "singers": ["E"],
+  "setOrder": 11,
+  "lines": [
+    {
+      "t": "cue",
+      "x": "Dois depois do baixo entrar"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "verse",
+      "x": "We all came out to Montreaux"
+    },
+    {
+      "t": "verse",
+      "x": "On the Lake Geneva shoreline"
+    },
+    {
+      "t": "verse",
+      "x": "To make records with a mobile"
+    },
+    {
+      "t": "verse",
+      "x": "We didn't have much time"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "verse",
+      "x": "Frank Zappa and the Mothers"
+    },
+    {
+      "t": "verse",
+      "x": "Were at the best place around"
+    },
+    {
+      "t": "verse",
+      "x": "But some stupid with a flare gun"
+    },
+    {
+      "t": "verse",
+      "x": "Burned the place to the ground"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "chorus",
+      "x": "Smoke on the water, fire in the sky"
+    },
+    {
+      "t": "chorus",
+      "x": "Smoke on the water"
+    },
+    {
+      "t": "cue",
+      "x": "Dois Riffs"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "verse",
+      "x": "They burned down the gambling house"
+    },
+    {
+      "t": "verse",
+      "x": "It died with an awful sound"
+    },
+    {
+      "t": "verse",
+      "x": "Funky Claude was running in and out"
+    },
+    {
+      "t": "verse",
+      "x": "Pulling kids out the ground"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "verse",
+      "x": "When it all was over"
+    },
+    {
+      "t": "verse",
+      "x": "We had to find another place"
+    },
+    {
+      "t": "verse",
+      "x": "But Swiss time was running out"
+    },
+    {
+      "t": "verse",
+      "x": "It seemed that we would lose the race"
+    },
+    {
+      "t": "chorus",
+      "x": "Smoke on the water, fire in the sky"
+    },
+    {
+      "t": "chorus",
+      "x": "Smoke on the water"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "cue",
+      "x": "Dois Riffs - SOLO - Dois riffs"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "verse",
+      "x": "We ended up at the Grand Hotel"
+    },
+    {
+      "t": "verse",
+      "x": "It was empty, cold and bare"
+    },
+    {
+      "t": "verse",
+      "x": "But with the Rolling truck Stones thing just outside"
+    },
+    {
+      "t": "verse",
+      "x": "Making our music there"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "verse",
+      "x": "With a few red lights and a few old beds"
+    },
+    {
+      "t": "verse",
+      "x": "We made a place to sweat"
+    },
+    {
+      "t": "verse",
+      "x": "No matter what we get out of this"
+    },
+    {
+      "t": "verse",
+      "x": "I know, I know we'll never forget"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "chorus",
+      "x": "Smoke on the water, fire in the sky"
+    },
+    {
+      "t": "chorus",
+      "x": "Smoke on the water"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "cue",
+      "x": "Dois Riffs - FINALE"
+    }
+  ]
+}

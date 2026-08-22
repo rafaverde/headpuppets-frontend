@@ -1,0 +1,166 @@
+{
+  "id": "paranoid",
+  "title": "PARANOID",
+  "artist": "Black Sabbath",
+  "key": "Em",
+  "singers": ["E"],
+  "setOrder": 24,
+  "lines": [
+    {
+      "t": "cue",
+      "x": "dois riffs depois que entra a bateria:"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "verse",
+      "x": "Finished with my woman 'cause she"
+    },
+    {
+      "t": "verse",
+      "x": "Couldn't help me with my mind"
+    },
+    {
+      "t": "verse",
+      "x": "People think I'm insane because"
+    },
+    {
+      "t": "verse",
+      "x": "I am frowning all the time"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "cue",
+      "x": "dois riffs"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "verse",
+      "x": "All day long, I think of things"
+    },
+    {
+      "t": "verse",
+      "x": "But nothing seems to satisfy"
+    },
+    {
+      "t": "verse",
+      "x": "Think I'll lose my mind if I don't"
+    },
+    {
+      "t": "verse",
+      "x": "Find something to pacify"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "chorus",
+      "x": "sustain"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "chorus",
+      "x": "Can you help me"
+    },
+    {
+      "t": "chorus",
+      "x": "Occupy my brain?"
+    },
+    {
+      "t": "chorus",
+      "x": "Whoa, yeah"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "cue",
+      "x": "dois riffs"
+    },
+    {
+      "t": "verse",
+      "x": "I need someone to show me"
+    },
+    {
+      "t": "verse",
+      "x": "The things in life that I can't find"
+    },
+    {
+      "t": "verse",
+      "x": "I can't see the things that make true happiness"
+    },
+    {
+      "t": "verse",
+      "x": "I must be blind"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "cue",
+      "x": "-> solo"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "verse",
+      "x": "Make a joke and I will sigh"
+    },
+    {
+      "t": "verse",
+      "x": "And you will laugh and I will cry"
+    },
+    {
+      "t": "verse",
+      "x": "Happiness, I cannot feel"
+    },
+    {
+      "t": "verse",
+      "x": "And love to me is so unreal"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "cue",
+      "x": "dois riffs"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "verse",
+      "x": "And so, as you hear these words"
+    },
+    {
+      "t": "verse",
+      "x": "Telling you now of my state"
+    },
+    {
+      "t": "verse",
+      "x": "I tell you to enjoy life, I wish I could"
+    },
+    {
+      "t": "verse",
+      "x": "But it's too late"
+    }
+  ]
+}

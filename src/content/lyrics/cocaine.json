@@ -1,0 +1,190 @@
+{
+  "id": "cocaine",
+  "title": "COCAINE",
+  "artist": "Eric Clapton",
+  "key": "E",
+  "singers": ["E"],
+  "setOrder": 18,
+  "lines": [
+    {
+      "t": "cue",
+      "x": "Intro 2 riffs"
+    },
+    {
+      "t": "verse",
+      "x": "If you wanna hang out"
+    },
+    {
+      "t": "verse",
+      "x": "You've got to - take her out"
+    },
+    {
+      "t": "chorus",
+      "x": "Cocaine"
+    },
+    {
+      "t": "verse",
+      "x": "If you wanna get down"
+    },
+    {
+      "t": "verse",
+      "x": "Down on the ground"
+    },
+    {
+      "t": "chorus",
+      "x": "Cocaine"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "chorus",
+      "x": "She don't lie"
+    },
+    {
+      "t": "chorus",
+      "x": "She don't lie"
+    },
+    {
+      "t": "chorus",
+      "x": "She don't lie"
+    },
+    {
+      "t": "chorus",
+      "x": "Cocaine"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "cue",
+      "x": "2 riffs"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "verse",
+      "x": "If you got bad news"
+    },
+    {
+      "t": "verse",
+      "x": "You wanna kick them blues"
+    },
+    {
+      "t": "chorus",
+      "x": "Cocaine"
+    },
+    {
+      "t": "verse",
+      "x": "When your day is done"
+    },
+    {
+      "t": "verse",
+      "x": "And you wanna run"
+    },
+    {
+      "t": "chorus",
+      "x": "Cocaine"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "chorus",
+      "x": "She don't lie"
+    },
+    {
+      "t": "chorus",
+      "x": "She don't lie"
+    },
+    {
+      "t": "chorus",
+      "x": "She don't lie"
+    },
+    {
+      "t": "chorus",
+      "x": "Cocaine"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "cue",
+      "x": "SOLO após 2 riffs"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "verse",
+      "x": "If your thing is gone"
+    },
+    {
+      "t": "verse",
+      "x": "And you wanna ride on"
+    },
+    {
+      "t": "chorus",
+      "x": "Cocaine"
+    },
+    {
+      "t": "verse",
+      "x": "Don't forget this fact"
+    },
+    {
+      "t": "verse",
+      "x": "You can't get it back"
+    },
+    {
+      "t": "chorus",
+      "x": "Cocaine"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "chorus",
+      "x": "She don't lie"
+    },
+    {
+      "t": "chorus",
+      "x": "She don't lie"
+    },
+    {
+      "t": "chorus",
+      "x": "She don't lie"
+    },
+    {
+      "t": "chorus",
+      "x": "Cocaine"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "chorus",
+      "x": "She don't lie"
+    },
+    {
+      "t": "chorus",
+      "x": "She don't lie"
+    },
+    {
+      "t": "chorus",
+      "x": "She don't lie"
+    },
+    {
+      "t": "chorus",
+      "x": "Cocaine"
+    }
+  ]
+}

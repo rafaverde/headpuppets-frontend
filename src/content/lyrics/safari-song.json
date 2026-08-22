@@ -1,0 +1,302 @@
+{
+  "id": "safari-song",
+  "title": "SAFARI SONG",
+  "artist": "Greta Van Fleet",
+  "key": "Am",
+  "singers": ["A"],
+  "setOrder": 9,
+  "lines": [
+    {
+      "t": "verse",
+      "x": "Ah yeah"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "verse",
+      "x": "Oh lady, when ya come on down"
+    },
+    {
+      "t": "verse",
+      "x": "Won't ya come on down?"
+    },
+    {
+      "t": "verse",
+      "x": "I said to my town"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "verse",
+      "x": "Oh mama when ya come on down"
+    },
+    {
+      "t": "verse",
+      "x": "Won't ya come on down?"
+    },
+    {
+      "t": "verse",
+      "x": "I said to my home"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "verse",
+      "x": "Oo lady won't you move my way?"
+    },
+    {
+      "t": "verse",
+      "x": "Can't ya move my way?"
+    },
+    {
+      "t": "verse",
+      "x": "I'm getting hazy"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "verse",
+      "x": "Oh mama when you give your lovin'"
+    },
+    {
+      "t": "verse",
+      "x": "When you give your love"
+    },
+    {
+      "t": "verse",
+      "x": "You drive me crazy"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "verse",
+      "x": "Ah mama what you gonna do"
+    },
+    {
+      "t": "verse",
+      "x": "With all that love in your heart?"
+    },
+    {
+      "t": "verse",
+      "x": "Ah mama what you gonna say"
+    },
+    {
+      "t": "verse",
+      "x": "About that love in your heart?"
+    },
+    {
+      "t": "verse",
+      "x": "Oh mama when you walk this way"
+    },
+    {
+      "t": "verse",
+      "x": "Why don't you give some lovin'?"
+    },
+    {
+      "t": "verse",
+      "x": "Oo mama what you gonna do"
+    },
+    {
+      "t": "verse",
+      "x": "With all that lovin' in your heart?"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "verse",
+      "x": "See mama gotta feel your everything"
+    },
+    {
+      "t": "verse",
+      "x": "Feel your everything"
+    },
+    {
+      "t": "verse",
+      "x": "I really wanna know"
+    },
+    {
+      "t": "verse",
+      "x": "See mama when you shine you're shinin' bright"
+    },
+    {
+      "t": "verse",
+      "x": "Give you're given right"
+    },
+    {
+      "t": "verse",
+      "x": "I really want our love to grow"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "verse",
+      "x": "See mama when your heart is in its place"
+    },
+    {
+      "t": "verse",
+      "x": "See that smilin' face"
+    },
+    {
+      "t": "verse",
+      "x": "It's all I wanna do"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "verse",
+      "x": "See mama every time that you are near"
+    },
+    {
+      "t": "verse",
+      "x": "It's when your gonna fear"
+    },
+    {
+      "t": "verse",
+      "x": "You're never gonna come back home"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "verse",
+      "x": "Ah mama what you gonna do"
+    },
+    {
+      "t": "verse",
+      "x": "With all that love in your heart?"
+    },
+    {
+      "t": "verse",
+      "x": "Ah mama what you gonna say"
+    },
+    {
+      "t": "verse",
+      "x": "About that love in your heart?"
+    },
+    {
+      "t": "verse",
+      "x": "Oh mama when you walk this way"
+    },
+    {
+      "t": "verse",
+      "x": "Why don't you give some lovin'?"
+    },
+    {
+      "t": "verse",
+      "x": "Oo mama what you gonna do"
+    },
+    {
+      "t": "verse",
+      "x": "With all that lovin' in your heart?"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "verse",
+      "x": "Do you remember what I said"
+    },
+    {
+      "t": "verse",
+      "x": "When I got down on my knees?"
+    },
+    {
+      "t": "verse",
+      "x": "Gotta get your lovin', baby"
+    },
+    {
+      "t": "verse",
+      "x": "Lovin's all I need"
+    },
+    {
+      "t": "verse",
+      "x": "Don't make me beg now, baby"
+    },
+    {
+      "t": "verse",
+      "x": "Don't make me bleed"
+    },
+    {
+      "t": "verse",
+      "x": "I gave you all a man could give"
+    },
+    {
+      "t": "verse",
+      "x": "And you still walked out on me"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "verse",
+      "x": "Ah mama what you gonna do"
+    },
+    {
+      "t": "verse",
+      "x": "With all that love in your heart?"
+    },
+    {
+      "t": "verse",
+      "x": "Ah mama what you gonna say"
+    },
+    {
+      "t": "verse",
+      "x": "About that love in your heart?"
+    },
+    {
+      "t": "verse",
+      "x": "Oh mama when you walk this way"
+    },
+    {
+      "t": "verse",
+      "x": "Why don't you give some lovin'?"
+    },
+    {
+      "t": "verse",
+      "x": "Oo mama what you gonna do"
+    },
+    {
+      "t": "verse",
+      "x": "With all that lovin' in your heart?"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "verse",
+      "x": "Your heart - Your heart"
+    },
+    {
+      "t": "verse",
+      "x": "Your heart - Your heart"
+    },
+    {
+      "t": "verse",
+      "x": "Lovin' -  Burnin - Fire"
+    },
+    {
+      "t": "verse",
+      "x": "Aw yeah"
+    }
+  ]
+}

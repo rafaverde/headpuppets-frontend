@@ -1,0 +1,250 @@
+{
+  "id": "love-gun",
+  "title": "LOVE GUN",
+  "artist": "KISS",
+  "key": "Em",
+  "singers": ["A", "E"],
+  "setOrder": 32,
+  "lines": [
+    {
+      "t": "cue",
+      "x": "2 riffs e redoblo"
+    },
+    {
+      "t": "verse",
+      "x": "I really love you, baby"
+    },
+    {
+      "t": "verse",
+      "x": "I love what you got"
+    },
+    {
+      "t": "verse",
+      "x": "Let's get together, we can"
+    },
+    {
+      "t": "verse",
+      "x": "Get hot"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "verse",
+      "x": "No more tomorrow, baby"
+    },
+    {
+      "t": "verse",
+      "x": "Time is today"
+    },
+    {
+      "t": "verse",
+      "x": "Girl, I can make you feel"
+    },
+    {
+      "t": "verse",
+      "x": "Okay"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "verse",
+      "x": "No place for hiding, baby"
+    },
+    {
+      "t": "verse",
+      "x": "No place to run"
+    },
+    {
+      "t": "verse",
+      "x": "You pull the trigger of my"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "chorus",
+      "x": "Love gun (love gun)"
+    },
+    {
+      "t": "chorus",
+      "x": "Love gun"
+    },
+    {
+      "t": "chorus",
+      "x": "Love gun (love gun)"
+    },
+    {
+      "t": "chorus",
+      "x": "Love gun"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "verse",
+      "x": "You can't forget me, baby"
+    },
+    {
+      "t": "verse",
+      "x": "Don't try to lie"
+    },
+    {
+      "t": "verse",
+      "x": "You'll never leave me, mama"
+    },
+    {
+      "t": "verse",
+      "x": "So don't try"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "verse",
+      "x": "I'll be a gambler, baby"
+    },
+    {
+      "t": "verse",
+      "x": "Lay down the bet"
+    },
+    {
+      "t": "verse",
+      "x": "We'll get together, mama"
+    },
+    {
+      "t": "verse",
+      "x": "You'll sweat"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "verse",
+      "x": "No place for hiding, baby"
+    },
+    {
+      "t": "verse",
+      "x": "No place to run"
+    },
+    {
+      "t": "verse",
+      "x": "You pull the trigger of my"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "chorus",
+      "x": "Love gun (love gun)"
+    },
+    {
+      "t": "chorus",
+      "x": "Love gun"
+    },
+    {
+      "t": "chorus",
+      "x": "Love gun (love gun)"
+    },
+    {
+      "t": "chorus",
+      "x": "Love gun"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "cue",
+      "x": "Love gun"
+    },
+    {
+      "t": "cue",
+      "x": "Love gun"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "cue",
+      "x": "Redoblo de ponte"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "chorus",
+      "x": "Love gun (love gun)"
+    },
+    {
+      "t": "chorus",
+      "x": "Love gun"
+    },
+    {
+      "t": "chorus",
+      "x": "Love gun (love gun)"
+    },
+    {
+      "t": "chorus",
+      "x": "Love gun"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "chorus",
+      "x": "Love gun (love gun)"
+    },
+    {
+      "t": "chorus",
+      "x": "Love gun"
+    },
+    {
+      "t": "chorus",
+      "x": "Love gun (love gun)"
+    },
+    {
+      "t": "chorus",
+      "x": "Love gun"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "chorus",
+      "x": "Love gun (love gun)"
+    },
+    {
+      "t": "chorus",
+      "x": "Love gun (love gun)"
+    },
+    {
+      "t": "chorus",
+      "x": "Love gun (love gun)"
+    },
+    {
+      "t": "chorus",
+      "x": "Love gun (love gun)"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "chorus",
+      "x": "Love gun"
+    }
+  ]
+}

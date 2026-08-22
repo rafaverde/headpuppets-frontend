@@ -1,0 +1,210 @@
+{
+  "id": "hells-bells",
+  "title": "HELLS BELLS",
+  "artist": "AC/DC",
+  "key": "Am",
+  "singers": ["E"],
+  "setOrder": 28,
+  "lines": [
+    {
+      "t": "cue",
+      "x": "quatro finais com a guitarra:"
+    },
+    {
+      "t": "verse",
+      "x": "I'm a rolling thunder, pouring rain"
+    },
+    {
+      "t": "verse",
+      "x": "I'm coming on like a hurricane"
+    },
+    {
+      "t": "verse",
+      "x": "My lightning's flashing across the sky"
+    },
+    {
+      "t": "verse",
+      "x": "You're only young, but you're gonna die"
+    },
+    {
+      "t": "chorus",
+      "x": "I won't take no prisoners, won't spare no lives"
+    },
+    {
+      "t": "chorus",
+      "x": "Nobody's putting up a fight"
+    },
+    {
+      "t": "chorus",
+      "x": "I got my bell, I'm gonna take you to hell"
+    },
+    {
+      "t": "chorus",
+      "x": "I'm gonna get you, Satan get you"
+    },
+    {
+      "t": "chorus",
+      "x": "Hell's bells"
+    },
+    {
+      "t": "chorus",
+      "x": "Yeah, hell's bells"
+    },
+    {
+      "t": "verse",
+      "x": "You got me ringing hell's bells"
+    },
+    {
+      "t": "verse",
+      "x": "My temperature's high, hell's bells"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "cue",
+      "x": "dois riffs"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "verse",
+      "x": "I'll give you black sensations up and down your spine"
+    },
+    {
+      "t": "verse",
+      "x": "If you're into evil, you're a friend of mine"
+    },
+    {
+      "t": "verse",
+      "x": "See my white light flashing as I split the night"
+    },
+    {
+      "t": "verse",
+      "x": "'Cause if good's on the left, then I'm sticking to the right"
+    },
+    {
+      "t": "chorus",
+      "x": "I won't take no prisoners, won't spare no lives"
+    },
+    {
+      "t": "chorus",
+      "x": "Nobody's putting up a fight"
+    },
+    {
+      "t": "chorus",
+      "x": "I got my bell, I'm gonna take you to hell"
+    },
+    {
+      "t": "chorus",
+      "x": "I'm gonna get you, Satan get you"
+    },
+    {
+      "t": "cue",
+      "x": "dois riffs"
+    },
+    {
+      "t": "chorus",
+      "x": "Hell's bells"
+    },
+    {
+      "t": "chorus",
+      "x": "Yeah, hell's bells"
+    },
+    {
+      "t": "verse",
+      "x": "You got me ringing hell's bells"
+    },
+    {
+      "t": "verse",
+      "x": "My temperature's high, hell's bells"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "cue",
+      "x": "-> solo principal"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "chorus",
+      "x": "Hell's bells"
+    },
+    {
+      "t": "chorus",
+      "x": "Satan's coming to you"
+    },
+    {
+      "t": "chorus",
+      "x": "Hell's bells"
+    },
+    {
+      "t": "chorus",
+      "x": "He's ringing them now"
+    },
+    {
+      "t": "chorus",
+      "x": "Those hell's bells"
+    },
+    {
+      "t": "chorus",
+      "x": "The temperature's high"
+    },
+    {
+      "t": "chorus",
+      "x": "Hell's bells"
+    },
+    {
+      "t": "chorus",
+      "x": "Across the sky"
+    },
+    {
+      "t": "cue",
+      "x": "começa o solo e canta por cima"
+    },
+    {
+      "t": "chorus",
+      "x": "Hell's bells"
+    },
+    {
+      "t": "verse",
+      "x": "They're taking you down"
+    },
+    {
+      "t": "chorus",
+      "x": "Hell's bells"
+    },
+    {
+      "t": "verse",
+      "x": "They're dragging you under"
+    },
+    {
+      "t": "chorus",
+      "x": "Hell's bells"
+    },
+    {
+      "t": "verse",
+      "x": "Gonna split the night"
+    },
+    {
+      "t": "chorus",
+      "x": "Hell's bells"
+    },
+    {
+      "t": "verse",
+      "x": "There's no way to fight, yeah"
+    },
+    {
+      "t": "cue",
+      "x": "SOLO final Hell's bell"
+    }
+  ]
+}

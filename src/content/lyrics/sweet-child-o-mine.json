@@ -1,0 +1,330 @@
+{
+  "id": "sweet-child-o-mine",
+  "title": "SWEET CHILD O' MINE",
+  "artist": "Guns N' Roses",
+  "key": "D",
+  "singers": ["A"],
+  "setOrder": 23,
+  "lines": [
+    {
+      "t": "verse",
+      "x": "She's got a smile that it seems to me"
+    },
+    {
+      "t": "verse",
+      "x": "Reminds me of childhood memories"
+    },
+    {
+      "t": "verse",
+      "x": "Where everything was as fresh as the bright blue sky (sky, sky)"
+    },
+    {
+      "t": "verse",
+      "x": "Now and then when I see her face"
+    },
+    {
+      "t": "verse",
+      "x": "She takes me away to that special place"
+    },
+    {
+      "t": "chorus",
+      "x": "And if I stared too long, I'd probably break down and cry"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "chorus",
+      "x": "Woah, oh, oh, sweet child of mine"
+    },
+    {
+      "t": "chorus",
+      "x": "Woah, oh, oh, oh, sweet love of mine"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "verse",
+      "x": "She's got eyes of the bluest skies"
+    },
+    {
+      "t": "verse",
+      "x": "As if they thought of rain"
+    },
+    {
+      "t": "verse",
+      "x": "I'd hate to look into those eyes and see an ounce of pain"
+    },
+    {
+      "t": "verse",
+      "x": "Her hair reminds me of a warm, safe place"
+    },
+    {
+      "t": "verse",
+      "x": "Where, as a child, I'd hide"
+    },
+    {
+      "t": "chorus",
+      "x": "And pray for the thunder and the rain to quietly pass me by"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "chorus",
+      "x": "Woah, oh, oh, sweet child of mine"
+    },
+    {
+      "t": "chorus",
+      "x": "Woah-woah, oh, oh, oh, sweet love of mine"
+    },
+    {
+      "t": "chorus",
+      "x": "Woah, oh, oh, oh, sweet child of mine (ooh, yeah, yeah)"
+    },
+    {
+      "t": "verse",
+      "x": "Ooh, sweet love of mine"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "verse",
+      "x": "Where do we go?"
+    },
+    {
+      "t": "verse",
+      "x": "Where do we go now?"
+    },
+    {
+      "t": "verse",
+      "x": "Where do we go?"
+    },
+    {
+      "t": "verse",
+      "x": "Mm-mm, oh, where do we go?"
+    },
+    {
+      "t": "verse",
+      "x": "Where do we go now?"
+    },
+    {
+      "t": "verse",
+      "x": "Oh, where do we go now?"
+    },
+    {
+      "t": "verse",
+      "x": "Where do we go?"
+    },
+    {
+      "t": "verse",
+      "x": "Sweet child, where do we go now?"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "verse",
+      "x": "Aye, aye, aye, aye, aye, aye, aye, aye (where do we go?)"
+    },
+    {
+      "t": "verse",
+      "x": "Ooh, where do we go now?"
+    },
+    {
+      "t": "verse",
+      "x": "Oh-oh-oh-oh-oh, oh, woah, where do we go?"
+    },
+    {
+      "t": "verse",
+      "x": "Oh-oh, where do we go now?"
+    },
+    {
+      "t": "verse",
+      "x": "Oh, where do we go?"
+    },
+    {
+      "t": "verse",
+      "x": "Where do we go now?"
+    },
+    {
+      "t": "verse",
+      "x": "Where do we go?"
+    },
+    {
+      "t": "verse",
+      "x": "Woah-oh, where do we go now?"
+    },
+    {
+      "t": "chorus",
+      "x": "No, no, no, no, no, no, no"
+    },
+    {
+      "t": "chorus",
+      "x": "Sweet child, sweet child of mine"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "verse",
+      "x": "🧑‍🤝‍🧑 TWIST AND SHOUT"
+    },
+    {
+      "t": "verse",
+      "x": "TWIST AND SHOUT"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "verse",
+      "x": "Well, shake it up, baby, now (shake it up, baby)"
+    },
+    {
+      "t": "verse",
+      "x": "Twist and shout (twist and shout)"
+    },
+    {
+      "t": "verse",
+      "x": "Come on, come on, come on, come on, baby, now (come on, baby)"
+    },
+    {
+      "t": "verse",
+      "x": "Come on and work it on out (work it on out)"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "verse",
+      "x": "Well, work it on out (work it on out)"
+    },
+    {
+      "t": "verse",
+      "x": "You know you look so good (look so good)"
+    },
+    {
+      "t": "verse",
+      "x": "You know you got me going now (got me going)"
+    },
+    {
+      "t": "verse",
+      "x": "Just like I knew you would (like I knew you would)"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "verse",
+      "x": "Well, shake it up, baby, now (shake it up, baby)"
+    },
+    {
+      "t": "verse",
+      "x": "Twist and shout (twist and shout)"
+    },
+    {
+      "t": "verse",
+      "x": "Come on, come on, come on, come on, baby, now (come on, baby)"
+    },
+    {
+      "t": "verse",
+      "x": "Come on and work it on out (work it on out)"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "verse",
+      "x": "You know you twist, little girl (twist, little girl)"
+    },
+    {
+      "t": "verse",
+      "x": "You know you twist so fine (twist so fine)"
+    },
+    {
+      "t": "verse",
+      "x": "Come on and twist a little closer now (twist a little closer)"
+    },
+    {
+      "t": "verse",
+      "x": "And let me know that you're mine (let me know you're mine)"
+    },
+    {
+      "t": "verse",
+      "x": "Ah, ah, ah, ah, ah, ah!"
+    },
+    {
+      "t": "verse",
+      "x": "Baby, now (shake it up, baby)"
+    },
+    {
+      "t": "verse",
+      "x": "Twist and shout (twist and shout)"
+    },
+    {
+      "t": "verse",
+      "x": "Come on, come on, come on, come on, baby, now (come on, baby)"
+    },
+    {
+      "t": "verse",
+      "x": "Come on and work it on out (work it on out)"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "verse",
+      "x": "You know you twist, little girl (twist, little girl)"
+    },
+    {
+      "t": "verse",
+      "x": "You know you twist so fine (twist so fine)"
+    },
+    {
+      "t": "verse",
+      "x": "Come on and twist a little closer now (twist a little closer)"
+    },
+    {
+      "t": "verse",
+      "x": "And let me know that you're mine (let me know you're mine)"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "verse",
+      "x": "Well, shake it, shake it, shake it, baby, now"
+    },
+    {
+      "t": "verse",
+      "x": "Well, shake it, shake it, shake it, baby, now"
+    },
+    {
+      "t": "verse",
+      "x": "Well, shake it, shake it, shake it, baby, now"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "verse",
+      "x": "Ah, ah, ah, yeah!"
+    }
+  ]
+}

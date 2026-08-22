@@ -1,0 +1,274 @@
+{
+  "id": "back-in-black",
+  "title": "BACK IN BLACK",
+  "artist": "AC/DC",
+  "key": "Em",
+  "singers": ["E"],
+  "setOrder": null,
+  "lines": [
+    {
+      "t": "cue",
+      "x": "Dois riffs completos"
+    },
+    {
+      "t": "verse",
+      "x": "Back in black -  I hit the sack"
+    },
+    {
+      "t": "verse",
+      "x": "I've been too long, I'm glad to be back"
+    },
+    {
+      "t": "verse",
+      "x": "Yes, I'm let loose - from the noose"
+    },
+    {
+      "t": "verse",
+      "x": "That's kept me hanging about"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "verse",
+      "x": "I'm just looking at the sky 'cause it's getting me high"
+    },
+    {
+      "t": "verse",
+      "x": "Forget the hearse 'cause I'll never die"
+    },
+    {
+      "t": "verse",
+      "x": "I got - nine lives, cat's eyes"
+    },
+    {
+      "t": "chorus",
+      "x": "Abusing every one of them and running wild - 'Cause I'm back"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "chorus",
+      "x": "Yes, I'm back"
+    },
+    {
+      "t": "chorus",
+      "x": "Well, I'm back"
+    },
+    {
+      "t": "chorus",
+      "x": "Yes, I'm back"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "chorus",
+      "x": "Well, I'm back, back"
+    },
+    {
+      "t": "chorus",
+      "x": "Well, I'm back in black"
+    },
+    {
+      "t": "chorus",
+      "x": "Yes, I'm back in black"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "verse",
+      "x": "Back in the back of a - Cadillac"
+    },
+    {
+      "t": "verse",
+      "x": "Number one with a bullet, I'm a power pack"
+    },
+    {
+      "t": "verse",
+      "x": "Yes, I'm - in a bang with a gang"
+    },
+    {
+      "t": "verse",
+      "x": "They've got to catch me if they want me to hang"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "verse",
+      "x": "Cause I'm back on the track and I'm beating the flack"
+    },
+    {
+      "t": "verse",
+      "x": "Nobody's gonna get me on another rap"
+    },
+    {
+      "t": "verse",
+      "x": "So look at me now, I'm just making my play"
+    },
+    {
+      "t": "chorus",
+      "x": "Don't try to push your luck, just get out of my way - 'Cause I'm back"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "chorus",
+      "x": "Yes, I'm back"
+    },
+    {
+      "t": "chorus",
+      "x": "Well, I'm back"
+    },
+    {
+      "t": "chorus",
+      "x": "Yes, I'm back"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "chorus",
+      "x": "Well, I'm back, back"
+    },
+    {
+      "t": "chorus",
+      "x": "Well, I'm back in black"
+    },
+    {
+      "t": "chorus",
+      "x": "Yes, I'm back in black"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "cue",
+      "x": "solo"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "chorus",
+      "x": "Well, I'm back"
+    },
+    {
+      "t": "chorus",
+      "x": "Yes, I'm back"
+    },
+    {
+      "t": "chorus",
+      "x": "Well, I'm back"
+    },
+    {
+      "t": "chorus",
+      "x": "Yes, I'm back"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "chorus",
+      "x": "Well, I'm back, back"
+    },
+    {
+      "t": "chorus",
+      "x": "Well, I'm back in black"
+    },
+    {
+      "t": "chorus",
+      "x": "Yes, I'm back in black, yow"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "verse",
+      "x": "Ah, yeah"
+    },
+    {
+      "t": "chorus",
+      "x": "Oh, yeah"
+    },
+    {
+      "t": "verse",
+      "x": "Take my love"
+    },
+    {
+      "t": "chorus",
+      "x": "Yeah, yeah"
+    },
+    {
+      "t": "chorus",
+      "x": "Yeah"
+    },
+    {
+      "t": "verse",
+      "x": "Ah, hey, yeah"
+    },
+    {
+      "t": "chorus",
+      "x": "Oh, yeah"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "verse",
+      "x": "Well, I'm back (I'm back)"
+    },
+    {
+      "t": "verse",
+      "x": "Back (well, I'm back)"
+    },
+    {
+      "t": "verse",
+      "x": "Back (I'm back)"
+    },
+    {
+      "t": "verse",
+      "x": "Back (I'm back)"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "verse",
+      "x": "Back (I'm back)"
+    },
+    {
+      "t": "chorus",
+      "x": "Back in black"
+    },
+    {
+      "t": "chorus",
+      "x": "Yes, I'm back in black"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "chorus",
+      "x": "Out of the sack"
+    }
+  ]
+}

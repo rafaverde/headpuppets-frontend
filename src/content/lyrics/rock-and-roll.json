@@ -1,0 +1,154 @@
+{
+  "id": "rock-and-roll",
+  "title": "ROCK AND ROLL",
+  "artist": "Led Zeppelin",
+  "key": "Am",
+  "singers": ["A"],
+  "setOrder": 1,
+  "lines": [
+    {
+      "t": "verse",
+      "x": "It's been a long time since I rock and rolled"
+    },
+    {
+      "t": "verse",
+      "x": "It's been a long time since I did the stroll"
+    },
+    {
+      "t": "verse",
+      "x": "Ooh, let me get it back, let me get it back"
+    },
+    {
+      "t": "verse",
+      "x": "Let me get it back"
+    },
+    {
+      "t": "verse",
+      "x": "Baby, where I come from"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "chorus",
+      "x": "It's been a long time, been a long time"
+    },
+    {
+      "t": "chorus",
+      "x": "Been a long lonely, lonely, lonely, lonely, lonely time"
+    },
+    {
+      "t": "chorus",
+      "x": "Yes, it has"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "verse",
+      "x": "It's been a long time since the book of love"
+    },
+    {
+      "t": "verse",
+      "x": "I can't count the tears of a life with no love"
+    },
+    {
+      "t": "verse",
+      "x": "Carry me back, carry me back"
+    },
+    {
+      "t": "verse",
+      "x": "Carry me back"
+    },
+    {
+      "t": "verse",
+      "x": "Baby, where I come from"
+    },
+    {
+      "t": "verse",
+      "x": "Whoa, whoa, oh"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "chorus",
+      "x": "It's been a long time, been a long time"
+    },
+    {
+      "t": "chorus",
+      "x": "Been a long lonely, lonely, lonely, lonely, lonely time"
+    },
+    {
+      "t": "verse",
+      "x": "Oh, seems so long since we walked in the moonlight"
+    },
+    {
+      "t": "verse",
+      "x": "Making vows that just can't work right"
+    },
+    {
+      "t": "verse",
+      "x": "Oh, yeah, open your arms, opens your arms"
+    },
+    {
+      "t": "verse",
+      "x": "Open your arms, baby, let my love come running in"
+    },
+    {
+      "t": "chorus",
+      "x": "Yeah!"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "chorus",
+      "x": "It's been a long time, been a long time"
+    },
+    {
+      "t": "chorus",
+      "x": "Been a long lonely, lonely, lonely, lonely, lonely time"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "chorus",
+      "x": "Yeah, yeah"
+    },
+    {
+      "t": "chorus",
+      "x": "Yeah, yeah"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "verse",
+      "x": "Ooh, yeah, ooh, yeah"
+    },
+    {
+      "t": "verse",
+      "x": "Ooh, yeah, ooh, yeah"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "chorus",
+      "x": "It's been a long time, been a long time"
+    },
+    {
+      "t": "chorus",
+      "x": "Been a long lonely, lonely, lonely, lonely, lonely time"
+    }
+  ]
+}

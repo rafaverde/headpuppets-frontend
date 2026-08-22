@@ -1,0 +1,194 @@
+{
+  "id": "iron-man",
+  "title": "IRON MAN",
+  "artist": "Black Sabbath",
+  "key": "Em",
+  "singers": ["E"],
+  "setOrder": null,
+  "lines": [
+    {
+      "t": "chorus",
+      "x": "após o primeiro dissonante"
+    },
+    {
+      "t": "cue",
+      "x": "I am Iron Man"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "cue",
+      "x": "dois riffs"
+    },
+    {
+      "t": "verse",
+      "x": "Has he lost his mind?"
+    },
+    {
+      "t": "verse",
+      "x": "Can he see or is he blind?"
+    },
+    {
+      "t": "verse",
+      "x": "Can he walk at all"
+    },
+    {
+      "t": "verse",
+      "x": "Or if he moves, will he fall?"
+    },
+    {
+      "t": "cue",
+      "x": "UM riff"
+    },
+    {
+      "t": "verse",
+      "x": "Is he alive or dead?"
+    },
+    {
+      "t": "verse",
+      "x": "Has he thoughts within his head?"
+    },
+    {
+      "t": "verse",
+      "x": "We'll just pass him there"
+    },
+    {
+      "t": "verse",
+      "x": "Why should we even care?"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "cue",
+      "x": "quatro steps e volta aos dois riffs"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "verse",
+      "x": "He was turned to steel"
+    },
+    {
+      "t": "verse",
+      "x": "In the great magnetic field"
+    },
+    {
+      "t": "verse",
+      "x": "When he travelled time"
+    },
+    {
+      "t": "verse",
+      "x": "For the future of mankind"
+    },
+    {
+      "t": "chorus",
+      "x": "acorde sustain"
+    },
+    {
+      "t": "chorus",
+      "x": "Nobody wants him"
+    },
+    {
+      "t": "chorus",
+      "x": "He just stares at the world"
+    },
+    {
+      "t": "chorus",
+      "x": "Planning his vengeance"
+    },
+    {
+      "t": "chorus",
+      "x": "That he will soon unfurl"
+    },
+    {
+      "t": "cue",
+      "x": "dois riffs"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "verse",
+      "x": "Now the time is here"
+    },
+    {
+      "t": "verse",
+      "x": "For Iron Man to spread fear"
+    },
+    {
+      "t": "verse",
+      "x": "Vengeance from the grave"
+    },
+    {
+      "t": "verse",
+      "x": "Kills the people he once saved"
+    },
+    {
+      "t": "chorus",
+      "x": "acorde sustain"
+    },
+    {
+      "t": "chorus",
+      "x": "Nobody wants him"
+    },
+    {
+      "t": "chorus",
+      "x": "They just turn their heads"
+    },
+    {
+      "t": "chorus",
+      "x": "Nobody helps him"
+    },
+    {
+      "t": "chorus",
+      "x": "Now he has his revenge"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "cue",
+      "x": "solo - saída com dois riffs"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "verse",
+      "x": "Heavy boots of lead"
+    },
+    {
+      "t": "verse",
+      "x": "Fills his victims full of dread"
+    },
+    {
+      "t": "verse",
+      "x": "Running as fast as they can"
+    },
+    {
+      "t": "verse",
+      "x": "Iron Man lives again"
+    },
+    {
+      "t": "chorus",
+      "x": "ieeeeeeeeee"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "cue",
+      "x": "solo final longo"
+    }
+  ]
+}
