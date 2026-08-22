@@ -205,6 +205,7 @@ export function StagePlayer({
     if (!isRunning) return
     let frameId = 0
     let previousTime = performance.now()
+    let scrollPosition = lyricsRef.current?.scrollTop ?? 0
 
     const scroll = (time: number) => {
       const lyrics = lyricsRef.current
@@ -212,7 +213,8 @@ export function StagePlayer({
 
       const elapsed = Math.min(time - previousTime, 100)
       previousTime = time
-      lyrics.scrollTop += (speed * elapsed) / 1000
+      scrollPosition += (speed * elapsed) / 1000
+      lyrics.scrollTop = scrollPosition
 
       if (lyrics.scrollTop + lyrics.clientHeight >= lyrics.scrollHeight - 2) {
         setIsRunning(false)
