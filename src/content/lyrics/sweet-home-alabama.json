@@ -5,5 +5,234 @@
   "key": "G",
   "singers": ["E"],
   "setOrder": 15,
-  "lines": []
+  "lines": [
+    {
+      "t": "cue",
+      "x": "One, two, three — Turn It Up"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "verse",
+      "x": "Big wheels keep on turnin'"
+    },
+    {
+      "t": "verse",
+      "x": "Carry me home to see my kin"
+    },
+    {
+      "t": "verse",
+      "x": "Singin' songs about the Southland"
+    },
+    {
+      "t": "verse",
+      "x": "I miss Alabamy once again"
+    },
+    {
+      "t": "verse",
+      "x": "And I think it's a sin, yes"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "verse",
+      "x": "Well, I heard Mr. Young sing about her"
+    },
+    {
+      "t": "verse",
+      "x": "Well, I heard old Neil put her down"
+    },
+    {
+      "t": "verse",
+      "x": "Well, I hope Neil Young will remember"
+    },
+    {
+      "t": "verse",
+      "x": "A southern man don't need him around anyhow"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "chorus",
+      "x": "Sweet home Alabama"
+    },
+    {
+      "t": "chorus",
+      "x": "Where the skies are so blue"
+    },
+    {
+      "t": "chorus",
+      "x": "Sweet home Alabama"
+    },
+    {
+      "t": "chorus",
+      "x": "Lord, I'm comin' home to you"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "verse",
+      "x": "In Birmingham, they love the governor"
+    },
+    {
+      "t": "chorus",
+      "x": "(boo-hoo-hoo)"
+    },
+    {
+      "t": "verse",
+      "x": "Now, we all did what we could do"
+    },
+    {
+      "t": "verse",
+      "x": "Now, Watergate does not bother me"
+    },
+    {
+      "t": "verse",
+      "x": "Does your conscience bother you?"
+    },
+    {
+      "t": "verse",
+      "x": "Tell the truth"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "chorus",
+      "x": "Sweet home Alabama"
+    },
+    {
+      "t": "chorus",
+      "x": "Where the skies are so blue"
+    },
+    {
+      "t": "chorus",
+      "x": "Sweet home Alabama"
+    },
+    {
+      "t": "chorus",
+      "x": "Lord, I'm comin' home to you"
+    },
+    {
+      "t": "chorus",
+      "x": "(Here I come, Alabama)"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "chorus",
+      "x": "(Ooh, oh, oh)"
+    },
+    {
+      "t": "chorus",
+      "x": "(Alabama, oh, oh, oh)"
+    },
+    {
+      "t": "chorus",
+      "x": "(Alabama, oh, oh, oh)"
+    },
+    {
+      "t": "chorus",
+      "x": "(Alabama, oh, oh, oh)"
+    },
+    {
+      "t": "chorus",
+      "x": "(Alabama)"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "verse",
+      "x": "Now Muscle Shoals has got the Swampers"
+    },
+    {
+      "t": "verse",
+      "x": "And they've been known to pick a song or two"
+    },
+    {
+      "t": "chorus",
+      "x": "(yes, they do)"
+    },
+    {
+      "t": "verse",
+      "x": "Lord, they get me off so much"
+    },
+    {
+      "t": "verse",
+      "x": "They pick me up when I'm feeling blue"
+    },
+    {
+      "t": "verse",
+      "x": "Now, how about you?"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "chorus",
+      "x": "Sweet home Alabama"
+    },
+    {
+      "t": "chorus",
+      "x": "Where the skies are so blue"
+    },
+    {
+      "t": "chorus",
+      "x": "Sweet home Alabama"
+    },
+    {
+      "t": "chorus",
+      "x": "Lord, I'm comin' home to you"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "chorus",
+      "x": "Sweet home Alabama"
+    },
+    {
+      "t": "chorus",
+      "x": "(Oh sweet home, baby)"
+    },
+    {
+      "t": "chorus",
+      "x": "Where the skies are so blue"
+    },
+    {
+      "t": "chorus",
+      "x": "(And the governor's true)"
+    },
+    {
+      "t": "chorus",
+      "x": "Sweet home Alabama (Lordy)"
+    },
+    {
+      "t": "chorus",
+      "x": "Lord, I'm coming home to you (oh, oh, yeah)"
+    },
+    {
+      "t": "gap",
+      "x": ""
+    },
+    {
+      "t": "verse",
+      "x": "Montgomery's got the answer"
+    }
+  ]
 }
